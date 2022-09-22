@@ -150,6 +150,13 @@
             "heading": "What payment method do you accept?",
             "content": "<p>We accept credit card and bank transfer payment methods.<\/p>"
           }
+        },
+        "ec4170e4-b0db-4f48-bc51-fa1eb25d3c87": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "Do you ship overseas?",
+            "content": "<p>No. We only ship within New Zealand. All transactions are priced in NZD ( New Zealand Dollars) <\/p>"
+          }
         }
       },
       "block_order": [
@@ -168,7 +175,8 @@
         "f50cd388-7db9-432c-8489-e5278ea4d203",
         "291f9bfb-a826-44d0-b0dc-af5d1f2a5c4f",
         "8deeecd9-2072-493b-b9d2-e1a094043acb",
-        "d2ad0b63-d807-4306-bb33-97a981fb5176"
+        "d2ad0b63-d807-4306-bb33-97a981fb5176",
+        "ec4170e4-b0db-4f48-bc51-fa1eb25d3c87"
       ],
       "settings": {
         "heading": ""
