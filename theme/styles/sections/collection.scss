@@ -27,7 +27,7 @@
             @include media($md, max) {
                 display: block;
             }
-            
+
             polygon {
                 fill: white;
             }
@@ -116,11 +116,12 @@
                 &__sale {
                     background: var(--primary);
                     color: white;
-                    padding: 1rem 2rem;
+                    padding: 0.8rem 1.5rem;
                     position: absolute;
                     top: 0;
                     right: 0;
                     font-weight: 600;
+                    font-size: 1.2rem;
                 }
 
                 &__unavailable {

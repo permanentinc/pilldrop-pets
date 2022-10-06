@@ -206,7 +206,7 @@
 
 
           {% if on_sale %}
-            <span class="collection__grid__item__image__sale">SALE</span>
+            <span class="collection__grid__item__image__sale">WHY PAY {{ product.compare_at_price | money }} ?</span>
           {% endif %}
 
           {% if product.available %}
