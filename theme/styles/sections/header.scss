@@ -142,7 +142,7 @@ body:not(.template--index) .header {
                         padding: 0.5rem;
                     }
 
-                    &:first-of-type {
+                    &:last-of-type {
                         background: white;
                         border-radius: 0.2rem 0.2rem 0 0;
 
