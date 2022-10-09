@@ -1277,6 +1277,17 @@ Hero Block
             top: 0;
             margin: 0 auto; } }
 
+#body .contactEmbed a {
+  color: var(--primary); }
+
+#body .contactEmbed em {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--h3-size);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  font-style: normal; }
+
 #body .bcontact-title {
   margin-bottom: 1rem;
   color: var(--primary) !important; }
