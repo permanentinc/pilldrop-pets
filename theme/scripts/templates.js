@@ -64,7 +64,7 @@ export const searchPlaceholder = () =>
 export const searchItem = (product) =>
     `<a href="${product.url}" class="searchPane__wrapper__item">
         <div class="searchPane__wrapper__item__image">
-            <img src="${product.image}">
+            <img src="${product.image || 'https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg'}">
         </div>
         <div class="searchPane__wrapper__item__details">
             <p><strong>${product.title}</strong></p>
@@ -138,7 +138,7 @@ export const cartItem = (product, index) =>
     `<tr class="cart__wrap__form__table__body__row" data-index="${index + 1}">
     <td class="cart__wrap__form__table__body__row__cell">
         <a href="${product.url}" class="cart__wrap__form__table__body__row__cell__image">
-          <img src="${product.image}" alt="${product.title}" />
+          <img src="${product.image || 'https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg'}" alt="${product.title}" />
         </a>
     </td>
     <td class="cart__wrap__form__table__body__row__cell cart__wrap__form__table__body__row__cell--details">
@@ -185,7 +185,7 @@ export const cartItem = (product, index) =>
 */
 export const sidecartItem = (product, index) =>
     `<div class="sidecart__inner__list__item">
-        <a href="${product.url}" class="sidecart__inner__list__item__image"><span style="background-image:url('${product.image}')"></span></a>
+        <a href="${product.url}" class="sidecart__inner__list__item__image"><span style="background-image:url('${product.image || 'https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg'}')"></span></a>
         <a href="${product.url}" class="sidecart__inner__list__item__details">
             <p><strong>${product.title}</strong></p>
             ${(product.product_type) ? `<p>${product.product_type}</p>` : ``}
