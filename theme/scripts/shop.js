@@ -30,6 +30,7 @@ export default class Shop {
         this.$shop.on('click', '.js-remove-from-side-cart', (e) => { this.removeFromSideCart(e) });
         this.$shop.on('click', '.js-remove-from-cart', (e) => { this.removeFromCart(e) });
         this.$shop.on('click', '.js-change-quantity', (e) => { this.changeCartItem(e) });
+        this.$shop.on('change', '.js-change-variation', (e) => { this.updatePrice(e) });
     }
 
     getCart($button, updates = []) {
@@ -97,6 +98,11 @@ export default class Shop {
         $.post(params)
             .done(() => this.getCart($this, ['openSideCart']))
             .fail((response) => this.catchError(response.responseJSON));
+    }
+
+    updatePrice(e) {
+        let variant = $('.js-change-variation').val();
+        $('.js-variation-price').text(window.inventories[variant].price)
     }
 
     changeCartItem(e) {
