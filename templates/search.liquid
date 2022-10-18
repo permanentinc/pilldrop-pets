@@ -60,18 +60,14 @@
     {{ collection_image | image_url: height: 968, width:968 }} 968w,
     {{ collection_image | image_url: height: 1080 ,width:1080 }} 1080w" alt="{{ collection_image.alt | escape }}" />
         {% else %}
-        <img class="[ lazyload ]"src="https:{{ 'placeholder.jpg' | asset_url }}" srcset="
-    {{ 'placeholder.jpg' | asset_url }} 540w,
-    {{ 'placeholder.jpg' | asset_url }} 768w,
-    {{ 'placeholder.jpg' | asset_url }} 968w,
-    {{ 'placeholder.jpg' | asset_url }} 1080w" alt="placeholder image" />
+        <img class="[ lazyload ]" src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg" alt="placeholder image" />
         {% endunless %}
       </a>
       {% endif %}
 
       <p>
         <strong>
-          <a href="{{ item.url }}" title="{{ item.title }}">view product</a>
+          <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
         </strong>
       </p>
 
