@@ -26,6 +26,7 @@
     },
     "165467105679d9cbc9": {
       "type": "column",
+      "disabled": true,
       "settings": {
         "heading_left": "Reach a PillDrop vet",
         "heading_left_size": "h3",
@@ -37,6 +38,7 @@
     },
     "1654671145eb99ca1b": {
       "type": "column",
+      "disabled": true,
       "settings": {
         "heading_left": "Send prescriptions to",
         "heading_left_size": "h3",
