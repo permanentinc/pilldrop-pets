@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "16510315198c1783c4": {
+      "type": "banner-slim",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner-slim.jpg",
+        "subheading": "<p><strong>IT'S SIMPLE<\/strong><\/p>",
+        "subheading_size": "h4",
+        "heading": "<p>How it works<\/p>",
+        "heading_size": "h1"
+      }
+    },
+    "165103094054a59026": {
+      "type": "icons",
+      "settings": {
+        "heading": "Image with text",
+        "heading_size": "h2",
+        "image1": "shopify:\/\/shop_images\/prescription.png",
+        "heading1": "Get prescription",
+        "text1": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
+        "image2": "shopify:\/\/shop_images\/trolley.png",
+        "heading2": "Get prescription",
+        "text2": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
+        "image3": "shopify:\/\/shop_images\/package.png",
+        "heading3": "Get prescription",
+        "text3": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "1651037785dcfb2f3f": {
+      "type": "split-block",
+      "settings": {
+        "heading_main": "Getting started",
+        "heading_main_size": "h2",
+        "heading_left": "Send us your prescription",
+        "heading_left_size": "h2",
+        "text_left": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
+        "button_left_label": "SUBMIT NOW",
+        "button_left_link": "",
+        "heading_right": "Book an appointment",
+        "heading_right_size": "h2",
+        "text_right": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
+        "button_right_label": "BOOK NOW",
+        "button_right_link": ""
+      }
+    },
+    "16510310124e67975c": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/laughing-couple-mask.png",
+        "heading": "Am I elligible?",
+        "heading_size": "h2",
+        "text": "<p>Cannabinoids including CBD and THC, extracted from the cannabis plant under strict medical supervision, have been shown to work very well on the symptoms of some chronic medical conditions that conventional prescription medicines have been ineffective at treating.<\/p><p>​So, if prescription medicines from your doctor aren’t working for you, Medicinal Cannabis may be a great natural option.<\/p>",
+        "button_label": "READ MORE",
+        "button_link": "",
+        "layout": "left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16510315198c1783c4",
+    "165103094054a59026",
+    "1651037785dcfb2f3f",
+    "16510310124e67975c"
+  ],
+  "wrapper": "div.main-wrapper"
+}
