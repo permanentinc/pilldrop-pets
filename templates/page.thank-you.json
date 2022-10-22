@@ -8,25 +8,26 @@
     "16510315198c1783c4": {
       "type": "banner-slim",
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner-slim.jpg",
-        "subheading": "<p><strong>IT'S SIMPLE<\/strong><\/p>",
+        "image": "shopify:\/\/shop_images\/dog_banner.jpg",
+        "image_position": "left",
+        "subheading": "",
+        "colour": "dark",
         "subheading_size": "h4",
-        "heading": "<p>How it works<\/p>",
-        "heading_size": "h1"
+        "heading": "<p>Thank you for <br\/>getting in touch.<\/p>",
+        "heading_size": "h1",
+        "text": "<p>One of our team will be in touch with you shortly.<\/p>"
       }
     },
     "165103094054a59026": {
       "type": "icons",
+      "disabled": true,
       "settings": {
         "heading": "Image with text",
         "heading_size": "h2",
-        "image1": "shopify:\/\/shop_images\/prescription.png",
         "heading1": "Get prescription",
         "text1": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
-        "image2": "shopify:\/\/shop_images\/trolley.png",
         "heading2": "Get prescription",
         "text2": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
-        "image3": "shopify:\/\/shop_images\/package.png",
         "heading3": "Get prescription",
         "text3": "<p>Get a prescription through your doctor or book an appointment with one of our doctors.<\/p>",
         "button_label": "",
@@ -35,7 +36,9 @@
     },
     "1651037785dcfb2f3f": {
       "type": "split-block",
+      "disabled": true,
       "settings": {
+        "background_colour": "#ec1d24",
         "heading_main": "Getting started",
         "heading_main_size": "h2",
         "heading_left": "Send us your prescription",
@@ -52,8 +55,8 @@
     },
     "16510310124e67975c": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/laughing-couple-mask.png",
         "heading": "Am I elligible?",
         "heading_size": "h2",
         "text": "<p>Cannabinoids including CBD and THC, extracted from the cannabis plant under strict medical supervision, have been shown to work very well on the symptoms of some chronic medical conditions that conventional prescription medicines have been ineffective at treating.<\/p><p>​So, if prescription medicines from your doctor aren’t working for you, Medicinal Cannabis may be a great natural option.<\/p>",
