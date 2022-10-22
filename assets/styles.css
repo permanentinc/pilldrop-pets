@@ -246,17 +246,12 @@ hr {
     stroke-linecap: square; }
     .button .svg-loader use, .shopify-challenge__button .svg-loader use {
       stroke: var(--green-dark);
-      -webkit-animation: a 1.5s linear infinite;
-              animation: a 1.5s linear infinite; }
+      animation: a 1.5s linear infinite; }
   .button.busy, .busy.shopify-challenge__button {
     color: var(--yellow-mid) !important; }
     .button.busy .svg-loader, .busy.shopify-challenge__button .svg-loader {
       opacity: 1;
       visibility: visible; }
-
-@-webkit-keyframes a {
-  to {
-    stroke-dashoffset: 0px; } }
 
 @keyframes a {
   to {
@@ -787,16 +782,11 @@ Product
               align-items: center; } }
           .cart__wrap__form__table__body__row--placeholder .cart__wrap__form__table__body__row__cell__image {
             background: rgba(0, 0, 0, 0.1);
-            -webkit-animation-duration: 1.25s;
-                    animation-duration: 1.25s;
-            -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-                    animation-iteration-count: infinite;
-            -webkit-animation-name: placeHolderShimmer;
-                    animation-name: placeHolderShimmer;
-            -webkit-animation-timing-function: linear;
-                    animation-timing-function: linear;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
             background: rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
             background-size: 800px 104px;
@@ -813,16 +803,11 @@ Product
           .cart__wrap__form__table__body__row--placeholder .cart__wrap__form__table__body__row__cell--details h5,
           .cart__wrap__form__table__body__row--placeholder .cart__wrap__form__table__body__row__cell--details p {
             background: rgba(0, 0, 0, 0.1);
-            -webkit-animation-duration: 1.25s;
-                    animation-duration: 1.25s;
-            -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-                    animation-iteration-count: infinite;
-            -webkit-animation-name: placeHolderShimmer;
-                    animation-name: placeHolderShimmer;
-            -webkit-animation-timing-function: linear;
-                    animation-timing-function: linear;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
             background: rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
             background-size: 800px 104px;
@@ -836,16 +821,11 @@ Product
             margin-top: 0.5rem; }
           .cart__wrap__form__table__body__row--placeholder .cart__wrap__form__table__body__row__cell--quantity span {
             background: rgba(0, 0, 0, 0.1);
-            -webkit-animation-duration: 1.25s;
-                    animation-duration: 1.25s;
-            -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-                    animation-iteration-count: infinite;
-            -webkit-animation-name: placeHolderShimmer;
-                    animation-name: placeHolderShimmer;
-            -webkit-animation-timing-function: linear;
-                    animation-timing-function: linear;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
             background: rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
             background-size: 800px 104px;
@@ -856,16 +836,11 @@ Product
             margin: 0 auto; }
           .cart__wrap__form__table__body__row--placeholder .cart__wrap__form__table__body__row__cell--total h6 {
             background: rgba(0, 0, 0, 0.1);
-            -webkit-animation-duration: 1.25s;
-                    animation-duration: 1.25s;
-            -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-                    animation-iteration-count: infinite;
-            -webkit-animation-name: placeHolderShimmer;
-                    animation-name: placeHolderShimmer;
-            -webkit-animation-timing-function: linear;
-                    animation-timing-function: linear;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
             background: rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
             background-size: 800px 104px;
@@ -907,12 +882,6 @@ Product
             .cart__wrap__form__table__body__row__cell h6 {
               color: var(--text);
               margin-bottom: 0; }
-
-@-webkit-keyframes placeHolderShimmer {
-  0% {
-    background-position: -468px 0; }
-  100% {
-    background-position: 468px 0; } }
 
 @keyframes placeHolderShimmer {
   0% {
@@ -1108,7 +1077,6 @@ input[type='checkbox'] {
     padding-left: 3rem;
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
     cursor: pointer;
     display: block; }
@@ -1171,12 +1139,6 @@ Loader
     top: 10rem;
     left: calc(50% - 20px); }
 
-@-webkit-keyframes loader {
-  0% {
-    left: -100px; }
-  100% {
-    left: 110%; } }
-
 @keyframes loader {
   0% {
     left: -100px; }
@@ -1186,25 +1148,11 @@ Loader
     width: 50px;
     height: 50px;
     background: var(--red);
-    -webkit-animation: animate 0.5s linear infinite;
-            animation: animate 0.5s linear infinite;
+    animation: animate 0.5s linear infinite;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 3px; }
-
-@-webkit-keyframes animate {
-  17% {
-    border-bottom-right-radius: 3px; }
-  25% {
-    transform: translateY(9px) rotate(22.5deg); }
-  50% {
-    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-    border-bottom-right-radius: 40px; }
-  75% {
-    transform: translateY(9px) rotate(67.5deg); }
-  100% {
-    transform: translateY(0) rotate(90deg); } }
 
 @keyframes animate {
   17% {
@@ -1227,12 +1175,7 @@ Loader
     top: 59px;
     left: 0;
     border-radius: 50%;
-    -webkit-animation: shadow 0.5s linear infinite;
-            animation: shadow 0.5s linear infinite; }
-
-@-webkit-keyframes shadow {
-  50% {
-    transform: scale(1.2, 1); } }
+    animation: shadow 0.5s linear infinite; }
 
 @keyframes shadow {
   50% {
@@ -1389,7 +1332,6 @@ Filter icon
 .filter-icon {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   transition: transform 440ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2899,14 +2841,6 @@ Newsletter popup
     .animate-out .popup__inner {
       transform: translateY(3rem); } }
 
-@-webkit-keyframes notyf-fadeinup {
-  0% {
-    opacity: 0;
-    transform: translateY(25%); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
 @keyframes notyf-fadeinup {
   0% {
     opacity: 0;
@@ -2914,14 +2848,6 @@ Newsletter popup
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
-@-webkit-keyframes notyf-fadeinleft {
-  0% {
-    opacity: 0;
-    transform: translateX(25%); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
 
 @keyframes notyf-fadeinleft {
   0% {
@@ -2931,14 +2857,6 @@ Newsletter popup
     opacity: 1;
     transform: translateX(0); } }
 
-@-webkit-keyframes notyf-fadeoutright {
-  0% {
-    opacity: 1;
-    transform: translateX(0); }
-  100% {
-    opacity: 0;
-    transform: translateX(25%); } }
-
 @keyframes notyf-fadeoutright {
   0% {
     opacity: 1;
@@ -2947,14 +2865,6 @@ Newsletter popup
     opacity: 0;
     transform: translateX(25%); } }
 
-@-webkit-keyframes notyf-fadeoutdown {
-  0% {
-    opacity: 1;
-    transform: translateY(0); }
-  100% {
-    opacity: 0;
-    transform: translateY(25%); } }
-
 @keyframes notyf-fadeoutdown {
   0% {
     opacity: 1;
@@ -2962,12 +2872,6 @@ Newsletter popup
   100% {
     opacity: 0;
     transform: translateY(25%); } }
-
-@-webkit-keyframes ripple {
-  0% {
-    transform: scale(0) translateY(-45%) translateX(13%); }
-  100% {
-    transform: scale(1) translateY(-45%) translateX(13%); } }
 
 @keyframes ripple {
   0% {
@@ -3001,8 +2905,7 @@ Newsletter popup
     display: block;
     overflow: hidden;
     pointer-events: auto;
-    -webkit-animation: notyf-fadeinup 0.3s ease-in forwards;
-            animation: notyf-fadeinup 0.3s ease-in forwards;
+    animation: notyf-fadeinup 0.3s ease-in forwards;
     background: white;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086);
     position: relative;
@@ -3013,23 +2916,18 @@ Newsletter popup
     border: 2px solid var(--green-dark); }
     .notyf__toast--disappear {
       transform: translateY(0);
-      -webkit-animation: notyf-fadeoutdown 0.3s forwards;
-              animation: notyf-fadeoutdown 0.3s forwards;
-      -webkit-animation-delay: 0.25s;
-              animation-delay: 0.25s; }
+      animation: notyf-fadeoutdown 0.3s forwards;
+      animation-delay: 0.25s; }
       .notyf__toast--disappear .notyf__message, .notyf__toast--disappear .notyf__icon {
-        -webkit-animation: notyf-fadeoutdown 0.3s forwards;
-                animation: notyf-fadeoutdown 0.3s forwards;
+        animation: notyf-fadeoutdown 0.3s forwards;
         opacity: 1;
         transform: translateY(0); }
       .notyf__toast--disappear .notyf__dismiss {
-        -webkit-animation: notyf-fadeoutright 0.3s forwards;
-                animation: notyf-fadeoutright 0.3s forwards;
+        animation: notyf-fadeoutright 0.3s forwards;
         opacity: 1;
         transform: translateX(0); }
       .notyf__toast--disappear .notyf__message {
-        -webkit-animation-delay: 0.05s;
-                animation-delay: 0.05s; }
+        animation-delay: 0.05s; }
     .notyf__toast--upper {
       margin-bottom: 20px; }
     .notyf__toast--lower {
@@ -3046,8 +2944,7 @@ Newsletter popup
     border-radius: 50%;
     transform: scale(0) translateY(-51%) translateX(13%);
     z-index: 5;
-    -webkit-animation: ripple 0.4s ease-out forwards;
-            animation: ripple 0.4s ease-out forwards;
+    animation: ripple 0.4s ease-out forwards;
     background: white !important; }
   .notyf__wrapper {
     display: flex;
@@ -3064,10 +2961,8 @@ Newsletter popup
     text-align: center;
     font-size: 1.3em;
     opacity: 0;
-    -webkit-animation: notyf-fadeinup 0.3s forwards;
-            animation: notyf-fadeinup 0.3s forwards;
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
+    animation: notyf-fadeinup 0.3s forwards;
+    animation-delay: 0.3s;
     margin-right: 13px; }
   .notyf__dismiss {
     position: absolute;
@@ -3076,10 +2971,8 @@ Newsletter popup
     height: 100%;
     width: 26px;
     margin-right: -15px;
-    -webkit-animation: notyf-fadeinleft 0.3s forwards;
-            animation: notyf-fadeinleft 0.3s forwards;
-    -webkit-animation-delay: 0.35s;
-            animation-delay: 0.35s;
+    animation: notyf-fadeinleft 0.3s forwards;
+    animation-delay: 0.35s;
     opacity: 0; }
   .notyf__dismiss-btn {
     background-color: var(--green-dark);
@@ -3110,10 +3003,8 @@ Newsletter popup
     vertical-align: middle;
     position: relative;
     opacity: 0;
-    -webkit-animation: notyf-fadeinup 0.3s forwards;
-            animation: notyf-fadeinup 0.3s forwards;
-    -webkit-animation-delay: 0.25s;
-            animation-delay: 0.25s;
+    animation: notyf-fadeinup 0.3s forwards;
+    animation-delay: 0.25s;
     line-height: 1.5em; }
 
 /* Small screens */
@@ -3123,8 +3014,7 @@ Newsletter popup
     .notyf__ripple {
       height: 600px;
       width: 600px;
-      -webkit-animation-duration: 0.5s;
-              animation-duration: 0.5s; }
+      animation-duration: 0.5s; }
     .notyf__toast {
       max-width: initial;
       border-radius: 0;
@@ -3313,7 +3203,6 @@ Quantity
     border: 0;
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
     cursor: pointer; }
   .quantity--inline svg {
@@ -3430,17 +3319,10 @@ Quantity
     padding: 4rem 0; }
     .scrolling-text__container__text {
       transform: translate3d(var(--move-initial), 0, 0);
-      -webkit-animation: animation_loop 5s linear infinite;
-              animation: animation_loop 5s linear infinite; }
+      animation: animation_loop 5s linear infinite; }
       .scrolling-text__container__text span {
         font-weight: bolder;
         white-space: nowrap; }
-
-@-webkit-keyframes animation_loop {
-  0% {
-    transform: translate3d(var(--move-initial), 0, 0); }
-  100% {
-    transform: translate3d(var(--move-final), 0, 0); } }
 
 @keyframes animation_loop {
   0% {
@@ -3618,16 +3500,11 @@ Quantity
             opacity: 0.5; }
       .searchPane__wrapper__item--placeholder .searchPane__wrapper__item__image span {
         background: rgba(0, 0, 0, 0.1);
-        -webkit-animation-duration: 1.25s;
-                animation-duration: 1.25s;
-        -webkit-animation-fill-mode: forwards;
-                animation-fill-mode: forwards;
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-        -webkit-animation-name: placeHolderShimmer;
-                animation-name: placeHolderShimmer;
-        -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
+        animation-duration: 1.25s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: linear;
         background: rgba(0, 0, 0, 0.1);
         background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
         background-size: 800px 104px;
@@ -3644,16 +3521,11 @@ Quantity
           bottom: 2px;
           left: 0;
           right: 0;
-          -webkit-animation-duration: 1.25s;
-                  animation-duration: 1.25s;
-          -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards;
-          -webkit-animation-iteration-count: infinite;
-                  animation-iteration-count: infinite;
-          -webkit-animation-name: placeHolderShimmer;
-                  animation-name: placeHolderShimmer;
-          -webkit-animation-timing-function: linear;
-                  animation-timing-function: linear;
+          animation-duration: 1.25s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          animation-name: placeHolderShimmer;
+          animation-timing-function: linear;
           background: rgba(0, 0, 0, 0.1);
           background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
           background-size: 800px 104px; }
@@ -3968,16 +3840,11 @@ Side Cart
           transform: translateX(2rem) translateY(48rem); }
         .sidecart__inner__list__item--placeholder .sidecart__inner__list__item__image span {
           background: rgba(0, 0, 0, 0.1);
-          -webkit-animation-duration: 1.25s;
-                  animation-duration: 1.25s;
-          -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards;
-          -webkit-animation-iteration-count: infinite;
-                  animation-iteration-count: infinite;
-          -webkit-animation-name: placeHolderShimmer;
-                  animation-name: placeHolderShimmer;
-          -webkit-animation-timing-function: linear;
-                  animation-timing-function: linear;
+          animation-duration: 1.25s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          animation-name: placeHolderShimmer;
+          animation-timing-function: linear;
           background: rgba(0, 0, 0, 0.1);
           background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
           background-size: 800px 104px;
@@ -3996,16 +3863,11 @@ Side Cart
             bottom: 2px;
             left: 0;
             right: 0;
-            -webkit-animation-duration: 1.25s;
-                    animation-duration: 1.25s;
-            -webkit-animation-fill-mode: forwards;
-                    animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-                    animation-iteration-count: infinite;
-            -webkit-animation-name: placeHolderShimmer;
-                    animation-name: placeHolderShimmer;
-            -webkit-animation-timing-function: linear;
-                    animation-timing-function: linear;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
             background: rgba(0, 0, 0, 0.1);
             background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
             background-size: 800px 104px; }
@@ -4085,7 +3947,6 @@ Side Cart
   box-sizing: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
@@ -4583,10 +4444,6 @@ Tile Slider
       z-index: 2;
       pointer-events: none; }
 
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg); } }
-
 @keyframes spin {
   to {
     transform: rotate(360deg); } }
@@ -4595,8 +4452,7 @@ Tile Slider
         stroke-dasharray: 4, 5;
         stroke-width: 1px;
         transform-origin: 50% 50%;
-        -webkit-animation: spin 4s infinite linear;
-                animation: spin 4s infinite linear;
+        animation: spin 4s infinite linear;
         transition: opacity 1s ease, stroke-width 1s ease; }
       .video__constraint__icon .stroke-solid {
         stroke-dashoffset: 0;
