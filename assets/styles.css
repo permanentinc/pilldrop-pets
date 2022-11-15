@@ -758,14 +758,14 @@ Product
                 .cart__wrap__form__table__head tr th:nth-child(1) h6 {
                   text-align: left; }
               .cart__wrap__form__table__head tr th:nth-child(2) {
-                width: calc(100% - 47.2rem); }
+                width: calc(100% - 49.2rem); }
                 @media only screen and (max-width: 967px) {
                   .cart__wrap__form__table__head tr th:nth-child(2) {
                     width: calc(100% - 10rem); } }
               .cart__wrap__form__table__head tr th:nth-child(3) {
-                width: 17.2rem; }
+                width: 19.2rem; }
               .cart__wrap__form__table__head tr th:nth-child(4) {
-                width: 15rem; }
+                width: 14rem; }
               .cart__wrap__form__table__head tr th:nth-child(5) {
                 width: 5rem; }
         .cart__wrap__form__table__body__empty {
@@ -857,17 +857,17 @@ Product
                 .cart__wrap__form__table__body__row__cell:nth-child(1) {
                   border-bottom: 1px solid var(--grey-light); } }
             .cart__wrap__form__table__body__row__cell:nth-child(2) {
-              width: calc(100% - 47.2rem);
+              width: calc(100% - 49.2rem);
               padding-left: 4rem; }
               @media only screen and (max-width: 967px) {
                 .cart__wrap__form__table__body__row__cell:nth-child(2) {
                   width: calc(100% - 10rem);
                   border-bottom: 1px solid var(--grey-light); } }
             .cart__wrap__form__table__body__row__cell:nth-child(3) {
-              width: 17.2rem;
+              width: 19.2rem;
               text-align: center; }
             .cart__wrap__form__table__body__row__cell:nth-child(4) {
-              width: 15rem;
+              width: 14rem;
               text-align: center; }
             .cart__wrap__form__table__body__row__cell:nth-child(5) {
               width: 5rem;
@@ -3215,7 +3215,7 @@ Quantity
   .quantity--inline .quantity__subtract {
     margin-right: 0.5rem; }
   .quantity--inline .quantity__quantity {
-    width: 4rem;
+    width: 6rem;
     background: transparent;
     font-size: 2rem;
     color: var(--green-dark);
@@ -3236,7 +3236,7 @@ Quantity
       width: 1.6rem;
       height: 1.6rem; }
   .quantity--cart .quantity__quantity {
-    width: 4rem;
+    width: 6rem;
     font-size: 2.4rem; }
 
 .divide {

@@ -83,7 +83,7 @@ Product
               }
 
               &:nth-child(2) {
-                width: calc(100% - 47.2rem);
+                width: calc(100% - 49.2rem);
 
                 @include media($xmd, max) {
                   width: calc(100% - 10rem);
@@ -91,11 +91,11 @@ Product
               }
  
               &:nth-child(3) {
-                width: 17.2rem;
+                width: 19.2rem;
               }
 
               &:nth-child(4) {
-                width: 15rem;
+                width: 14rem;
               }
 
               &:nth-child(5) {
@@ -218,7 +218,7 @@ Product
               }
 
               &:nth-child(2) {
-                width: calc(100% - 47.2rem);
+                width: calc(100% - 49.2rem);
                 padding-left: 4rem;
 
                 @include media($xmd, max) {
@@ -228,12 +228,12 @@ Product
               }
 
               &:nth-child(3) {
-                width: 17.2rem;
+                width: 19.2rem;
                 text-align: center;
               }
 
               &:nth-child(4) {
-                width: 15rem;
+                width: 14rem;
                 text-align: center;
               }
 
