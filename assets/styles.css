@@ -2099,6 +2099,9 @@ Subnav
   .page--password footer,
   .page--password header {
     display: none; }
+  @media only screen and (max-width: 767px) {
+    .page--password {
+      padding: 5rem 0 0rem; } }
 
 .passwordEmbed {
   margin: 0 !important; }
@@ -2127,6 +2130,9 @@ Subnav
     width: calc(50% - 1rem);
     display: flex;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 767px) {
+      .passwordEmbed .mc-field-group {
+        width: 100%; } }
     .passwordEmbed .mc-field-group label {
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -2137,6 +2143,9 @@ Subnav
   margin: -6rem auto 3rem;
   width: 100%;
   text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .password__logo {
+      margin: 5rem auto 3rem; } }
 
 .hero {
   margin: -18rem auto 10rem;

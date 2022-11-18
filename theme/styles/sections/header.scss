@@ -650,6 +650,10 @@ Subnav
     }
 
     padding: 10rem;
+
+    @include media($md, max) {
+        padding: 5rem 0 0rem;
+    }
 }
 
 .passwordEmbed {
@@ -692,6 +696,10 @@ Subnav
         display: flex;
         flex-wrap: wrap;
 
+        @include media($md, max) {
+            width: 100%;
+        }
+
         label {
             margin-top: 1rem;
             margin-bottom: 1rem;
@@ -707,4 +715,8 @@ Subnav
 
     width: 100%;
     text-align: center;
+
+    @include media($md, max) {
+        margin: 5rem auto 3rem;
+    }
 }
