@@ -2094,6 +2094,50 @@ Subnav
     .arrowed {
       display: none; } }
 
+.page--password {
+  padding: 10rem; }
+  .page--password footer,
+  .page--password header {
+    display: none; }
+
+.passwordEmbed {
+  margin: 0 !important; }
+  .passwordEmbed .text__wrap__form {
+    width: 100%;
+    margin: 0 !important;
+    top: 0; }
+  .passwordEmbed label {
+    font-size: 1.6rem; }
+  .passwordEmbed #mc_embed_signup_scroll {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between; }
+  .passwordEmbed input,
+  .passwordEmbed textarea,
+  .passwordEmbed select {
+    margin-bottom: 1rem; }
+  .passwordEmbed .clear {
+    width: 100%; }
+    .passwordEmbed .clear input {
+      padding: 1.4rem 2rem;
+      max-width: 30rem; }
+  .passwordEmbed .mc-field-group {
+    width: calc(50% - 1rem);
+    display: flex;
+    flex-wrap: wrap; }
+    .passwordEmbed .mc-field-group label {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%; }
+
+.password__logo {
+  display: inline-block;
+  margin: -6rem auto 3rem;
+  width: 100%;
+  text-align: center; }
+
 .hero {
   margin: -18rem auto 10rem;
   position: relative;
