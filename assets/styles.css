@@ -1725,7 +1725,7 @@ body:not(.template--index) .header {
             background: white;
             border-radius: 0.2rem 0.2rem 0 0; }
             .header__wrap__secondary__sites__item--active p {
-              color: var(--primary); }
+              color: var(--primary) !important; }
           .header__wrap__secondary__sites__item p {
             font-weight: bold;
             font-size: 1.2rem;
