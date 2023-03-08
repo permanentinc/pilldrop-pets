@@ -1708,7 +1708,7 @@ body:not(.template--index) .header {
           .header__wrap__secondary__sites {
             background-color: var(--primary);
             box-shadow: none; } }
-        @media only screen and (max-width: 539px) {
+        @media only screen and (max-width: 859px) {
           .header__wrap__secondary__sites {
             display: none; } }
         .header__wrap__secondary__sites__item {
