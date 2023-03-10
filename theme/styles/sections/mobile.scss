@@ -83,11 +83,9 @@ Mobile menu
                     margin-right: 1rem;
                 }
 
-                &:last-of-type {
-                    border: 2px solid var(--primary);
-                }
+                border: 2px solid var(--primary);
 
-                &:first-of-type {
+                &--active {
                     background: var(--primary);
 
                     p {

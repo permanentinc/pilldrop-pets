@@ -126,7 +126,7 @@ body:not(.template--index) .header {
                     box-shadow: none;
                 }
 
-                @include media($xs, max) {
+                @include media(860px, max) {
                     display: none;
                 }
 
@@ -142,12 +142,12 @@ body:not(.template--index) .header {
                         padding: 0.5rem;
                     }
 
-                    &:last-of-type {
+                    &--active {
                         background: white;
                         border-radius: 0.2rem 0.2rem 0 0;
 
                         p {
-                            color: var(--primary);
+                            color: var(--primary) !important;
                         }
                     }
 

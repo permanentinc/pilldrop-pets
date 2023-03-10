@@ -1708,7 +1708,7 @@ body:not(.template--index) .header {
           .header__wrap__secondary__sites {
             background-color: var(--primary);
             box-shadow: none; } }
-        @media only screen and (max-width: 539px) {
+        @media only screen and (max-width: 859px) {
           .header__wrap__secondary__sites {
             display: none; } }
         .header__wrap__secondary__sites__item {
@@ -1721,11 +1721,11 @@ body:not(.template--index) .header {
           @media only screen and (max-width: 639px) {
             .header__wrap__secondary__sites__item {
               padding: 0.5rem; } }
-          .header__wrap__secondary__sites__item:last-of-type {
+          .header__wrap__secondary__sites__item--active {
             background: white;
             border-radius: 0.2rem 0.2rem 0 0; }
-            .header__wrap__secondary__sites__item:last-of-type p {
-              color: var(--primary); }
+            .header__wrap__secondary__sites__item--active p {
+              color: var(--primary) !important; }
           .header__wrap__secondary__sites__item p {
             font-weight: bold;
             font-size: 1.2rem;
@@ -2755,7 +2755,8 @@ Mobile menu
         align-content: center;
         justify-content: center;
         width: calc(50% - 1rem);
-        border-radius: 100rem; }
+        border-radius: 100rem;
+        border: 2px solid var(--primary); }
         @media only screen and (max-width: 1099px) {
           .mobileMenu__wrap__sites__item {
             width: 100%;
@@ -2767,11 +2768,9 @@ Mobile menu
           color: var(--primary); }
         .mobileMenu__wrap__sites__item svg {
           margin-right: 1rem; }
-        .mobileMenu__wrap__sites__item:last-of-type {
-          border: 2px solid var(--primary); }
-        .mobileMenu__wrap__sites__item:first-of-type {
+        .mobileMenu__wrap__sites__item--active {
           background: var(--primary); }
-          .mobileMenu__wrap__sites__item:first-of-type p {
+          .mobileMenu__wrap__sites__item--active p {
             color: white; }
 
 .mobile-menu-active {
