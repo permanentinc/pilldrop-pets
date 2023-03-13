@@ -32,11 +32,11 @@
 
 {%- if page_image -%}
   {%- comment %}<locksmith:b6a6>{% endcomment -%}
-    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image" content="http:{{ page_image | image_url: 'master' }}">{% endif -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image" content="http:{{ page_image | image_url }}">{% endif -%}
     {%- comment %}original: <meta property="og:image" content="http:{{ page_image | image_url: 'master' }}">{%- endcomment %}
   {%- comment %}</locksmith:b6a6>{% endcomment -%}
   {%- comment %}<locksmith:5176>{% endcomment -%}
-    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image:secure_url" content="https:{{ page_image | image_url: 'master' }}">{% endif -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">{% endif -%}
     {%- comment %}original: <meta property="og:image:secure_url" content="https:{{ page_image | image_url: 'master' }}">{%- endcomment %}
   {%- comment %}</locksmith:5176>{% endcomment -%}
   <meta property="og:image:width" content="{{ page_image.width }}">
