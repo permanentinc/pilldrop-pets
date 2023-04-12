@@ -79,6 +79,7 @@
         },
         "1652680485ef574f60-2": {
           "type": "scroller_item",
+          "disabled": true,
           "settings": {
             "icon": "shopify:\/\/shop_images\/Artboard_Copy_2_6cbc8313-bea2-4135-85ae-9b3594971232.png",
             "heading": "Free shipping",
