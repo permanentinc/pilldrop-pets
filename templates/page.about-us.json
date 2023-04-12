@@ -64,9 +64,9 @@
       "type": "background-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/banner_slim.jpg",
-        "heading": "Fast & Free delivery*",
+        "heading": "Express Delivery",
         "heading_size": "h2",
-        "text": "<p><strong>With PillDrop Pets, you will enjoy FREE delivery*<br\/>on all orders over $50.<\/strong><\/p>",
+        "text": "<p><strong>To your door, anywhere you are in New Zealand.<\/strong><\/p>",
         "button_label": "Shop now",
         "button_link": "shopify:\/\/collections\/all"
       }
