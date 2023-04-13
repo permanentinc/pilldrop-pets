@@ -180,6 +180,8 @@
 
   </div>
 
+{% paginate collections['all'].products by 1000 %}
+
     {% for product in collections['all'].products %}
 
       {% assign on_sale = false %}
@@ -243,7 +245,7 @@
     </div>
 
     {% endfor %}
-    
+    {% endpaginate %}
   </div>
 </div>
 
