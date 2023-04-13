@@ -39,9 +39,9 @@
       "type": "background-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/Pilldrop_aboutus.jpg",
-        "heading": "Fast & Free Delivery*",
+        "heading": "Express Delivery",
         "heading_size": "h2",
-        "text": "<p><strong>With PillDrop Pets, you will enjoy FREE delivery*<br\/>on all orders over $50.<\/strong><\/p>",
+        "text": "<p>Flat rate shipping $7.50 nationwide.<\/p>",
         "button_label": "Shop now",
         "button_link": "shopify:\/\/collections\/all"
       }

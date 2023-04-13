@@ -79,6 +79,7 @@
         },
         "1652680485ef574f60-2": {
           "type": "scroller_item",
+          "disabled": true,
           "settings": {
             "icon": "shopify:\/\/shop_images\/Artboard_Copy_2_6cbc8313-bea2-4135-85ae-9b3594971232.png",
             "heading": "Free shipping",
@@ -91,8 +92,8 @@
           "type": "scroller_item",
           "settings": {
             "icon": "shopify:\/\/shop_images\/Artboard_Copy_3_daa30d64-c745-49d7-9adc-99b165e2c484.png",
-            "heading": "Fully Licensed Pharmacy",
-            "content": "<p>We are a fully licensed pharmacy.<\/p>",
+            "heading": "Fully Licensed Pet Pharmacy",
+            "content": "<p>We are a fully licensed pet pharmacy.<\/p>",
             "button_label": "",
             "button_link": ""
           }
@@ -165,9 +166,9 @@
       "type": "background-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/woof.jpg",
-        "heading": "Fast & Free Delivery*",
+        "heading": "Express Delivery",
         "heading_size": "h2",
-        "text": "<p><strong>With PillDrop Pets, you will enjoy FREE delivery* <br\/>on all orders over $50.<\/strong><\/p>",
+        "text": "<p><strong>Flat rate shipping $7.50 nationwide.<\/strong><\/p>",
         "button_label": "SHOP NOW",
         "button_link": "shopify:\/\/collections\/all"
       }

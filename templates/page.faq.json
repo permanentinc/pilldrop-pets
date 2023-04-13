@@ -78,7 +78,7 @@
           "type": "accordion_item",
           "settings": {
             "heading": "How much is your shipping fee?",
-            "content": "<p>We offer free shipping* for all orders over $50. <\/p><p><br\/><strong>For orders less than $50:<\/strong><br\/>Urban deliveries: $7.50<br\/><strong>Rural: <\/strong>$12.50<br\/><br\/>For urgent delivery, please call us on <a href=\"tel:0800745537\" title=\"tel:0800745537\">0800745537<\/a><\/p>"
+            "content": "<p><strong>Urban deliveries: <\/strong>$7.50<br\/><strong>Rural: <\/strong>$12.50<br\/><br\/>For urgent delivery, please call us on <a href=\"tel:0800745537\" title=\"tel:0800745537\">0800745537<\/a><\/p>"
           }
         },
         "8eecd9e9-b5c0-45a6-9d83-869ac4f295f0": {
