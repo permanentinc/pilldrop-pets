@@ -157,6 +157,13 @@
             "heading": "Do you ship overseas?",
             "content": "<p>No. We only ship within New Zealand. All transactions are priced in NZD ( New Zealand Dollars) <\/p>"
           }
+        },
+        "50cc51fb-9eed-466b-8e8d-86e1dfd121ac": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "How do I contact your vet?",
+            "content": "<p>We are happy to answer questions you may have. You may contact our vet through email <a href=\"mailto:vet@pilldroppets.co.nz\" target=\"_blank\">vet@pilldroppets.co.nz<\/a>.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -176,7 +183,8 @@
         "291f9bfb-a826-44d0-b0dc-af5d1f2a5c4f",
         "8deeecd9-2072-493b-b9d2-e1a094043acb",
         "d2ad0b63-d807-4306-bb33-97a981fb5176",
-        "ec4170e4-b0db-4f48-bc51-fa1eb25d3c87"
+        "ec4170e4-b0db-4f48-bc51-fa1eb25d3c87",
+        "50cc51fb-9eed-466b-8e8d-86e1dfd121ac"
       ],
       "settings": {
         "heading": ""
