@@ -97,8 +97,8 @@
       <label for="Most Popular">Most Popular</label>
     </p> {% endcomment %}
     <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Most PopularPain and Anti-inflammatory" id="Most PopularPain and Anti-inflammatory">
-      <label for="Most PopularPain and Anti-inflammatory">Most PopularPain and Anti-inflammatory</label>
+      <input type="checkbox" class="[ js-filter-tags ]" value="Pain and Anti-inflammatory" id="Pain and Anti-inflammatory">
+      <label for="Pain and Anti-inflammatory">Pain and Anti-inflammatory</label>
     </p>
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Hyperthyroidism" id="Hyperthyroidism">
@@ -189,7 +189,7 @@
       {%- assign on_sale = true -%}
       {% endif %}
 
-      <div class="collection__grid__item" data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}" data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}" data-brand="{{ product.vendor }}">
+      <div class="collection__grid__item" data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}" data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}" data-brand="{{ product.vendor }}" data-types="{{ product.type }}">
         {% if product.media[0] %}
         <a  href="{{ product.url }}" class="collection__grid__item__image">
           
