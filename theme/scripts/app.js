@@ -161,15 +161,19 @@ $(() => {
         let tags = [];
         $('.js-filter-tags:checked').each((i, el) => tags.push($(el).attr('id')));
 
-        let collection = [];
+        // let collection = [];
 
-        $('.js-filter-collections.active').each((i, el) => collection.push($(el).attr('data-id')));
-
+        // $('.js-filter-collections.active').each((i, el) => collection.push($(el).attr('data-id')));
 
         $('.collection__grid__item').each((i, el) => {
+
             let $this = $(el);
+
+            console.log($this.attr('data-types'))
+
             let item_brands = $this.attr('data-brand').split(',');
-            let item_tags = $this.attr('data-collections').split(',');
+            let item_tags = $this.attr('data-types').split(',');
+
             $this.show();
             if (brands.length > 0 && !item_brands.some(brand => brands.includes(brand))) {
                 $this.hide();
@@ -177,21 +181,16 @@ $(() => {
             if (tags.length > 0 && !item_tags.some(tag => tags.includes(tag))) {
                 $this.hide();
             }
-            if (collection.length > 0 && !item_tags.some(tag => collection.includes(tag))) {
-                $this.hide();
-            }
+            // if (collection.length > 0 && !item_tags.some(tag => collection.includes(tag))) {
+            //     $this.hide();
+            // }
         });
 
-
-        setTimeout(() => {
-            $body.removeClass('busy');
-        }, 400);
-
+        setTimeout(() => $body.removeClass('busy'), 400);
 
     };
 
     filterProducts();
-
 
     $body.on('click', '.js-filter-collections', (e) => {
         e.preventDefault();
