@@ -1211,8 +1211,9 @@ Hero Block
             width: 100%;
             text-align: center;
             margin-bottom: 3rem; } }
+      .cta__wrap__content h3 {
+        padding-right: 4rem; }
       .cta__wrap__content p {
-        margin-left: 4rem;
         position: relative;
         top: -1rem; }
         @media only screen and (max-width: 967px) {
@@ -1461,6 +1462,16 @@ Footer
             font-size: 1.2rem !important; }
           .footer__wrap__column--details p a {
             color: var(--primary); }
+      .footer__wrap__column__fern {
+        padding: 0 0.5rem; }
+        @media only screen and (max-width: 1059px) {
+          .footer__wrap__column__fern {
+            width: 100%;
+            padding-top: 1rem; } }
+        @media only screen and (max-width: 539px) {
+          .footer__wrap__column__fern {
+            order: 125;
+            margin-bottom: 1rem; } }
       .footer__wrap__column__social {
         padding: 0 0rem; }
         @media only screen and (max-width: 539px) {
