@@ -4,6 +4,10 @@
       "contact": {
         "company_label": "Pet's name",
         "optional_company_label": "Pet's name (optional)"
+      },
+      "field_errors": {
+        "address_company_blank": "Enter your pet's name",
+        "address_company_too_long": "Pet's name is too long"
       }
     }
   }
