@@ -1,2 +1,10 @@
 {
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "company_label": "Pet's name",
+        "optional_company_label": "Pet's name (optional)"
+      }
+    }
+  }
 }
