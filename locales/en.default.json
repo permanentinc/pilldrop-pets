@@ -7,7 +7,23 @@
       },
       "field_errors": {
         "address_company_blank": "Enter your pet's name",
-        "address_company_too_long": "Pet's name is too long"
+        "address_company_too_long": "Pet's name is too long",
+        "address_company_contains_emojis": "Pet's name cannot contain emojis",
+        "address_company_contains_html_tags": "Pet's name cannot contain HTML tags"
+      },
+      "thank_you": {
+        "company_location_title": "Pet's name"
+      }
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "company": "Pet's Name"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Pet's Name",
+        "company_card_section_accessibility_label": "Pet"
       }
     }
   }
