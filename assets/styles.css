@@ -1464,7 +1464,7 @@ Footer
             color: var(--primary); }
       .footer__wrap__column__fern {
         padding: 0 0.5rem; }
-        @media only screen and (max-width: 1059px) {
+        @media only screen and (max-width: 1060px) {
           .footer__wrap__column__fern {
             width: 100%;
             padding-top: 1rem; } }
@@ -3315,6 +3315,28 @@ Quantity
   .choices .choices__item {
     position: relative;
     top: 3px; }
+
+.radio label {
+  position: relative;
+  display: block;
+  padding: 1rem 2rem;
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+  margin: 0 0 1rem 1rem;
+  cursor: pointer; }
+  .radio label:hover {
+    box-shadow: 0 0 0 2px rgba(236, 29, 36, 0.3); }
+
+.radio input {
+  position: absolute;
+  opacity: 0;
+  left: -1000px; }
+  .radio input:checked + label {
+    background: var(--primary);
+    color: white; }
+
+.product__wrap__details__form .button, .product__wrap__details__form .shopify-challenge__button {
+  position: relative !important; }
 
 .scroller {
   background-size: cover;

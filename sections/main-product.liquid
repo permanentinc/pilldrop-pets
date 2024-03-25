@@ -17,12 +17,12 @@
               {% if product.media[0] %}
                 {% else %}
                 
-                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg" class="placeholder">
+                <img data-id="{{ media.id }}" loading="lazy" src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg" class="placeholder">
                 {% endif %}
                 
               {% for media in product.media %}
                 <div>
-                  <img loading="lazy" width="540" height="540" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }}" srcset="
+                  <img data-index="{{ forloop.index }}" data-xxxx="{{ forloop.index }}" data-id="{{ media.id }}" loading="lazy" width="540" height="540" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }}" srcset="
                     {{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }} 540w,
                     {{ media.preview_image | image_url: width: 768, height: 768, crop: 'center' }} 768w,
                     {{ media.preview_image | image_url: width: 968, height: 968, crop: 'center' }} 968w,
@@ -73,14 +73,21 @@
   
             {%- form 'product', product, id: 'product_form', class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
 
-            <select name="id" id="ProductSelect-{{ section.id }}" {% if product.variants.size == 1 %}style="display:none;" {% else %}class="[ js-choices ][ js-change-variation ]" {% endif %}>
+            {% comment %} <select name="id" id="ProductSelect-{{ section.id }}" {% if product.variants.size == 1 %}style="display:none;" {% else %}class="[ js-choices ][ js-change-variation ]" {% endif %}>
               {% for variant in product.variants %}
               <option value="{{ variant.id }}" {%- if variant == current_variant %} selected="selected" {%- endif -%}>
                 {{ variant.title }} {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
               </option>
               {% endfor %}
-            </select>
-  
+            </select> {% endcomment %}
+            
+            {% for variant in product.variants %}
+              <div class="radio" {% if product.variants.size == 1 %}style="display:none;"{% endif %}>
+                <input class="[ js-radio ]" {% if variant.featured_media.id %}data-id="{{ variant.featured_media.id }}"{% endif %} type="radio" id="variant-{{ variant.id }}" name="id" value="{{ variant.id }}" {% if forloop.first %} checked {% endif %}>
+                <label for="variant-{{ variant.id }}">{{ variant.title }}</label>              
+              </div>
+            {% endfor %}
+
             <div class="divide"></div>
   
             <div class="quantity quantity--inline">

@@ -110,6 +110,26 @@ $(() => {
     });
 
 
+
+    $('body').on('change', '[name="id"]', (e) => {
+        e.preventDefault();
+        let $this = $(e.currentTarget);
+        let variant = $this.val();
+
+        let image_id = $this.attr('data-id');
+
+        if (image_id) {
+            let image_index = $(`.js-product-slider-item-image[data-id="${image_id}"]`).attr('data-index');
+            console.log(image_index);
+            $productSlider.slick('slickGoTo', image_index, true);
+        }
+
+
+    });
+
+
+
+
     let $body = $('body');
 
     $body.on('click', '.js-my-cart', (e) => {
