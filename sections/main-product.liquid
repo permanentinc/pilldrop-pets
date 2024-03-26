@@ -22,7 +22,7 @@
                 
               {% for media in product.media %}
                 <div>
-                  <img data-index="{{ forloop.index }}" data-xxxx="{{ forloop.index }}" data-id="{{ media.id }}" loading="lazy" width="540" height="540" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }}" srcset="
+                  <img data-index="{{ forloop.index0 }}" data-xxxx="{{ forloop.index0 }}" data-id="{{ media.id }}" loading="lazy" width="540" height="540" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }}" srcset="
                     {{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }} 540w,
                     {{ media.preview_image | image_url: width: 768, height: 768, crop: 'center' }} 768w,
                     {{ media.preview_image | image_url: width: 968, height: 968, crop: 'center' }} 968w,
