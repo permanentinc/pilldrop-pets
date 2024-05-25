@@ -4,34 +4,49 @@
 
 <div class="filter">
   <div class="filter__wrap">
-    <a href="/collections/most-popular" class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Most Popular' %}active{% endif %}" data-id="Most Popular">
+    <a
+      href="/collections/most-popular"
+      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Most Popular' %}active{% endif %}"
+      data-id="Most Popular"
+    >
       <p class="colour--red"><b>Most popular</b></p>
     </a>
 
-    <a href="/collections/cats" class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Cats' %}active{% endif %}" data-id="Cats">
+    <a
+      href="/collections/cats"
+      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Cats' %}active{% endif %}"
+      data-id="Cat"
+    >
       <p class="colour--red"><b>Cats</b></p>
-      <img src="{{ 'mini-cat.png' | asset_url }}" width="140" height="140" loading="lazy" />
+      <img src="{{ 'mini-cat.png' | asset_url }}" width="140" height="140" loading="lazy">
     </a>
 
-    <a href="/collections/dogs" class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Dogs' %}active{% endif %}" data-id="Dogs">
+    <a
+      href="/collections/dogs"
+      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Dogs' %}active{% endif %}"
+      data-id="Dog"
+    >
       <p class="colour--red"><b>Dogs</b></p>
-      <img src="{{ 'mini-dog.png' | asset_url }}" width="140" height="140" loading="lazy" />
+      <img src="{{ 'mini-dog.png' | asset_url }}" width="140" height="140" loading="lazy">
     </a>
 
-    <a href="/collections/horses" class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Horses' %}active{% endif %}" data-id="Horses">
+    <a
+      href="/collections/horses"
+      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Horses' %}active{% endif %}"
+      data-id="Horse"
+    >
       <p class="colour--red"><b>Horses</b></p>
-      <img src="{{ 'mini-horse.png' | asset_url }}" width="140" height="140" loading="lazy" />
+      <img src="{{ 'mini-horse.png' | asset_url }}" width="140" height="140" loading="lazy">
     </a>
-    
   </div>
 </div>
 
 <a href="#" class="filter__toggle" onclick="event.preventDefault();document.body.classList.toggle('filters-active')">
   <span class="[ js-toggle-filters-text ]">Show Filters</span>
   <span class="filter-icon">
-      <b><i></i></b>
-      <b><i></i></b>
-      <b><i></i></b>
+    <b><i></i></b>
+    <b><i></i></b>
+    <b><i></i></b>
   </span>
 </a>
 
@@ -40,26 +55,26 @@
 {% endcomment %}
 
 <div class="collection">
-
-
-            
   {% comment %}
     Product Filters
   {% endcomment %}
   <div class="collection__filters">
-
-    <a href="#" class="collection__filters__toggle" onclick="event.preventDefault();document.body.classList.toggle('filters-active')">
-      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11"><polygon fill="#000" fill-rule="evenodd" points="14.7 4.776 3.12 4.776 6.652 1.245 5.502 .095 0 5.597 5.502 11.1 6.652 9.95 3.12 6.419 14.7 6.419"/></svg> CLOSE<span>
+    <a
+      href="#"
+      class="collection__filters__toggle"
+      onclick="event.preventDefault();document.body.classList.toggle('filters-active')"
+    >
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+          <polygon fill="#000" fill-rule="evenodd" points="14.7 4.776 3.12 4.776 6.652 1.245 5.502 .095 0 5.597 5.502 11.1 6.652 9.95 3.12 6.419 14.7 6.419"/>
+        </svg>
+        CLOSE</span
+      >
     </a>
 
     <h4 class="colour--red">Shop by...</h4>
-    
-    <h6 class="collection__filters__title">Condition</h6>
 
-    {% comment %} <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="All" id="All">
-      <label for="All">All</label>
-    </p> {% endcomment %}
+    <h6 class="collection__filters__title">Condition</h6>
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Skin and Allergy" id="Skin and Allergy">
       <label for="Skin and Allergy">Skin and Allergy</label>
@@ -68,10 +83,6 @@
       <input type="checkbox" class="[ js-filter-tags ]" value="Skin" id="Skin">
       <label for="Skin">Skin</label>
     </p>
-    {% comment %} <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Dogs" id="Dogs">
-      <label for="Dogs">Dogs</label>
-    </p> {% endcomment %}
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Cardiac" id="Cardiac">
       <label for="Cardiac">Cardiac</label>
@@ -84,20 +95,13 @@
       <input type="checkbox" class="[ js-filter-tags ]" value="Behavioural" id="Behavioural">
       <label for="Behavioural">Behavioural</label>
     </p>
-    {% comment %} <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Cats" id="Cats">
-      <label for="Cats">Cats</label>
-    </p> {% endcomment %}
-    {% comment %} <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Horses" id="Horses">
-      <label for="Horses">Horses</label>
-    </p> {% endcomment %}
-    {% comment %} <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Most Popular" id="Most Popular">
-      <label for="Most Popular">Most Popular</label>
-    </p> {% endcomment %}
     <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Pain and Anti-inflammatory" id="Pain and Anti-inflammatory">
+      <input
+        type="checkbox"
+        class="[ js-filter-tags ]"
+        value="Pain and Anti-inflammatory"
+        id="Pain and Anti-inflammatory"
+      >
       <label for="Pain and Anti-inflammatory">Pain and Anti-inflammatory</label>
     </p>
     <p class="collection__filters__item">
@@ -109,17 +113,27 @@
       <label for="Eye Health">Eye Health</label>
     </p>
     <p class="collection__filters__item">
+      <input type="checkbox" class="[ js-filter-tags ]" value="Food" id="Food">
+      <label for="Food">Food</label>
+    </p>
+    <p class="collection__filters__item">
+      <input type="checkbox" class="[ js-filter-tags ]" value="Flea Treatment" id="Flea Treatment">
+      <label for="Flea Treatment">Flea Treatment</label>
+    </p>
+    <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Seizure" id="Seizure">
       <label for="Seizure">Seizure</label>
     </p>
 
+    <p class="collection__filters__item">
+      <input type="checkbox" class="[ js-filter-tags ]" value="Worming" id="Worming">
+      <label for="Worming">Worming</label>
+    </p>
 
     <br>
     <br>
-
 
     <h6 class="collection__filters__title">Manufacturers</h6>
-
 
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-brands ]" value="Dechra" id="Dechra">
@@ -161,96 +175,102 @@
       <input type="checkbox" class="[ js-filter-brands ]" value="Zoetis" id="Zoetis">
       <label for="Zoetis">Zoetis</label>
     </p>
-
-  
   </div>
-
 
   {% comment %}
     Product grid
   {% endcomment %}
   <div class="collection__grid">
-
-
     <div class="loader">
       <div id="loader">
-      <div id="shadow"></div>
-      <div id="box"></div>
+        <div id="shadow"></div>
+        <div id="box"></div>
+      </div>
     </div>
 
-  </div>
+    {% paginate collections.all.products by 1000 %}
+      {% for product in collections.all.products %}
+        {% assign on_sale = false %}
+        {% if product.compare_at_price > product.price %}
+          {%- assign on_sale = true -%}
+        {% endif %}
 
-{% paginate collections['all'].products by 1000 %}
+        <div
+          class="collection__grid__item"
+          data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}"
+          data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}"
+          data-brand="{{ product.vendor }}"
+          data-types="{{ product.type }}"
+        >
+          {% if product.media[0] %}
+            <a href="{{ product.url }}" class="collection__grid__item__image">
+              <img
+                loading="lazy"
+                srcset="
+                  {{ product.media[0] | image_url: width: 480 }} 480w,
+                  {{ product.media[0] | image_url: width: 800 }} 800w,
+                  {{ product.media[0] | image_url: width: 1920 }} 1600w,
+                "
+                sizes="
+                  (max-width: 600px) 480px,
+                  (max-width: 1000px) 800px,
+                  1000px
+                "
+                src="{{ product.media[0] | image_url: width: 1920 }}"
+                alt="{{ product.media[0].alt | escape }}"
+                width="{{ product.media[0].width }}"
+                height="{{ product.media[0].height }}"
+              >
 
-    {% for product in collections['all'].products %}
+              {% if on_sale %}
+                <span class="collection__grid__item__image__sale"
+                  >WHY PAY {{ product.compare_at_price | money }} ?</span
+                >
+              {% endif %}
 
-      {% assign on_sale = false %}
-      {% if product.compare_at_price > product.price %}
-      {%- assign on_sale = true -%}
-      {% endif %}
-
-      <div class="collection__grid__item" data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}" data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}" data-brand="{{ product.vendor }}" data-types="{{ product.type }}">
-        {% if product.media[0] %}
-        <a  href="{{ product.url }}" class="collection__grid__item__image">
-          
-          
-          <img loading="lazy"
-            srcset="{{ product.media[0] | image_url: width: 480 }} 480w,
-                    {{ product.media[0] | image_url: width: 800 }} 800w,
-                    {{ product.media[0] | image_url: width: 1920 }} 1600w,"
-            sizes="(max-width: 600px) 480px,
-                   (max-width: 1000px) 800px,
-                   1000px"
-            src="{{ product.media[0] | image_url: width: 1920 }}"
-            alt="{{ product.media[0].alt | escape }}"
-            width="{{ product.media[0].width }}"
-            height="{{ product.media[0].height }}">
-
-
-          {% if on_sale %}
-            <span class="collection__grid__item__image__sale">WHY PAY {{ product.compare_at_price | money }} ?</span>
-          {% endif %}
-
-          {% if product.available %}
+              {% if product.available %}
+              {% else %}
+                <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
+              {% endif %}
+            </a>
           {% else %}
-            <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
+            <a href="{{ product.url }}" class="collection__grid__item__image">
+              <img
+                loading="lazy"
+                src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg"
+                class="placeholder"
+              >
+
+              {% if on_sale %}
+                <span class="collection__grid__item__image__sale"
+                  >WHY PAY {{ product.compare_at_price | money }} ?</span
+                >
+              {% endif %}
+
+              {% if product.available %}
+              {% else %}
+                <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
+              {% endif %}
+            </a>
           {% endif %}
 
-        </a>
-      {% else %}
-      <a  href="{{ product.url }}" class="collection__grid__item__image">
-        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg" class="placeholder">
-
-
-
-        {% if on_sale %}
-          <span class="collection__grid__item__image__sale">WHY PAY {{ product.compare_at_price | money }} ?</span>
-        {% endif %}
-
-        {% if product.available %}
-        {% else %}
-          <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
-        {% endif %}
-
-      </a>
-      {% endif %}
-
-      <a href="{{ product.url }}" class="collection__grid__item__details">
-        <div class="collection__grid__item__details__title">
-          {% comment %} <h6 class="colour--text" >{{ product.vendor }}</h6> {% endcomment %}
-          <h6 class="colour--red" ><strong>{{ product.title | escape }} &nbsp;</strong></h6>
-          <p style="color:#212121;">{{ product.price | money }}</p>
+          <a href="{{ product.url }}" class="collection__grid__item__details">
+            <div class="collection__grid__item__details__title">
+              {% comment %} <h6 class="colour--text" >{{ product.vendor }}</h6> {% endcomment %}
+              <h6 class="colour--red">
+                <strong>{{ product.title | escape }} &nbsp;</strong>
+              </h6>
+              <p style="color:#212121;">{{ product.price | money }}</p>
+            </div>
+          </a>
         </div>
-      </a>
-    </div>
-
-    {% endfor %}
+      {% endfor %}
     {% endpaginate %}
   </div>
 </div>
 
 {% schema %}
-{ 
+{
   "name": "Product Grid",
   "settings": [
     {
@@ -264,5 +284,5 @@
       "name": "Product Grid"
     }
   ]
-}   
+}
 {% endschema %}

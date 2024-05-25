@@ -181,18 +181,25 @@ $(() => {
         let tags = [];
         $('.js-filter-tags:checked').each((i, el) => tags.push($(el).attr('id')));
 
-        // let collection = [];
 
-        // $('.js-filter-collections.active').each((i, el) => collection.push($(el).attr('data-id')));
+        let collection = [];
+
+        $('.js-filter-collections.active').each((i, el) => collection.push($(el).attr('data-id')));
+
+
+
+        console.log('tags:' + tags)
+        console.log('brands:' + brands)
+        console.log('collections:' + collection)
 
         $('.collection__grid__item').each((i, el) => {
 
             let $this = $(el);
 
-            console.log($this.attr('data-types'))
 
             let item_brands = $this.attr('data-brand').split(',');
             let item_tags = $this.attr('data-types').split(',');
+            let item_collection = $this.attr('data-tags').split(',');
 
             $this.show();
             if (brands.length > 0 && !item_brands.some(brand => brands.includes(brand))) {
@@ -201,9 +208,9 @@ $(() => {
             if (tags.length > 0 && !item_tags.some(tag => tags.includes(tag))) {
                 $this.hide();
             }
-            // if (collection.length > 0 && !item_tags.some(tag => collection.includes(tag))) {
-            //     $this.hide();
-            // }
+            if (collection.length > 0 && !item_collection.some(tag => collection.includes(tag))) {
+                $this.hide();
+            }
         });
 
         setTimeout(() => $body.removeClass('busy'), 400);
