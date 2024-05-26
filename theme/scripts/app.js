@@ -116,6 +116,10 @@ $(() => {
         let $this = $(e.currentTarget);
         let variant = $this.val();
 
+        console.log(variant)
+
+        $('.js-variation-price').text(window.inventories[variant].price)
+
         let image_id = $this.attr('data-id');
 
         if (image_id) {
@@ -124,8 +128,9 @@ $(() => {
             $productSlider.slick('slickGoTo', image_index, true);
         }
 
-
     });
+
+    if ($('.js-radio:checked').length) $('.js-radio:checked').trigger('change');
 
 
 
@@ -188,9 +193,9 @@ $(() => {
 
 
 
-        console.log('tags:' + tags)
-        console.log('brands:' + brands)
-        console.log('collections:' + collection)
+        // console.log('tags:' + tags)
+        // console.log('brands:' + brands)
+        // console.log('collections:' + collection)
 
         $('.collection__grid__item').each((i, el) => {
 
