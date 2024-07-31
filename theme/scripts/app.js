@@ -153,20 +153,20 @@ $(() => {
     });
 
 
-    $body.on('click', '.js-click-through', (e) => {
-        if ($('#agree').is(':checked')) {
+    // $body.on('click', '.js-click-through', (e) => {
+    //     if ($('#agree').is(':checked')) {
 
-        } else {
-            e.preventDefault();
-            let notyf = new Notyf();
-            notyf.error({
-                message: 'You must agree with the terms and conditions & health and safety guidelines to check out.',
-                duration: 4000,
-                dismissible: true,
-                icon: false
-            });
-        }
-    });
+    //     } else {
+    //         e.preventDefault();
+    //         let notyf = new Notyf();
+    //         notyf.error({
+    //             message: 'You must agree with the terms and conditions & health and safety guidelines to check out.',
+    //             duration: 4000,
+    //             dismissible: true,
+    //             icon: false
+    //         });
+    //     }
+    // });
 
 });
 
