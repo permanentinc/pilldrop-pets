@@ -72,13 +72,14 @@
       >
     </a>
 
-    <h4 class="colour--red">Shop by...</h4>
+    <h4 class="colour--red">Shop by....</h4>
 
     <h6 class="collection__filters__title">Condition</h6>
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Skin and Allergy" id="Skin and Allergy">
       <label for="Skin and Allergy">Skin and Allergy</label>
     </p>
+
     <p class="collection__filters__item">
       <input type="checkbox" class="[ js-filter-tags ]" value="Skin" id="Skin">
       <label for="Skin">Skin</label>
@@ -181,6 +182,8 @@
     Product grid
   {% endcomment %}
   <div class="collection__grid">
+    <h2 class="no-results" style="display:none;">There are no results for the selected filters</h2>
+
     <div class="loader">
       <div id="loader">
         <div id="shadow"></div>

@@ -218,7 +218,19 @@ $(() => {
             }
         });
 
-        setTimeout(() => $body.removeClass('busy'), 400);
+        setTimeout(() => {
+
+            let visible = $('.collection__grid__item:visible').length;
+
+            if (visible === 0) {
+                $('.no-results').show();
+            } else {
+                $('.no-results').hide();
+            }
+
+            $body.removeClass('busy');
+
+        }, 400);
 
     };
 
