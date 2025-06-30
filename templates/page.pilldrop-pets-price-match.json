@@ -46,25 +46,15 @@
         "button_link": ""
       }
     },
-    "1654072419df7eab99": {
-      "type": "text",
-      "settings": {
-        "heading": "Our Story.",
-        "heading_size": "h3",
-        "text": "<p>Kia ora!</p><p>PillDrop’s vision is for healthy, thriving communities and for everyone to have access to a complete pharmacy experience that puts you and your family’s health first. </p><p>Our background and hearts are in community health. Jack has over twelve years’ experience as a community pharmacist and loves helping people of all ages and walks of life stay happy and healthy. Many of his patients that he first met twelve years ago, he still sees and helps today.</p><p>Suzanne, as an experienced nurse, is passionate about helping people stay well and independent for as long as possible. She believes medication management plays a huge part in making people stay safe and well at home.</p><p><br/></p><p><strong>But why stop at helping humans stay healthy? Our pets are an extension of our family – we want them to live happy, healthy lives too.</strong></p><p><br/></p><p><strong>Looking after our much-loved pets. </strong></p><p>With PillDrop Pets, we make it easier and affordable to receive your pets’ medicines.</p><p>PillDrop Pets has many of the features and benefits our customers love about PillDrop. We deliver straight to your door, so you don’t have to leave home to collect the prescription, and easy repeat ordering at your fingertips.  </p><p><strong>Pet care cost - a huge barrier.</strong></p><p>That’s why we’ve said goodbye to the middle person, huge mark-ups, and price games to make accessing the right pet medication simpler and much more affordable. Simply send your original prescription to our pharmacy and we’ll take care of the rest. Your vet can also scan or fax the prescription straight to us. Easy.</p><p><strong>Finally. New Zealand now has a digital pet pharmacy that’s designed with busy families in mind. </strong></p><p>PillDrop Pets communicates between vets, our pharmacy and you. It includes a portable, easy-to-follow medicine diary that tells you exactly what medicines your pets are on, how much supply you have left, and when you should see your vet for more. All these features are available to you anytime and anywhere through your personalised PillDrop Account.</p><p><strong>Building on the success of PillDrop, we’ve planned, designed and built a pet pharmacy model that continues to listen to you, our community.</strong></p><p>The result is PillDrop Pets: affordable and hassle-free pharmacy for New Zealand’s much-loved pets.  </p>",
-        "button_label": "",
-        "button_link": ""
-      }
-    },
     "1654072422ee4ffbdd": {
       "type": "background-image",
       "settings": {
         "image": "shopify://shop_images/banner_slim.jpg",
-        "heading": "Express Delivery",
+        "heading": "Want to price match?",
         "heading_size": "h2",
-        "text": "<p><strong>To your door, anywhere you are in New Zealand.</strong></p>",
-        "button_label": "Shop now",
-        "button_link": "shopify://collections/all"
+        "text": "<p><strong>Email us the link with the competitors<br/>pricing and the quantity needed.</strong></p>",
+        "button_label": "Email us now",
+        "button_link": "mailto:vet@pilldrop.co.nz"
       }
     }
   },
@@ -73,7 +63,6 @@
     "16510315198c1783c4",
     "165407221457d375a5",
     "165407237486075401",
-    "1654072419df7eab99",
     "1654072422ee4ffbdd"
   ],
   "wrapper": "div.main-wrapper"
