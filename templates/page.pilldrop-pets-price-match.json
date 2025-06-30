@@ -26,24 +26,12 @@
         "text": ""
       }
     },
-    "16570076576ba4e626": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify://shop_images/Drlouise_pilldrop.jpg",
-        "heading": "Introducing our veterinarian: Dr Louise Harvey",
-        "heading_size": "h2",
-        "text": "<p>PillDrop Pets is proud to welcome experienced veterinarian, Louise Harvey, to the team. <br/>Louise is excited to join PillDrop Pets and is the perfect fit. She believes every owner should have access to affordable, consistent, and excellent care to support their pets to live longer, happier, and healthier lives. </p>",
-        "button_label": "Read more",
-        "button_link": "shopify://pages/introducing-our-veterinarian-louise-harvey",
-        "layout": "right"
-      }
-    },
     "165407221457d375a5": {
       "type": "text",
       "settings": {
-        "heading": "Our pets are a cherished part of our family.  That undeniable love inspired PillDrop Pets.",
+        "heading": "At PillDrop, we want to ensure you always get the best value for your pets' needs.",
         "heading_size": "h2",
-        "text": "",
+        "text": "<p>Our Price Match Guarantee means that if you find an identical product at a lower price elsewhere, we’ll match that price. Here's how it works:</p>",
         "button_label": "",
         "button_link": ""
       }
@@ -51,9 +39,9 @@
     "165407237486075401": {
       "type": "text",
       "settings": {
-        "heading": "What we do.",
+        "heading": "Terms and Conditions:",
         "heading_size": "h3",
-        "text": "<p>Following the success of PillDrop, New Zealand’s first full-service digital pharmacy, here’s another NZ first: Your full service digital pet pharmacy - PillDrop Pets! </p><p><strong>We’ve done it again!</strong></p><p>We’ve listened to you, our customers, rave about the simplicity, accessibility and affordability of PillDrop. And we know that you want – and deserve – the same level of service and convenience for your pets.</p><p>As proud dog owners ourselves, we know that pets are a central part of the family and we want to give them the best care we can. But no matter how much we love them the reality is managing your pets’ regular medication can be very costly and another job on your to-do list. </p><p><strong>Now you can get pet medication straight to your door.</strong></p><p>For all these reasons, we’ve launched PillDrop Pets where we dispense and deliver pet medication for your cat, dog, or horse* straight to your door. </p><p>We can deliver your pets’ prescription medicines and vet-only nutraceuticals (such as vitamins) to your door anywhere in New Zealand. We deliver in the usual form that you expect – liquid, pill bottles, injections, creams and more. We’re here to make it easy to manage your pets’ health and wellbeing and their long-term conditions, keeping them healthy and happy for longer.  </p><p><strong>Forget the hassle and costly mark-ups.</strong></p><p>While pet medication is not subsidised, PillDrop Pets removes the middle person – and the huge mark-ups – which means we can pass on some serious savings to you. </p><p><strong>We give you an integrated medicine diary for your whole family – including your four-legged friends.</strong></p><p>The other bonus is if you are a PillDrop customer, you can fully integrate your pets’ medicine diary with your family’s personalised PillDrop Account. All the vital medication information for your family members – including the four-legged ones – is now in one easy place.  </p><p>*Currently our services are available to cats, dogs and horses.</p>",
+        "text": "<p>Product Price and Delivery: We match the total cost of the product, including delivery charges.</p><ul><li>Exclusions: This guarantee does not apply to gifts with purchase, membership-based discounts, or special offers.</li><li>Product Matching: The competitor’s product must exactly match ours—same brand, size, quantity, color, and must be new and authentic. The product must also be from the same manufacturer and shipped from the same country of origin.</li><li>Publicly Advertised Price: The competitor’s price must be publicly advertised on their valid website. Screenshots will not be accepted.</li><li>Competitor Location: The competitor must operate within New Zealand and use New Zealand currency.</li><li>Total Cost: We match the competitor’s final price, including GST, taxes, fees, and delivery.</li><li>Product Availability: The competitor’s product must be in stock at the time of comparison.</li><li>One-Time Price Match: Approved price matches are a one-off and do not apply to future purchases.</li><li>Discretion: PillDrop reserves the right to refuse a price match if it would result in a sale below cost price. This includes bulk-buying retailers or platforms like supermarkets, Facebook Marketplace, and others.</li><li>Exclusions: Price matches do not apply to expired offers, auction listings, trade quotes, wholesale quantities, liquidation or clearance items, or any products from international retailers.</li><li>Resellers and Retailers: Price matches are not available for resellers or retailers (including TradeMe and Facebook Marketplace).</li><li>Quantity Limitations: PillDrop may limit the quantity of products available for price matching.</li><li>Final Decision:  All price match offers are at the discretion of our customer care team, and we will confirm the decision via email.</li></ul><h3>How to Submit a Price Match Request:</h3><p>Before submitting a request, please have the following details ready:</p><ul><li>Website link to the competitor’s price</li><li>Quantity needed</li></ul><p>Send an email to <a href=\"mailto:vet@pilldrop.co.nz\" target=\"_blank\">vet@pilldrop.co.nz</a></p><p>Once you have this information, submit your via email. Our team will get back to you with a decision within 24 hours.<br/></p><p><strong>Please note:</strong> This guarantee is only valid on the same day as the lower price is advertised.</p>",
         "button_label": "",
         "button_link": ""
       }
@@ -83,7 +71,6 @@
   "order": [
     "main",
     "16510315198c1783c4",
-    "16570076576ba4e626",
     "165407221457d375a5",
     "165407237486075401",
     "1654072419df7eab99",
