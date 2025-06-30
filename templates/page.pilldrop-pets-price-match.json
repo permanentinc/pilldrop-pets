@@ -18,10 +18,10 @@
       "settings": {
         "image": "shopify://shop_images/pilldrop_pet_prescriptions_aboutus.jpg",
         "image_position": "left",
-        "subheading": "<p><strong>OUR STORY</strong></p>",
+        "subheading": "<p><strong>PILLDROP PETS</strong></p>",
         "colour": "light",
         "subheading_size": "h6",
-        "heading": "<p>About us</p>",
+        "heading": "<p>Price Match Guarantee</p>",
         "heading_size": "h1",
         "text": ""
       }
