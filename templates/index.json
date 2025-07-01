@@ -189,7 +189,7 @@
         "icon": "shopify://shop_images/image.png",
         "heading_size": "h2",
         "text_left": "<p><strong>We won’t be beaten on price</strong></p><p><a href=\"/pages/pilldrop-pets-price-match-guarantee\" title=\"PillDrop Pets Price Match Guarantee\">Terms & Conditions</a></p>",
-        "button_label": "SUBMIT PRICE MATCH",
+        "button_label": "LEARN MORE",
         "text_right": "<p>Before submitting a request, please have the following details ready:</p><ul><li>Website link to the competitor’s price</li><li>Quantity needed</li><li>Send an email to vet@pilldrop.co.nz</li></ul>",
         "button_link": "shopify://pages/pilldrop-pets-price-match-guarantee"
       }
