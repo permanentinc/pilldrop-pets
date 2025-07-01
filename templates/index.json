@@ -62,6 +62,19 @@
       ],
       "settings": {}
     },
+    "price_match_FiP6Wz": {
+      "type": "price-match",
+      "name": "PriceMatch",
+      "settings": {
+        "heading": "PillDrop Pets Price Match",
+        "icon": "shopify://shop_images/image.png",
+        "heading_size": "h2",
+        "text_left": "<p><strong>We won’t be beaten on price</strong></p><p><a href=\"/pages/pilldrop-pets-price-match-guarantee\" title=\"PillDrop Pets Price Match Guarantee\">Terms & Conditions</a></p>",
+        "button_label": "LEARN MORE",
+        "text_right": "<p>Before submitting a request, please have the following details ready:</p><ul><li>Website link to the competitor’s price</li><li>Quantity needed</li><li>Send an email to vet@pilldrop.co.nz</li></ul>",
+        "button_link": "shopify://pages/pilldrop-pets-price-match-guarantee"
+      }
+    },
     "165268048583a69a14": {
       "type": "scroller",
       "blocks": {
@@ -180,28 +193,15 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
-    },
-    "price_match_FiP6Wz": {
-      "type": "price-match",
-      "name": "PriceMatch",
-      "settings": {
-        "heading": "PillDrop Pets Price Match",
-        "icon": "shopify://shop_images/image.png",
-        "heading_size": "h2",
-        "text_left": "<p><strong>We won’t be beaten on price</strong></p><p><a href=\"/pages/pilldrop-pets-price-match-guarantee\" title=\"PillDrop Pets Price Match Guarantee\">Terms & Conditions</a></p>",
-        "button_label": "LEARN MORE",
-        "text_right": "<p>Before submitting a request, please have the following details ready:</p><ul><li>Website link to the competitor’s price</li><li>Quantity needed</li><li>Send an email to vet@pilldrop.co.nz</li></ul>",
-        "button_link": "shopify://pages/pilldrop-pets-price-match-guarantee"
-      }
     }
   },
   "order": [
     "16490384482dbd99cf",
     "1652742560da5a5df4",
+    "price_match_FiP6Wz",
     "165268048583a69a14",
     "16492312090f4dccd0",
     "165274939840989f58",
-    "1652752504e0ced0e0",
-    "price_match_FiP6Wz"
+    "1652752504e0ced0e0"
   ]
 }
