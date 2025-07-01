@@ -1,0 +1,39 @@
+.price-match {
+    display: none;
+    
+    &__wrap {
+        padding: 4rem 2rem;
+        margin: 0 auto;
+        max-width: var(--inner-content-width);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+
+            &__left {
+                width: 50%;
+                padding-right: 2rem;
+                position: relative;    
+
+                @include media($md, max) {
+                    width: 100%;
+                    padding-right: 0;
+                }
+            }
+
+            &__right {
+                width: 50%;
+                padding-left: 2rem;
+                position: relative;
+
+
+                @include media($md, max) {
+                    width: 100%;
+                    padding-left: 0;
+                }
+               
+            }
+        }
+    }
+}

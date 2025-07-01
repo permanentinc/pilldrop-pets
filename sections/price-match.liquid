@@ -1,0 +1,101 @@
+{% comment %}
+  Price match block
+{% endcomment %}
+
+<div class="price-match price-match--{{ section.id }}">
+  <div class="price-match__wrap">
+    <div class="price-match__wrap__left">
+      <div class="icons-with-image__text__item__icon">
+        <img
+          loading="lazy"
+          src="{{ section.settings.image | image_url: width: 200 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          width="200"
+          height="200"
+        >
+      </div>
+      <div class="price-match__wrap__left__text">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="{{ section.settings.heading_size }} colour--white">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        {{ section.settings.text_left }}
+      </div>
+    </div>
+    <div class="price-match__wrap__right">
+      {{ section.settings.text_right }}
+      {%- if section.settings.button_label != blank -%}
+        <p>
+          <a href="{{ section.settings.button_link }}" class="button button--yellow">
+            {{- section.settings.button_label -}}
+          </a>
+        </p>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "PillDrop Pets Price Match",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "h1"
+        },
+        {
+          "value": "h2",
+          "label": "h2"
+        },
+        {
+          "value": "h3",
+          "label": "h3"
+        }
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "richtext",
+      "id": "text_left",
+      "label": "Text left",
+      "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "richtext",
+      "id": "text_right",
+      "label": "Text right",
+      "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text"
+    }
+  ]
+}
+{% endschema %}

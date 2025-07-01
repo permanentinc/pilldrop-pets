@@ -1,0 +1,61 @@
+ul {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    ul {
+        margin: 0;
+    }
+
+    > li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            top: 1rem;
+            left: 0rem;
+            background: var(--primary);
+        }
+    }
+}
+
+ol {
+    list-style: none;
+    margin-bottom: 2rem;
+
+    ol {
+        margin: 0;
+    }
+
+    > li {
+        padding-left: 2rem;
+        margin-bottom: 0.2rem;
+        position: relative;
+        counter-increment: counter;
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0rem;
+            content: counter(counter) ".";
+            color: inherit;
+        }
+
+        li {
+            counter-increment: internalcounter;
+
+            &:before {
+                content: counter(internalcounter) ".";
+            }
+        }
+    }
+}

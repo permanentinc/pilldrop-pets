@@ -1,3 +1,4 @@
 !assets/
 settings_data.json
 /node_modules
+.shopify
