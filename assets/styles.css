@@ -78,7 +78,7 @@ html {
   font-variant-ligatures: no-common-ligatures !important; }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: var(--p-size);
   color: var(--text); }
 
@@ -173,6 +173,8 @@ a:not([class]) {
 
 .colour--white {
   color: white !important; }
+  .colour--white a:not([class]) {
+    color: white !important; }
 
 .colour--red,
 .colour--red * {
@@ -2596,6 +2598,9 @@ ol {
       ol > li li:before {
         content: counter(internalcounter) "."; }
 
+.colour--white li:before {
+  background: white; }
+
 /*------------------------------------------------------------------
 Login Page 
 ------------------------------------------------------------------*/
@@ -3129,6 +3134,54 @@ Newsletter popup
       width: 100%; }
     .notyf__dismiss {
       width: 56px; } }
+
+.price-match {
+  background: var(--primary); }
+  .price-match__wrap {
+    padding: 8rem 2rem 4rem;
+    margin: 0 auto;
+    max-width: var(--inner-content-width);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2; }
+    .price-match__wrap__left {
+      width: 55%;
+      padding-right: 2rem;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap; }
+      @media only screen and (max-width: 967px) {
+        .price-match__wrap__left {
+          width: 100%;
+          padding-right: 0; } }
+      .price-match__wrap__left__icon {
+        width: 10rem; }
+        .price-match__wrap__left__icon img {
+          width: 100%;
+          height: auto;
+          display: block;
+          max-width: 15rem; }
+      .price-match__wrap__left__text {
+        width: calc(100% - 10rem);
+        padding-left: 3rem; }
+        @media only screen and (max-width: 967px) {
+          .price-match__wrap__left__text {
+            margin-bottom: 2rem; } }
+    .price-match__wrap__right {
+      width: 45%;
+      padding-left: 2rem;
+      position: relative; }
+      @media only screen and (max-width: 967px) {
+        .price-match__wrap__right {
+          width: 100%;
+          padding-left: 0; }
+          .price-match__wrap__right .hide-mobile {
+            display: none; }
+          .price-match__wrap__right .button, .price-match__wrap__right .shopify-challenge__button {
+            width: 100%;
+            text-align: center; } }
 
 /*------------------------------------------------------------------
 Product

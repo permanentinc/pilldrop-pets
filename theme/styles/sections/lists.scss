@@ -59,3 +59,9 @@ ol {
         }
     }
 }
+
+.colour--white {
+    li:before {
+        background: white;
+    }
+}

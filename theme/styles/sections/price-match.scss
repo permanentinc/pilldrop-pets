@@ -1,8 +1,8 @@
 .price-match {
-    display: none;
-    
+    background: var(--primary);
+
     &__wrap {
-        padding: 4rem 2rem;
+        padding: 8rem 2rem 4rem;
         margin: 0 auto;
         max-width: var(--inner-content-width);
         display: flex;
@@ -11,28 +11,61 @@
         position: relative;
         z-index: 2;
 
-            &__left {
-                width: 50%;
-                padding-right: 2rem;
-                position: relative;    
+        &__left {
+            width: 55%;
+            padding-right: 2rem;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
 
-                @include media($md, max) {
+            @include media($xmd, max) {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            &__icon {
+                width: 10rem;
+
+                @include media($xmd, max) {
+                }
+
+                img {
                     width: 100%;
-                    padding-right: 0;
+                    height: auto;
+                    display: block;
+                    max-width: 15rem;
                 }
             }
 
-            &__right {
-                width: 50%;
-                padding-left: 2rem;
-                position: relative;
+            &__text {
+                width: calc(100% - 10rem);
+                padding-left: 3rem;
 
-
-                @include media($md, max) {
-                    width: 100%;
-                    padding-left: 0;
+                @include media($xmd, max) {
+                    margin-bottom: 2rem;
                 }
-               
+            }
+        }
+
+        &__right {
+            width: 45%;
+            padding-left: 2rem;
+            position: relative;
+
+            @include media($xmd, max) {
+                width: 100%;
+                padding-left: 0;
+
+                .hide-mobile{
+                    display: none;
+                    
+                }
+
+                .button
+                {
+                    width: 100%;
+                    text-align: center;
+                }
             }
         }
     }

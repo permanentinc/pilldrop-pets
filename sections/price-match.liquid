@@ -4,12 +4,12 @@
 
 <div class="price-match price-match--{{ section.id }}">
   <div class="price-match__wrap">
-    <div class="price-match__wrap__left">
-      <div class="icons-with-image__text__item__icon">
+    <div class="price-match__wrap__left colour--white">
+      <div class="price-match__wrap__left__icon">
         <img
           loading="lazy"
-          src="{{ section.settings.image | image_url: width: 200 }}"
-          alt="{{ section.settings.image.alt | escape }}"
+          src="{{ section.settings.icon | image_url: width: 200 }}"
+          alt="{{ section.settings.icon.alt | escape }}"
           width="200"
           height="200"
         >
@@ -21,11 +21,13 @@
         {{ section.settings.text_left }}
       </div>
     </div>
-    <div class="price-match__wrap__right">
-      {{ section.settings.text_right }}
+    <div class="price-match__wrap__right colour--white">
+      <div class="hide-mobile">
+        {{ section.settings.text_right }}
+      </div>
       {%- if section.settings.button_label != blank -%}
         <p>
-          <a href="{{ section.settings.button_link }}" class="button button--yellow">
+          <a href="{{ section.settings.button_link }}" class="button button--white">
             {{- section.settings.button_label -}}
           </a>
         </p>
