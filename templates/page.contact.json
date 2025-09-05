@@ -1,28 +1,27 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
-      "settings": {
-      }
+      "settings": {}
     },
     "1654671258afe5a2f9": {
       "type": "banner-slim",
       "settings": {
-        "image": "shopify:\/\/shop_images\/cat_banner_lifestyle.png",
+        "image": "shopify://shop_images/cat_banner_lifestyle.png",
         "image_position": "left",
-        "subheading": "<p>CONTACT US<\/p>",
+        "subheading": "<p>CONTACT US</p>",
         "colour": "light",
         "subheading_size": "h6",
-        "heading": "<p>Get in touch<\/p>",
+        "heading": "<p>Get in touch</p>",
         "heading_size": "h1",
         "text": ""
       }
@@ -30,7 +29,7 @@
     "6b616a48-4c22-49fd-a95b-9a0e9ce3b501": {
       "type": "mailchimp-embed",
       "settings": {
-        "copy": "<p><em>Reach a PillDrop vet<\/em><\/p><p><strong>Email<\/strong> <a href=\"mailto:vet@pilldrop.co.nz\" target=\"_blank\">vet@pilldrop.co.nz<br\/><br\/><\/a><em><br\/>Get in touch<\/em><\/p><p><strong>Auckland: <\/strong><a href=\"tel:092769090\">09 276 9090<\/a><br\/><strong>Christchurch:<\/strong> <a href=\"tel:036669292\">03 666 9292<\/a><br\/><strong>Toll Free:<\/strong> <a href=\"tel:0800745537\">0800 745 5<br\/><br\/><\/a><em><br\/>Send prescriptions to<\/em><\/p><p><strong>Prescriptions coming from your vet<br\/><\/strong>Email: <a href=\"mailto:vet@pilldrop.co.nz?subject=Pilldrop%20Enquiry\" title=\"mailto:vet@pilldrop.co.nz?subject=Pilldrop%20Enquiry\">vet@pilldrop.co.nz<\/a><br\/>Fax: 09 276 9292<\/p><p>OR<\/p><p><strong>Prescriptions coming from you<\/strong><br\/>PO Box 11521<br\/>Ellerslie, Auckland 1051<\/p><p><em><br\/>PillDrop Pharmacy<\/em><\/p><p><strong>Auckland<\/strong><br\/>3 Dryden place, <br\/>Mt Wellington, Auckland<br\/><br\/><strong>Christchurch<\/strong><br\/>6\/251 Blenheim Road<br\/>Riccarton, Christchurch<\/p>"
+        "copy": "<p><em>Reach a PillDrop vet</em></p><p><strong>Email</strong> <a href=\"mailto:vet@pilldrop.co.nz\" target=\"_blank\">vet@pilldrop.co.nz<br/><br/></a><em><br/>Get in touch</em></p><p><strong>Auckland: </strong><a href=\"tel:092769090\">09 276 9090</a><br/><strong>Christchurch:</strong> <a href=\"tel:036669292\">03 666 9292</a><br/><strong>Toll Free:</strong> <a href=\"tel:0800745537\">0800 745 537<br/><br/></a><em><br/>Send prescriptions to</em></p><p><strong>Prescriptions coming from your vet<br/></strong>Email: <a href=\"mailto:vet@pilldrop.co.nz?subject=Pilldrop%20Enquiry\" title=\"mailto:vet@pilldrop.co.nz?subject=Pilldrop%20Enquiry\">vet@pilldrop.co.nz</a><br/>Fax: 09 276 9292</p><p>OR</p><p><strong>Prescriptions coming from you</strong><br/>PO Box 11521<br/>Ellerslie, Auckland 1051</p><p><em><br/>PillDrop Pharmacy</em></p><p><strong>Auckland</strong><br/>3 Dryden place, <br/>Mt Wellington, Auckland<br/><br/><strong>Christchurch</strong><br/>6/251 Blenheim Road<br/>Riccarton, Christchurch</p>"
       }
     },
     "165467105679d9cbc9": {
@@ -39,10 +38,10 @@
       "settings": {
         "heading_left": "Reach a PillDrop vet",
         "heading_left_size": "h3",
-        "text_left": "<p><strong>Email<\/strong> <a href=\"mailto:vet@pilldrop.co.nz\" target=\"_blank\">vet@pilldrop.co.nz<\/a><\/p>",
+        "text_left": "<p><strong>Email</strong> <a href=\"mailto:vet@pilldrop.co.nz\" target=\"_blank\">vet@pilldrop.co.nz</a></p>",
         "heading_right": "Get in touch",
         "heading_right_size": "h3",
-        "text_right": "<p><strong>Auckland: <\/strong><a href=\"tel:092769090\">09 276 9090<\/a><br\/><strong>Christchurch:<\/strong> <a href=\"tel:036669292\">03 666 9292<\/a><br\/><strong>Toll Free:<\/strong> <a href=\"tel:0800745537\">0800 745 537<\/a><\/p>"
+        "text_right": "<p><strong>Auckland: </strong><a href=\"tel:092769090\">09 276 9090</a><br/><strong>Christchurch:</strong> <a href=\"tel:036669292\">03 666 9292</a><br/><strong>Toll Free:</strong> <a href=\"tel:0800745537\">0800 745 537</a></p>"
       }
     },
     "1654671145eb99ca1b": {
@@ -51,17 +50,16 @@
       "settings": {
         "heading_left": "Send prescriptions to",
         "heading_left_size": "h3",
-        "text_left": "<p><strong>Prescriptions coming from your vet<br\/><\/strong>Email: <a href=\"mailto:delivery@pilldrop.co.nz?subject=Pilldrop%20Enquiry\">delivery@pilldrop.co.nz<\/a><br\/>Fax: 09 276 9292<\/p><p>OR<\/p><p><strong>Prescriptions coming from you<\/strong><br\/>PO Box 11521<br\/>Ellerslie, Auckland 1051<\/p>",
+        "text_left": "<p><strong>Prescriptions coming from your vet<br/></strong>Email: <a href=\"mailto:delivery@pilldrop.co.nz?subject=Pilldrop%20Enquiry\">delivery@pilldrop.co.nz</a><br/>Fax: 09 276 9292</p><p>OR</p><p><strong>Prescriptions coming from you</strong><br/>PO Box 11521<br/>Ellerslie, Auckland 1051</p>",
         "heading_right": "PillDrop Pharmacy",
         "heading_right_size": "h3",
-        "text_right": "<p><strong>Auckland<\/strong><br\/>4 Hotunui Drive<br\/>Mt. Wellington, Auckland<br\/><br\/><strong>Christchurch<\/strong><br\/>6\/251 Blenheim Road<br\/>Riccarton, Christchurch<br\/><\/p>"
+        "text_right": "<p><strong>Auckland</strong><br/>4 Hotunui Drive<br/>Mt. Wellington, Auckland<br/><br/><strong>Christchurch</strong><br/>6/251 Blenheim Road<br/>Riccarton, Christchurch<br/></p>"
       }
     },
     "form": {
       "type": "contact-form",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
