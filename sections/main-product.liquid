@@ -137,7 +137,7 @@
   
             {% endform %}
 
-            {% for tag in product.tags %}
+            {% comment %} {% for tag in product.tags %}
 
               {% if tag == 'prescription' %}
                 <p class="warning" style="">
@@ -146,7 +146,7 @@
                 </p>
                 {% endif %}
             
-            {% endfor %}
+            {% endfor %} {% endcomment %}
 
            
 
