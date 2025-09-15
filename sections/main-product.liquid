@@ -89,6 +89,29 @@
             {% endfor %}
 
             <div class="divide"></div>
+
+
+            {% comment %} if product has a 'prescription' tag, show the prescription warning here {% endcomment %}
+            {% if product.tags contains 'prescription' %}
+             
+              <div class="required-prescription">
+                <div class="field">
+                  <input type="checkbox" id="prescription-check-1" name="prescription-check" >
+                  <label for="prescription-check-1">Prescription emailed by pet owner to delivery@pilldrop.co.nz  <br><span>(physical copy required by post before dispatch, 3-4 days for delivery)</span></label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="prescription-check-2" name="prescription-check" >
+                  <label for="prescription-check-2">Prescription emailed directly from Vet Practice <br><span>(recommended,  1-2 days for delivery)</span></label>
+                </div>
+                <div class="field">
+                  <input type="checkbox" id="prescription-check-3" name="prescription-check" >
+                  <label for="prescription-check-3">Repeat on an existing prescription (1-2 days for delivery)</label>
+                </div>
+              </div>
+
+                  <div class="divide"></div>
+            {% endif %}
+
   
             <div class="quantity quantity--inline">
               <a href="#" class="quantity__subtract [ js-change-quantity-inline ]" data-type="subtract">
@@ -101,7 +124,7 @@
             </div>
   
   
-  
+
             <button type="submit" class="button button--yellow [ js-add-to-cart ]">
               {% unless product.available %}
               Sold Out

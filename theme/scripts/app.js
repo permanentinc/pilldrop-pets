@@ -14,6 +14,12 @@ import slick from 'slick-carousel';
 
 $(() => {
 
+
+    $('input[name="prescription-check"]').change((e) => {
+        // uncheck all other checkboxes
+        $('input[name="prescription-check"]').not(e.target).prop('checked', false);
+    });
+
     const scrollHandler = () => {
         let scrollHeight = $('.bannerSlim').height();
         let scrollAmount = window.scrollY;

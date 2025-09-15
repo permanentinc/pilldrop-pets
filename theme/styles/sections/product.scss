@@ -5,6 +5,23 @@ Product
 .product {
     position: relative;
 
+    .required-prescription {
+        margin-bottom: 2rem;
+        .field {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 500;
+            line-height: 1.4;
+
+            span{
+                font-weight: 400;
+                font-size: 1.2rem;
+                color: #555;
+            }
+        }
+    }
+
     .warning {
         position: relative;
         padding: 1rem 2rem;
