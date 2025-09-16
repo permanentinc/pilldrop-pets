@@ -71,7 +71,7 @@ export default class Shop {
     addToCart(e) {
         e.preventDefault();
 
-        if ($('input[name="prescription-check"]:checked').length === 0) {
+        if ($('input[name="prescription-check"]').length && $('input[name="prescription-check"]:checked').length === 0) {
             this.notyf.error({
                 message: 'You must check at least one of the prescription options to proceed.',
                 duration: 4000,
