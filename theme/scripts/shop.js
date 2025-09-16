@@ -5,7 +5,7 @@ import $ from 'jquery';
 import * as templates from './templates';
 import { Notyf } from 'notyf';
 import numeral from 'numeral';
-
+window.$ = $;
 export default class Shop {
     constructor($el) {
         this.$shop = $el;
@@ -71,7 +71,7 @@ export default class Shop {
     addToCart(e) {
         e.preventDefault();
 
-        if ($('input[name="prescription-check"]').length && $('input[name="prescription-check"]:checked').length === 0) {
+        if ($('.js-prescription-checkbox').length && $('.js-prescription-checkbox:checked').length === 0) {
             this.notyf.error({
                 message: 'You must check at least one of the prescription options to proceed.',
                 duration: 4000,
