@@ -193,6 +193,17 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
+    },
+    "awards_block_a4EVTw": {
+      "type": "awards-block",
+      "name": "awards",
+      "settings": {
+        "feature": "shopify://shop_images/pdp_award.png",
+        "image1": "shopify://shop_images/finalist-award.jpg",
+        "image2": "shopify://shop_images/excellence-award.jpg",
+        "image3": "shopify://shop_images/emerging-award.jpg",
+        "image4": "shopify://shop_images/deloitte-award.png"
+      }
     }
   },
   "order": [
@@ -202,6 +213,7 @@
     "165268048583a69a14",
     "16492312090f4dccd0",
     "165274939840989f58",
-    "1652752504e0ced0e0"
+    "1652752504e0ced0e0",
+    "awards_block_a4EVTw"
   ]
 }
