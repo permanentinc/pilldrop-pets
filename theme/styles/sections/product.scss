@@ -100,13 +100,14 @@ Product
                     margin-top: 8rem;
 
                     &__sale {
-                        background: var(--green-dark);
-                        color: white;
-                        padding: 1rem 2rem;
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        font-weight: 600;
+                        background: var(--primary);
+                    color: white;
+                    padding: 0.8rem 1.5rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-weight: 600;
+                    font-size: 1.2rem;
                     }
 
                     img {

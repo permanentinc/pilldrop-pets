@@ -122,7 +122,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .customer th,
   .customer td:first-of-type {
     text-align: left;
@@ -191,7 +190,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .customer tfoot tr:first-of-type td,
   .customer tfoot tr:first-of-type th {
     padding-top: 2.4rem;
@@ -203,7 +201,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .customer tfoot tr:last-of-type td,
   .customer tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
@@ -213,7 +210,7 @@
 /* works around colspan phantom border issues */
 .customer thead::after,
 .customer tfoot::before {
-  content: ' ';
+  content: " ";
   height: 0.1rem;
   width: 100%;
   display: block;
@@ -223,7 +220,6 @@
 }
 
 @media screen and (forced-colors: active) {
-
   .customer thead::after,
   .customer tfoot::before {
     background: CanvasText;
@@ -232,7 +228,6 @@
 
 /* mobile table overrides */
 @media screen and (max-width: 749px) {
-
   .customer thead,
   .customer th,
   .customer tfoot td:first-of-type {
@@ -322,7 +317,7 @@
 }
 
 .customer .pagination li [aria-current]::after {
-  content: '';
+  content: "";
   display: block;
   width: 2rem;
   height: 0.01rem;
@@ -340,7 +335,7 @@
   width: fit-content;
 }
 
-.login a[href='#recover'] {
+.login a[href="#recover"] {
   margin-left: 0;
   margin-right: 0;
 }
@@ -390,7 +385,7 @@
   margin-bottom: 0;
 }
 
-.activate button[name='decline'],
+.activate button[name="decline"],
 .addresses li > button,
 .addresses form button[type] {
   background-color: rgba(var(--color-background), var(--alpha-button-background));
@@ -398,7 +393,7 @@
 }
 
 @media only screen and (min-width: 750px) {
-  .activate button[name='decline'] {
+  .activate button[name="decline"] {
     margin-top: inherit;
     margin-left: 1rem;
   }
@@ -475,7 +470,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .account thead th:last-child,
   .account td:last-child {
     text-align: right;
@@ -504,7 +498,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .order thead th:nth-last-child(-n + 3),
   .order td:nth-last-child(-n + 3) {
     text-align: right;
@@ -519,7 +512,6 @@
 }
 
 @media screen and (min-width: 750px) {
-
   .order tfoot tr:last-of-type td,
   .order tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
@@ -681,8 +673,8 @@
   margin-right: 1rem;
 }
 
-label[for='AddressCountryNew'],
-label[for='AddressProvinceNew'] {
+label[for="AddressCountryNew"],
+label[for="AddressProvinceNew"] {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
@@ -708,11 +700,15 @@ li[data-address] {
   margin-top: 5rem;
 }
 
-.addresses [aria-expanded='false'] ~ div[id] {
+li[data-address]:before {
   display: none;
 }
 
-.addresses [aria-expanded='true'] ~ div[id] {
+.addresses [aria-expanded="false"] ~ div[id] {
+  display: none;
+}
+
+.addresses [aria-expanded="true"] ~ div[id] {
   display: block;
 }
 
@@ -736,7 +732,7 @@ li[data-address] > h2 {
   margin-bottom: 0;
 }
 
-.addresses input[type='checkbox'] {
+.addresses input[type="checkbox"] {
   margin-top: 2rem;
   margin-left: 0;
 }

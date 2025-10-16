@@ -34,7 +34,9 @@
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <table role="table" class="order-history">
-            <caption class="visually-hidden">Orders</caption>
+            <caption class="visually-hidden">
+              Orders
+            </caption>
             <thead role="rowgroup">
               <tr role="row">
                 <th id="ColumnOrder" scope="col" role="columnheader">Order number</th>
@@ -42,6 +44,7 @@
                 <th id="ColumnPayment" scope="col" role="columnheader">Payment Status</th>
                 <th id="ColumnFulfillment" scope="col" role="columnheader">Fulfillment Status</th>
                 <th id="ColumnTotal" scope="col" role="columnheader">Total</th>
+                <th id="ColumnTotal" scope="col" role="columnheader">Reorder</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
@@ -67,7 +70,25 @@
                     {{ order.fulfillment_status_label }}
                   </td>
                   <td headers="RowOrder ColumnTotal" role="cell" data-label="Total">
-                    {{ order.total_price | money_with_currency }}</td>
+                    {{ order.total_price | money_with_currency }}
+                  </td>
+                  <td headers="RowOrder ColumnTotal" role="cell" data-label="Reorder">
+                    <button
+                      class="button [ js-reorder ]"
+                      data-id="{{ order.id }}"
+                      data-items='
+                        [
+                          {% for line_item in order.line_items %}
+                            {"id": {{ line_item.variant_id }}, "quantity": {{ line_item.quantity }}}
+                            {% unless forloop.last %},{% endunless %}
+                          {% endfor %}
+                        ]
+                      '
+                      style="margin:0;font-size:1.2rem;padding:0.8rem 1.2rem"
+                    >
+                      Reorder
+                    </button>
+                  </td>
                 </tr>
               {%- endfor -%}
             </tbody>
@@ -78,8 +99,8 @@
 
         {%- if paginate.pages > 1 -%}
           {%- if paginate.parts.size > 0 -%}
-              <nav class="pagination" role="navigation" aria-label="Pagination">
-                <ul role="list">
+            <nav class="pagination" role="navigation" aria-label="Pagination">
+              <ul role="list">
                 {%- if paginate.previous -%}
                   <li>
                     <a href="{{ paginate.previous.url }}" aria-label="Previous">
@@ -106,15 +127,15 @@
 
                 {%- if paginate.next -%}
                   <li>
-                    <a href="{{ paginate.next.url }}" aria-label="Next" >
+                    <a href="{{ paginate.next.url }}" aria-label="Next">
                       <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
                       </svg>
                     </a>
                   </li>
                 {%- endif -%}
-                </ul>
-              </nav>
+              </ul>
+            </nav>
           {%- endif -%}
         {%- endif -%}
       {% endpaginate %}
@@ -129,7 +150,6 @@
         <b>Addresses ({{ customer.addresses_count }})</b>
       </a>
     </div>
-
   </div>
 </div>
 

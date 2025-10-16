@@ -14,6 +14,36 @@ import slick from 'slick-carousel';
 
 $(() => {
 
+    document.querySelectorAll('.js-reorder').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            event.preventDefault();
+            const items = JSON.parse(button.dataset.items);
+
+            console.log(items)
+
+
+            try {
+                const response = await fetch('/cart/add.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ items })
+                });
+
+                if (!response.ok) throw new Error('Failed to add order items');
+                const data = await response.json();
+                console.log('Reorder success:', data);
+
+                // Redirect or show confirmation
+                window.location.href = '/cart';
+            } catch (error) {
+                console.error('Reorder error:', error);
+                alert('Could not reorder. Please try again.');
+            }
+        });
+    });
 
     $('input[name="prescription-check"]').change((e) => {
         // uncheck all other checkboxes
