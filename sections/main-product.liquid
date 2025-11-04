@@ -295,12 +295,9 @@
       "@type": "Product",
       "name": {{ product.title | json }},
       "url": {{ shop.url | append: product.url | json }},
-      {%- if product.featured_media -%}
-        {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
         "image": [
-          {{ product.featured_media | image_url: media_size | prepend: "https:" | json }}
+          https:{{ page_image | image_url }}
         ], 
-      {%- endif -%}
       "description": {{ product.description | strip_html | json }},
       {%- if current_variant.sku != blank -%}
         "sku": {{ current_variant.sku | json }},
