@@ -30,14 +30,25 @@
         "16527425609378dfb3-0": {
           "type": "hero_item",
           "settings": {
+            "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_b2a4130b-d59d-49b8-a45e-a6a425e8e0a5.jpg",
             "heading": "Cat shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/cats"
           }
         },
+        "hero_item_bCrw7d": {
+          "type": "hero_item",
+          "settings": {
+            "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_3775cfe8-535c-41a6-828c-1c5044831cc5.jpg",
+            "heading": "Cat shop",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
         "16527425609378dfb3-1": {
           "type": "hero_item",
           "settings": {
+            "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_edc4484d-e107-4f52-9bb3-2b953ffea8cb.jpg",
             "heading": "Dog shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/dogs"
@@ -46,6 +57,7 @@
         "16527425609378dfb3-2": {
           "type": "hero_item",
           "settings": {
+            "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_e5e25523-a2ff-4086-99b2-01da4f9eab65.jpg",
             "heading": "Horse Shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/horses"
@@ -54,6 +66,7 @@
       },
       "block_order": [
         "16527425609378dfb3-0",
+        "hero_item_bCrw7d",
         "16527425609378dfb3-1",
         "16527425609378dfb3-2"
       ],
@@ -64,6 +77,7 @@
       "name": "PriceMatch",
       "settings": {
         "heading": "PillDrop Pets Price Match",
+        "icon": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_b6c79a2c-6a21-426a-874e-b1153d83fffb.jpg",
         "heading_size": "h2",
         "text_left": "<p><strong>We won’t be beaten on price</strong></p><p><a href=\"/pages/pilldrop-pets-price-match-guarantee\" title=\"PillDrop Pets Price Match Guarantee\">Terms & Conditions</a></p>",
         "button_label": "LEARN MORE",
@@ -77,6 +91,7 @@
         "1652680485ef574f60-0": {
           "type": "scroller_item",
           "settings": {
+            "icon": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_869b1c4e-7b11-4515-b0ed-db795ec6534e.jpg",
             "heading": "Every Day Low Prices on Pet Meds",
             "content": "<p>Save upto 50% on prescription medications.</p>",
             "button_label": "",
@@ -86,6 +101,7 @@
         "1652680485ef574f60-1": {
           "type": "scroller_item",
           "settings": {
+            "icon": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_beb85ba3-1de8-4301-a204-d9d80d10bcf1.jpg",
             "heading": "NZ wide delivery",
             "content": "<p>Fast delivery to your door anywhere you are in NZ.</p>",
             "button_label": "",
@@ -96,6 +112,7 @@
           "type": "scroller_item",
           "disabled": true,
           "settings": {
+            "icon": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_4b0e6c5e-d1d4-48e3-ad82-9fd4d4504a98.jpg",
             "heading": "Free shipping",
             "content": "<p>Free shipping on all orders above $50.</p>",
             "button_label": "",
@@ -105,6 +122,7 @@
         "1652680485ef574f60-3": {
           "type": "scroller_item",
           "settings": {
+            "icon": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_3df1400a-18f7-42c5-941e-d5276ef350ce.jpg",
             "heading": "Fully Licensed Pet Pharmacy",
             "content": "<p>We are a fully licensed pet pharmacy.</p>",
             "button_label": "",
@@ -119,6 +137,7 @@
         "1652680485ef574f60-3"
       ],
       "settings": {
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_53fb7238-22ed-47ce-b21e-2a8ae5970b2c.jpg",
         "subheading": "IT'S SIMPLE",
         "heading": "Why choose PillDrop Pets",
         "content": "<p>Say goodbye to huge mark-ups and price games to make accessing the right pet medication simpler and much more affordable.</p>"
@@ -161,11 +180,15 @@
       "type": "icons-with-image",
       "settings": {
         "heading": "How it works",
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_1927716b-e882-493e-9945-1ef217d731ae.jpg",
         "heading_size": "h2",
+        "image1": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_8e8860b7-21f2-42e5-a5f8-e98791f021f1.jpg",
         "heading1": "Shop for the product you need",
         "text1": "<p>Place your order.</p>",
+        "image2": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_a7b2dcc2-30b6-484f-bfc8-14e8c80191d1.jpg",
         "heading2": "Send your prescription to  PillDrop, there are 2 ways how:",
         "text2": "<p>Ask your vet to send the prescription directly to PillDrop:<br/>Email: <a href=\"mailto:delivery@pilldrop.co.nz\" title=\"mailto:delivery@pilldrop.co.nz\">delivery@pilldrop.co.nz</a>  <br/>Fax: <a href=\"tel:09 276 9292\" title=\"tel:09 276 9292\">09 276 9292</a></p><p><em>or</em> Post the prescription to:<br/>PO Box: 11521, Ellerslie , Auckland 1051</p>",
+        "image3": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_b8779cd2-6909-4839-b929-dbe5a2ce2403.jpg",
         "heading3": "Delivered",
         "text3": "<p>Your pet medications will be delivered straight to your door anywhere you are in New Zealand.</p>"
       }
@@ -173,6 +196,7 @@
     "1652752504e0ced0e0": {
       "type": "background-image",
       "settings": {
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_1dc4a726-0c2c-4530-b9ad-04bb64d69c6b.jpg",
         "heading": "Express Delivery",
         "heading_size": "h2",
         "text": "<p><strong>Flat rate shipping $7.50 nationwide.</strong></p>",
@@ -183,7 +207,13 @@
     "awards_block_a4EVTw": {
       "type": "awards-block",
       "name": "awards",
-      "settings": {}
+      "settings": {
+        "feature": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_5eeab09e-c92a-4f52-a478-387fd69edaae.jpg",
+        "image1": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_ac530e1a-5351-44dd-bf02-bea8bc6ad249.jpg",
+        "image2": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_705d7011-36bc-4ebf-8dcf-cb8902fb275c.jpg",
+        "image3": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_ac3edd65-6f9e-4048-ad63-2090d34fe97a.jpg",
+        "image4": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_c47ac5e4-2fd6-43e8-a630-3aa9fd050c7b.jpg"
+      }
     }
   },
   "order": [
