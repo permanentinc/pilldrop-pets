@@ -12,7 +12,7 @@
     "16490384482dbd99cf": {
       "type": "banner",
       "settings": {
-        "image": "shopify://shop_images/home_page_banner.jpg",
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash.jpg",
         "video_id": "",
         "heading": "<p>No middleman.<br/>No price games.<br/>Huge savings.</p>",
         "heading_size": "h1",
@@ -30,7 +30,6 @@
         "16527425609378dfb3-0": {
           "type": "hero_item",
           "settings": {
-            "image": "shopify://shop_images/Artboard.jpg",
             "heading": "Cat shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/cats"
@@ -39,7 +38,6 @@
         "16527425609378dfb3-1": {
           "type": "hero_item",
           "settings": {
-            "image": "shopify://shop_images/Artboard_Copy_4.jpg",
             "heading": "Dog shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/dogs"
@@ -48,7 +46,6 @@
         "16527425609378dfb3-2": {
           "type": "hero_item",
           "settings": {
-            "image": "shopify://shop_images/Artboard_Copy_5.jpg",
             "heading": "Horse Shop",
             "button_label": "SHOP NOW",
             "button_link": "shopify://collections/horses"
@@ -67,7 +64,6 @@
       "name": "PriceMatch",
       "settings": {
         "heading": "PillDrop Pets Price Match",
-        "icon": "shopify://shop_images/image.png",
         "heading_size": "h2",
         "text_left": "<p><strong>We won’t be beaten on price</strong></p><p><a href=\"/pages/pilldrop-pets-price-match-guarantee\" title=\"PillDrop Pets Price Match Guarantee\">Terms & Conditions</a></p>",
         "button_label": "LEARN MORE",
@@ -81,7 +77,6 @@
         "1652680485ef574f60-0": {
           "type": "scroller_item",
           "settings": {
-            "icon": "shopify://shop_images/Artboard_0308d052-9620-4795-869f-c052825f6de0.png",
             "heading": "Every Day Low Prices on Pet Meds",
             "content": "<p>Save upto 50% on prescription medications.</p>",
             "button_label": "",
@@ -91,7 +86,6 @@
         "1652680485ef574f60-1": {
           "type": "scroller_item",
           "settings": {
-            "icon": "shopify://shop_images/Artboard_Copy_76485bd0-9d30-498d-89d4-0dd82f94fcfc.png",
             "heading": "NZ wide delivery",
             "content": "<p>Fast delivery to your door anywhere you are in NZ.</p>",
             "button_label": "",
@@ -102,7 +96,6 @@
           "type": "scroller_item",
           "disabled": true,
           "settings": {
-            "icon": "shopify://shop_images/Artboard_Copy_2_6cbc8313-bea2-4135-85ae-9b3594971232.png",
             "heading": "Free shipping",
             "content": "<p>Free shipping on all orders above $50.</p>",
             "button_label": "",
@@ -112,7 +105,6 @@
         "1652680485ef574f60-3": {
           "type": "scroller_item",
           "settings": {
-            "icon": "shopify://shop_images/Artboard_Copy_3_daa30d64-c745-49d7-9adc-99b165e2c484.png",
             "heading": "Fully Licensed Pet Pharmacy",
             "content": "<p>We are a fully licensed pet pharmacy.</p>",
             "button_label": "",
@@ -127,7 +119,6 @@
         "1652680485ef574f60-3"
       ],
       "settings": {
-        "image": "shopify://shop_images/sroller.jpg",
         "subheading": "IT'S SIMPLE",
         "heading": "Why choose PillDrop Pets",
         "content": "<p>Say goodbye to huge mark-ups and price games to make accessing the right pet medication simpler and much more affordable.</p>"
@@ -170,15 +161,11 @@
       "type": "icons-with-image",
       "settings": {
         "heading": "How it works",
-        "image": "shopify://shop_images/dog.jpg",
         "heading_size": "h2",
-        "image1": "shopify://shop_images/Artboard_e714124e-35da-4abc-b224-b844f91964f6.png",
         "heading1": "Shop for the product you need",
         "text1": "<p>Place your order.</p>",
-        "image2": "shopify://shop_images/Artboard_Copy_6.png",
         "heading2": "Send your prescription to  PillDrop, there are 2 ways how:",
         "text2": "<p>Ask your vet to send the prescription directly to PillDrop:<br/>Email: <a href=\"mailto:delivery@pilldrop.co.nz\" title=\"mailto:delivery@pilldrop.co.nz\">delivery@pilldrop.co.nz</a>  <br/>Fax: <a href=\"tel:09 276 9292\" title=\"tel:09 276 9292\">09 276 9292</a></p><p><em>or</em> Post the prescription to:<br/>PO Box: 11521, Ellerslie , Auckland 1051</p>",
-        "image3": "shopify://shop_images/Artboard_Copy_7.png",
         "heading3": "Delivered",
         "text3": "<p>Your pet medications will be delivered straight to your door anywhere you are in New Zealand.</p>"
       }
@@ -186,7 +173,6 @@
     "1652752504e0ced0e0": {
       "type": "background-image",
       "settings": {
-        "image": "shopify://shop_images/woof.jpg",
         "heading": "Express Delivery",
         "heading_size": "h2",
         "text": "<p><strong>Flat rate shipping $7.50 nationwide.</strong></p>",
@@ -197,13 +183,7 @@
     "awards_block_a4EVTw": {
       "type": "awards-block",
       "name": "awards",
-      "settings": {
-        "feature": "shopify://shop_images/pdp_award.png",
-        "image1": "shopify://shop_images/finalist-award.jpg",
-        "image2": "shopify://shop_images/excellence-award.jpg",
-        "image3": "shopify://shop_images/emerging-award.jpg",
-        "image4": "shopify://shop_images/deloitte-award.png"
-      }
+      "settings": {}
     }
   },
   "order": [
