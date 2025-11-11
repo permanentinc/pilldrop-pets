@@ -1,13 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
       "type": "banner-slim",
       "settings": {
-        "image": "shopify:\/\/shop_images\/horse_banner_3bf7f774-3e06-4bcc-805c-cbd979c5197e.jpg",
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_da3645e3-ebd8-4044-aa5d-6d3dd1df2142.jpg",
+        "image_position": "left",
         "subheading": "",
         "colour": "dark",
         "subheading_size": "h4",
-        "heading": "<p><strong>Horse shop.<\/strong><\/p>",
+        "heading": "<p><strong>Horse shop.</strong></p>",
         "heading_size": "h1",
         "text": ""
       }
