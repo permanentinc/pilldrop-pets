@@ -1,13 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
       "type": "banner-slim",
       "settings": {
-        "image": "shopify:\/\/shop_images\/cat_banner.jpg",
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_2aaad496-8546-44c9-bdb3-91cf74085248.jpg",
+        "image_position": "left",
         "subheading": "",
         "colour": "dark",
         "subheading_size": "h4",
-        "heading": "<p><strong>Cat shop.<\/strong><\/p>",
+        "heading": "<p><strong>Cat shop.</strong></p>",
         "heading_size": "h1",
         "text": ""
       }

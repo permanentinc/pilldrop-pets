@@ -1,12 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "banner": {
       "type": "banner-slim",
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_slim.jpg",
+        "image": "shopify://shop_images/alvan-nee-T-0EW-SEbsE-unsplash_b4e65ad4-06f7-4882-86f5-ebd7fffc6553.jpg",
+        "image_position": "left",
         "subheading": "",
+        "colour": "light",
         "subheading_size": "h4",
-        "heading": "<p><strong>Shop products<\/strong><\/p>",
+        "heading": "<p><strong>Shop products</strong></p>",
         "heading_size": "h1",
         "text": ""
       }
