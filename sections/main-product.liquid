@@ -56,8 +56,8 @@
                 
               {% for media in product.media %}
                 <div>
-                  <img data-index="{{ forloop.index0 }}" data-xxxx="{{ forloop.index0 }}" data-id="{{ media.id }}" loading="lazy" width="540" height="540" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }}" srcset="
-                    {{ media.preview_image | image_url: width: 540, height: 540, crop: 'center' }} 540w,
+                  <img data-index="{{ forloop.index0 }}" data-xxxx="{{ forloop.index0 }}" data-id="{{ media.id }}" loading="lazy" width="768" height="768" class="[ js-product-slider-item-image ]" src="{{ media.preview_image | image_url: width: 768, height: 768, crop: 'center' }}" srcset="
+                    {{ media.preview_image | image_url: width: 768, height: 768, crop: 'center' }} 768w,
                     {{ media.preview_image | image_url: width: 768, height: 768, crop: 'center' }} 768w,
                     {{ media.preview_image | image_url: width: 968, height: 968, crop: 'center' }} 968w,
                     {{ media.preview_image | image_url: width: 1080, height: 1080, crop: 'center' }} 1080w" alt="{{ media.preview_image.alt | escape }}" data-lightbox-image="{{ media.preview_image | image_url: width: 1080, height: 1080, crop: 'center' }}" />
@@ -79,6 +79,8 @@
           </div>
   
         </div>
+        <br><br>
+       {% for tag in product.tags %}<a href="/search?q={{tag}}" class="tag">{{ tag }}</a>{% endfor %}
   
       </div>
   

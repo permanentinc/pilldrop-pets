@@ -1,6 +1,7 @@
+.tag,
 .button {
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--primary);
   padding: 1.5rem 4.4rem;
   display: inline-block;
@@ -94,4 +95,14 @@
       }
     }
   }
+}
+
+.tag {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--grey-light);
+  color: var(--text) !important;
+  margin: 0 0.5rem 0.8rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
 }

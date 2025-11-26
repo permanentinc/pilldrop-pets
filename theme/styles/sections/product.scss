@@ -14,7 +14,7 @@ Product
             font-weight: 500;
             line-height: 1.4;
 
-            span{
+            span {
                 font-weight: 400;
                 font-size: 1.2rem;
                 color: #555;
@@ -101,13 +101,13 @@ Product
 
                     &__sale {
                         background: var(--primary);
-                    color: white;
-                    padding: 0.8rem 1.5rem;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    font-weight: 600;
-                    font-size: 1.2rem;
+                        color: white;
+                        padding: 0.8rem 1.5rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-weight: 600;
+                        font-size: 1.2rem;
                     }
 
                     img {
@@ -340,4 +340,12 @@ Quantity
 
 .product__wrap__details__form .button {
     position: relative !important;
+}
+
+
+.collection__grid__item[data-tags="provet"],
+.collection__grid__item[data-tags^="provet,"],
+.collection__grid__item[data-tags$=",provet"],
+.collection__grid__item[data-tags*=",provet,"] {
+//   border: 1px solid blue !important
 }

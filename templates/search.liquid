@@ -1,85 +1,124 @@
 <div class="banner banner--off-white">
   <div class="bannerSlim__text">
     <div class="bannerSlim__text__constraint">
-        <h6>SEARCH RESULTS</h6>
-        {% if search.performed %}
+      <h6>SEARCH RESULTS</h6>
+      {% if search.performed %}
         <h1>{{ search.results_count }} results for "{{ search.terms }}"</h1>
-        {% else %}
+      {% else %}
         <h1>Click below to search</h1>
-        {% endif %}
-        <p>
-          <button class="button button--outline [ js-search-again ]">
-            Search again
-          </button>
-        </p>
+      {% endif %}
+      <p>
+        <button class="button button--outline [ js-search-again ]">Search again</button>
+      </p>
     </div>
   </div>
 </div>
 
-
 {% paginate search.results by 10 %}
+  {% if search.performed and search.results_count == 0 %}
+  {% endif %}
+  
+  {% if search.performed %}
+    {% if search.results_count > 0 %}
+      <section class="collectionList">
+        <div class="collectionList__wrap">
+          {% for item in search.results %}
+            {% if item.image %}
+              {%- assign collection_image = item.image -%}
+            {% elsif item.products.first and item.products.first.media != empty %}
+              {%- assign collection_image = item.products.first.featured_media.preview_image -%}
+            {% else %}
+              {% assign collection_image = blank %}
+            {% endif %}
 
-{% if search.performed and search.results_count == 0 %}
-{% endif %}
+            <div class="collectionList__wrap__item">
+              {% if item.object_type == 'product' %}
+                <a href="{{ item.url }}" class="collectionList__wrap__item__image [ js-in-view ]">
+                  {% unless item.featured_media == null %}
+                    <img
+                      class="[ lazyload ]"
+                      src="{{ item.featured_media | image_url: height: 540, width:540, crop: 'center' }}"
+                      srcset="
+                        {{ item.featured_media | image_url: height: 540, width:540, crop: 'center' }} 540w,
+                        {{ item.featured_media | image_url: height: 768, width:768, crop: 'center' }} 768w,
+                        {{ item.featured_media | image_url: height: 968, width:968, crop: 'center' }} 968w,
+                        {{ item.featured_media | image_url: height: 1080, width:1080, crop: 'center' }} 1080w
+                      "
+                      alt="{{ item.featured_media.alt | escape }}"
+                      width="540"
+                      height="540"
+                    >
+                  {% endunless %}
+                </a>
+              {% else %}
+                <a href="{{ item.url }}" class="collectionList__wrap__item__image [ js-in-view ]">
+                  {% unless collection_image == blank %}
+                    <img
+                      class="[ lazyload ]"
+                      src="{{ collection_image | image_url: height: 540, width: 540, crop: 'center' }}"
+                      srcset="
+                        {{ collection_image | image_url: height: 540, width: 540, crop: 'center' }} 540w,
+                        {{ collection_image | image_url: height: 768, width: 768, crop: 'center' }} 768w,
+                        {{ collection_image | image_url: height: 968, width: 968, crop: 'center' }} 968w,
+                        {{ collection_image | image_url: height: 1080, width: 1080, crop: 'center' }} 1080w
+                      "
+                      alt="{{ collection_image.alt | escape }}"
+                      width="540"
+                      height="540"
+                    >
+                  {% else %}
+                    <img
+                      class="[ lazyload ]"
+                      src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg"
+                      alt="placeholder image"
+                      width="540"
+                      height="540"
+                    >
+                  {% endunless %}
+                </a>
+              {% endif %}
 
-{% if search.performed %}
-{% if search.results_count > 0 %}
-
-<section class="collectionList">
-  <div class="collectionList__wrap">
-
-    {% for item in search.results %}
-
-    {% if item.image %}
-    {%- assign collection_image = item.image -%}
-    {% elsif item.products.first and item.products.first.media != empty %}
-    {%- assign collection_image = item.products.first.featured_media.preview_image -%}
-    {% else %}
-    {% assign collection_image = blank %}
+              <p>
+                <strong>
+                  <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+                </strong>
+              </p>
+              <p style="color:#212121;">{{ item.price | money }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
     {% endif %}
+  {% endif %}
 
-    <div class="collectionList__wrap__item">
+  {% if paginate.pages > 1 %}
+    <nav class="pagination" role="navigation" aria-label="Pagination">
+      <ul>
+        {% if paginate.previous %}
+          <li>
+            <a href="{{ paginate.previous.url }}" aria-label="Previous page">&laquo; Previous</a>
+          </li>
+        {% endif %}
 
-      {% if item.object_type == 'product' %}
-      <a href="{{ item.url }}" class="collectionList__wrap__item__image [ js-in-view ]">
-        {% unless item.featured_media == null %}
-        <img class="[ lazyload ]"src="{{ item.featured_media | image_url: height: 540, width:540 }}"srcset="
-      {{ item.featured_media | image_url: height: 540, width:540 }} 540w,
-      {{ item.featured_media | image_url: height: 768, width:768 }} 768w,
-      {{ item.featured_media | image_url: height: 968, width:968 }} 968w,
-      {{ item.featured_media | image_url: height: 1080, width:1080 }} 1080w" alt="{{ item.featured_media.alt | escape }}" />
-        {% endunless %}
-      </a>
-      {% else %}
+        {% for part in paginate.parts %}
+          {% if part.is_link %}
+            <li>
+              <a href="{{ part.url }}">{{ part.title }}</a>
+            </li>
+          {% else %}
+            <li class="active">
+              <span>{{ part.title }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
 
-      <a href="{{ item.url }}" class="collectionList__wrap__item__image [ js-in-view ]">
-        {% unless collection_image == blank %}
-        <img class="[ lazyload ]"src="{{ collection_image | image_url: height: 540 ,width:540}}"srcset="
-    {{ collection_image | image_url: height: 540, width:540 }} 540w,
-    {{ collection_image | image_url: height: 768, width:768 }} 768w,
-    {{ collection_image | image_url: height: 968, width:968 }} 968w,
-    {{ collection_image | image_url: height: 1080 ,width:1080 }} 1080w" alt="{{ collection_image.alt | escape }}" />
-        {% else %}
-        <img class="[ lazyload ]" src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg" alt="placeholder image" />
-        {% endunless %}
-      </a>
-      {% endif %}
-
-      <p>
-        <strong>
-          <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-        </strong>
-      </p>
-      <p style="color:#212121;">{{ item.price | money }}</p>
-
-    </div>
-
-    {% endfor %}
-
-  </div>
-</section>
-
-{% endif %}
-{% endif %}
+        {% if paginate.next %}
+          <li>
+            <a href="{{ paginate.next.url }}" aria-label="Next page">Next &raquo;</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
 
 {% endpaginate %}

@@ -94,9 +94,12 @@
 
             &__image {
                 @include aspect(280, 430);
+                @include aspect(1, 1);
                 display: block;
                 width: 100%;
                 background-color: var(--grey-light);
+                background: #ffffff;
+
                 &:before {
                     @include pseudo;
                     @include full;
@@ -110,7 +113,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
 
                 &__sale {
@@ -152,7 +155,7 @@
 Checkbox
 ------------------------------------------------------------------*/
 
-input[type='checkbox'] {
+input[type="checkbox"] {
     opacity: 0;
     z-index: -1;
     position: absolute;
