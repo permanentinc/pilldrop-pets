@@ -1513,7 +1513,8 @@ Footer
           .footer__wrap__column--links p a {
             color: var(--primary);
             font-weight: 500;
-            box-shadow: none; }
+            box-shadow: none;
+            font-size: 1.4rem; }
       .footer__wrap__column--details {
         width: calc(30rem); }
         @media only screen and (max-width: 767px) {
