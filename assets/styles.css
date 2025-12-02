@@ -1094,6 +1094,14 @@ Product
       font-size: 1.4rem; }
       .collection__filters__item label {
         line-height: 1.4; }
+  .collection #ProductGridContainer {
+    width: calc(100%);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: flex-start;
+    align-content: flex-start; }
   .collection__grid {
     width: calc(100% - 30rem);
     margin: 0 auto;
@@ -1229,7 +1237,7 @@ input[type="checkbox"] {
 /*------------------------------------------------------------------
 Loader
 ------------------------------------------------------------------*/
-.busy .loader {
+.loading .loader {
   visibility: visible;
   opacity: 1; }
 
@@ -1291,6 +1299,50 @@ Loader
 @keyframes shadow {
   50% {
     transform: scale(1.2, 1); } }
+
+.mobile-facets__wrapper,
+.active-facets-mobile,
+.mobile-facets {
+  display: none !important; }
+
+#product-grid {
+  width: 100% !important; }
+
+.facets__disclosure-vertical {
+  border: 1px solid var(--grey-light) !important;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 1rem; }
+
+.facet-checkbox__text-label {
+  font-size: 1.2rem;
+  font-weight: 600; }
+
+.facets__selected,
+.facet-checkbox__text-count {
+  background-color: #f7f7f7;
+  color: #999;
+  padding: 0.2rem 0.6rem;
+  border-radius: 89rem;
+  font-size: 1rem;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: -1px; }
+
+.active-facets {
+  margin: 0 0 2rem 0; }
+
+.facet-checkbox .icon-checkmark {
+  top: -3px;
+  position: relative; }
+
+.facets__summary {
+  display: flex;
+  flex-wrap: wrap; }
+
+.facets__and-helptext {
+  display: none !important; }
 
 /*------------------------------------------------------------------
 Hero Block
@@ -2664,17 +2716,17 @@ Subnav
       max-width: 60rem;
       margin-bottom: -6rem; }
 
-ul {
+ul:not(.facets-layout) {
   list-style: none;
   margin-bottom: 2rem; }
-  ul ul {
+  ul:not(.facets-layout) ul {
     margin: 0; }
-  ul > li {
+  ul:not(.facets-layout) > li {
     position: relative;
     padding-left: 2rem;
     margin-bottom: 1rem;
     line-height: 1.5; }
-    ul > li:before {
+    ul:not(.facets-layout) > li:before {
       position: absolute;
       display: block;
       content: "";
