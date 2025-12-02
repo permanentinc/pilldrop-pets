@@ -12,15 +12,15 @@
   transition-delay: 0ms;
   max-width: 70rem;
   margin: 0 auto;
-
+  
   &__wrapper {
     width: 100%;
     height: 100%;
-
+    
     &__form {
       width: 100%;
       height: 100%;
-
+      
       &__input {
         width: 100%;
         height: 100%;
@@ -30,7 +30,7 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-family: "Montserrat", sans-serif;
-
+        
         @include media($md, max) {
           font-size: 2rem;
         }
@@ -51,11 +51,11 @@
   visibility: hidden;
   z-index: -1;
   background: white;
-
+  
   @include media($md, max) {
     top: 6rem;
   }
-
+  
   &__wrapper {
     margin: 0 auto;
     max-width: $md;
@@ -66,20 +66,20 @@
     box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.12);
     background: white;
     padding: 4rem;
-
+    
     @include media($md, max) {
       padding: 1rem 2rem;
       margin-top: 6.5rem;
     }
-
+    
     &__title {
       position: relative;
       width: 100%;
-
+      
       @include media($md, max) {
         display: none;
       }
-
+      
       &:after {
         @include pseudo;
         width: 100%;
@@ -88,7 +88,7 @@
         background: black;
         opacity: 0.2;
       }
-
+      
       span {
         font-size: 1.1rem;
         position: relative;
@@ -97,52 +97,52 @@
         z-index: 1;
       }
     }
-
+    
     &__items {
       display: flex;
       flex-wrap: wrap;
       width: calc(100% + 4rem);
       margin: 0 -2rem;
-
+      
       @include media($md, max) {
         margin: 0 -0.5rem;
       }
-
+      
       h4 {
         text-align: center;
         display: block;
         width: 100%;
       }
     }
-
+    
     &__item {
       display: flex;
       flex-wrap: wrap;
       padding: 2rem;
       width: 25%;
-
+      
       @include media($md, max) {
         padding: 0.5rem;
         width: 33.333333%;
-
+        
         &:nth-child(4) {
           display: none;
         }
       }
-
+      
       &__image {
         width: 100%;
         margin-bottom: 1rem;
         display: block;
         @include aspect(1, 1);
-
+        
         &:before {
           @include pseudo;
           @include full;
           background: rgba(black, 0.025);
           z-index: 4;
         }
-
+        
         span {
           @include aspect(1, 1);
           @include cover;
@@ -152,17 +152,17 @@
           height: 100%;
           position: absolute;
         }
-
+        
         img {
           width: 100%;
           height: 100%;
           position: absolute;
         }
       }
-
+      
       &__details {
         width: 100%;
-
+        
         p {
           font-size: 1.3rem;
           display: block;
@@ -171,31 +171,31 @@
           white-space: nowrap;
           margin-bottom: 0.3rem;
           color: var(--text);
-
+          
           &:first-of-type {
             margin-bottom: 0.5rem !important;
             color: var(--primary);
           }
-
+          
           &:nth-child(2) {
             @include media($md, max) {
               display: none;
             }
           }
-
+          
           &:nth-child(3) {
             @include media($md, max) {
               margin-bottom: 0.5rem;
             }
           }
-
+          
           .strike {
             margin-left: 0.5rem;
             opacity: 0.5;
           }
         }
       }
-
+      
       &--placeholder {
         .searchPane__wrapper__item__image {
           span {
@@ -212,12 +212,12 @@
             position: absolute;
           }
         }
-
+        
         .searchPane__wrapper__item__details {
           p {
             position: relative;
             width: 100%;
-
+            
             &:after {
               @include pseudo;
               top: 2px;
@@ -233,7 +233,7 @@
               background: linear-gradient(to right, #eaeaea 10%, #d5dadc 18%, #eaeaea 33%);
               background-size: 800px 104px;
             }
-
+            
             &:last-of-type {
               width: 80%;
             }
@@ -241,7 +241,7 @@
         }
       }
     }
-
+    
     .button {
       width: 100%;
       text-align: center;
@@ -269,40 +269,40 @@ Active styles
     opacity: 1;
     transform: translateY(0);
   }
-
+  
   .header {
     background: white !important;
   }
-
+  
   .header__wrap__nav,
   .header__wrap__account,
   .header__wrap__logo {
     opacity: 0;
     visibility: hidden;
   }
-
+  
   .searchForm {
     opacity: 1;
     visibility: visible;
     z-index: 99999999;
     padding-top: 4rem;
   }
-
+  
   .header__wrap__search {
     border-color: transparent;
-
+    
     p {
       opacity: 0;
     }
-
+    
     svg {
       opacity: 0;
       transform: scale(0.7);
-
+      
       path {
         fill: black;
       }
-
+      
       &:last-of-type {
         opacity: 1;
         transform: scale(1.1);
@@ -322,26 +322,26 @@ Results
     margin: 4rem auto;
     width: 100%;
     max-width: var(--content-width);
-
+    
     &__item {
       width: calc(25% - 4rem);
       margin: 0 2rem 2rem;
-
+      
       @include media($xmd, max) {
         width: calc(33.333333% - 4rem);
       }
-
+      
       @include media($xmd, max) {
         width: calc(50% - 4rem);
       }
-
+      
       &__image {
         @include aspect(1, 1);
         width: 100%;
         margin-bottom: 1rem;
         display: block;
         background: #ffffff;
-
+        
         img {
           width: 100%;
           height: 100%;
@@ -350,7 +350,7 @@ Results
           position: absolute;
           object-fit: contain;
         }
-
+        
         &:before {
           @include full;
           @include pseudo;
@@ -358,7 +358,7 @@ Results
           z-index: 4;
         }
       }
-
+      
       p a {
         color: var(--primary);
       }
@@ -370,21 +370,28 @@ Results
   display: flex;
   justify-content: center;
   margin: 3rem 0 8rem;
-
+  
   ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-
+    
     li {
       margin: 0 0.5rem;
       padding: 0;
-
+      
       &::before {
         display: none;
       }
-
+      
+      span{
+        display: block;
+        padding: 0.7rem 1.2rem;
+        border-radius: 4px;
+        background: #f5f5f5;
+      }
+      
       a {
         display: block;
         padding: 0.7rem 1.2rem;
@@ -393,14 +400,15 @@ Results
         color: var(--primary);
         text-decoration: none;
         transition: background 0.2s;
-
+        
         &:hover,
         &:focus {
           background: var(--primary);
           color: #fff;
+          box-shadow: none !important;
         }
       }
-
+      
       &.active span {
         display: block;
         padding: 0.7rem 1.2rem;

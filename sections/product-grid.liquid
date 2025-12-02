@@ -1,288 +1,319 @@
 {% comment %}
   Filters
 {% endcomment %}
-
-<div class="filter">
-  <div class="filter__wrap">
-    <a
-      href="/collections/most-popular"
-      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Most Popular' %}active{% endif %}"
-      data-id="Most Popular"
-    >
-      <p class="colour--red"><b>Most popular</b></p>
-    </a>
-
-    <a
-      href="/collections/cats"
-      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Cats' %}active{% endif %}"
-      data-id="Cat"
-    >
-      <p class="colour--red"><b>Cats</b></p>
-      <img src="{{ 'mini-cat.png' | asset_url }}" width="140" height="140" loading="lazy">
-    </a>
-
-    <a
-      href="/collections/dogs"
-      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Dogs' %}active{% endif %}"
-      data-id="Dog"
-    >
-      <p class="colour--red"><b>Dogs</b></p>
-      <img src="{{ 'mini-dog.png' | asset_url }}" width="140" height="140" loading="lazy">
-    </a>
-
-    <a
-      href="/collections/horses"
-      class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Horses' %}active{% endif %}"
-      data-id="Horse"
-    >
-      <p class="colour--red"><b>Horses</b></p>
-      <img src="{{ 'mini-horse.png' | asset_url }}" width="140" height="140" loading="lazy">
-    </a>
-  </div>
-</div>
-
-<a href="#" class="filter__toggle" onclick="event.preventDefault();document.body.classList.toggle('filters-active')">
-  <span class="[ js-toggle-filters-text ]">Show Filters</span>
-  <span class="filter-icon">
-    <b><i></i></b>
-    <b><i></i></b>
-    <b><i></i></b>
-  </span>
-</a>
-
-{% comment %}
-  Product grid
-{% endcomment %}
-
-<div class="collection">
-  {% comment %}
-    Product Filters
-  {% endcomment %}
-  <div class="collection__filters">
-    <a
-      href="#"
-      class="collection__filters__toggle"
-      onclick="event.preventDefault();document.body.classList.toggle('filters-active')"
-    >
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
-          <polygon fill="#000" fill-rule="evenodd" points="14.7 4.776 3.12 4.776 6.652 1.245 5.502 .095 0 5.597 5.502 11.1 6.652 9.95 3.12 6.419 14.7 6.419"/>
-        </svg>
-        CLOSE</span
+<div class="js-products">
+  <div class="filter">
+    <div class="filter__wrap">
+      <a
+        href="/collections/most-popular"
+        class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Most Popular' %}active{% endif %}"
+        data-id="Most Popular"
       >
-    </a>
+        <p class="colour--red"><b>Most popular</b></p>
+      </a>
 
-    <h4 class="colour--red">Shop by....</h4>
-
-    <h6 class="collection__filters__title">Condition</h6>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Skin and Allergy" id="Skin and Allergy">
-      <label for="Skin and Allergy">Skin and Allergy</label>
-    </p>
-
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Skin" id="Skin">
-      <label for="Skin">Skin</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Cardiac" id="Cardiac">
-      <label for="Cardiac">Cardiac</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Diabetes" id="Diabetes">
-      <label for="Diabetes">Diabetes</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Behavioural" id="Behavioural">
-      <label for="Behavioural">Behavioural</label>
-    </p>
-    <p class="collection__filters__item">
-      <input
-        type="checkbox"
-        class="[ js-filter-tags ]"
-        value="Pain and Anti-inflammatory"
-        id="Pain and Anti-inflammatory"
+      <a
+        href="/collections/cats"
+        class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Cats' %}active{% endif %}"
+        data-id="Cat"
       >
-      <label for="Pain and Anti-inflammatory">Pain and Anti-inflammatory</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Hyperthyroidism" id="Hyperthyroidism">
-      <label for="Hyperthyroidism">Hyperthyroidism</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Eye Health" id="Eye Health">
-      <label for="Eye Health">Eye Health</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Food" id="Food">
-      <label for="Food">Food</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Flea Treatment" id="Flea Treatment">
-      <label for="Flea Treatment">Flea Treatment</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Seizure" id="Seizure">
-      <label for="Seizure">Seizure</label>
-    </p>
+        <p class="colour--red"><b>Cats</b></p>
+        <img src="{{ 'mini-cat.png' | asset_url }}" width="140" height="140" loading="lazy">
+      </a>
 
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-tags ]" value="Worming" id="Worming">
-      <label for="Worming">Worming</label>
-    </p>
+      <a
+        href="/collections/dogs"
+        class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Dogs' %}active{% endif %}"
+        data-id="Dog"
+      >
+        <p class="colour--red"><b>Dogs</b></p>
+        <img src="{{ 'mini-dog.png' | asset_url }}" width="140" height="140" loading="lazy">
+      </a>
 
-    <br>
-    <br>
-
-    <h6 class="collection__filters__title">Manufacturers</h6>
-
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="4CYTE" id="4CYTE">
-      <label for="4CYTE">4CYTE</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Bravecto" id="Bravecto">
-      <label for="Bravecto">Bravecto</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Dechra" id="Dechra">
-      <label for="Dechra">Dechra</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="MSD Animal Health" id="MSD Animal Health">
-      <label for="MSD Animal Health">MSD Animal Health</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Elanco" id="Elanco">
-      <label for="Elanco">Elanco</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Lantus" id="Lantus">
-      <label for="Lantus">Lantus</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Dermcare" id="Dermcare">
-      <label for="Dermcare">Dermcare</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Boehringer Ingelheim" id="Boehringer Ingelheim">
-      <label for="Boehringer Ingelheim">Boehringer Ingelheim</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Bayer" id="Bayer">
-      <label for="Bayer">Bayer</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Vetoquinol" id="Vetoquinol">
-      <label for="Vetoquinol">Vetoquinol</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Chanelle" id="Chanelle">
-      <label for="Chanelle">Chanelle</label>
-    </p>
-    <p class="collection__filters__item">
-      <input type="checkbox" class="[ js-filter-brands ]" value="Zoetis" id="Zoetis">
-      <label for="Zoetis">Zoetis</label>
-    </p>
+      <a
+        href="/collections/horses"
+        class="filter__wrap__item [ js-filter-collections ] {% if collection.title == 'Horses' %}active{% endif %}"
+        data-id="Horse"
+      >
+        <p class="colour--red"><b>Horses</b></p>
+        <img src="{{ 'mini-horse.png' | asset_url }}" width="140" height="140" loading="lazy">
+      </a>
+    </div>
   </div>
+
+  <a href="#" class="filter__toggle" onclick="event.preventDefault();document.body.classList.toggle('filters-active')">
+    <span class="[ js-toggle-filters-text ]">Show Filters</span>
+    <span class="filter-icon">
+      <b><i></i></b>
+      <b><i></i></b>
+      <b><i></i></b>
+    </span>
+  </a>
 
   {% comment %}
     Product grid
   {% endcomment %}
-  <div class="collection__grid">
-    <h3 class="no-results colour--red" style="display:none;width: 100%;">
+
+  <div class="collection">
+    {% comment %}
+      Product Filters
+    {% endcomment %}
+    <div class="collection__filters">
+      <a
+        href="#"
+        class="collection__filters__toggle"
+        onclick="event.preventDefault();document.body.classList.toggle('filters-active')"
+      >
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+            <polygon fill="#000" fill-rule="evenodd" points="14.7 4.776 3.12 4.776 6.652 1.245 5.502 .095 0 5.597 5.502 11.1 6.652 9.95 3.12 6.419 14.7 6.419"/>
+          </svg>
+          CLOSE</span
+        >
+      </a>
+
+      <h4 class="colour--red">Shop by....</h4>
+
+      <h6 class="collection__filters__title">Condition</h6>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Skin and Allergy" id="Skin and Allergy">
+        <label for="Skin and Allergy">Skin and Allergy</label>
+      </p>
+
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Skin" id="Skin">
+        <label for="Skin">Skin</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Cardiac" id="Cardiac">
+        <label for="Cardiac">Cardiac</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Diabetes" id="Diabetes">
+        <label for="Diabetes">Diabetes</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Behavioural" id="Behavioural">
+        <label for="Behavioural">Behavioural</label>
+      </p>
+      <p class="collection__filters__item">
+        <input
+          type="checkbox"
+          class="[ js-filter-tags ]"
+          value="Pain and Anti-inflammatory"
+          id="Pain and Anti-inflammatory"
+        >
+        <label for="Pain and Anti-inflammatory">Pain and Anti-inflammatory</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Hyperthyroidism" id="Hyperthyroidism">
+        <label for="Hyperthyroidism">Hyperthyroidism</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Eye Health" id="Eye Health">
+        <label for="Eye Health">Eye Health</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Food" id="Food">
+        <label for="Food">Food</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Flea Treatment" id="Flea Treatment">
+        <label for="Flea Treatment">Flea Treatment</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Seizure" id="Seizure">
+        <label for="Seizure">Seizure</label>
+      </p>
+
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Worming" id="Worming">
+        <label for="Worming">Worming</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-tags ]" value="Bravecto" id="Bravecto">
+        <label for="Bravecto">Bravecto</label>
+      </p>
+
       <br>
       <br>
-      There are no results for the selected filters
-    </h3>
-    <div class="loader">
-      <div id="loader">
-        <div id="shadow"></div>
-        <div id="box"></div>
-      </div>
+
+      <h6 class="collection__filters__title">Manufacturers</h6>
+
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="4CYTE" id="4CYTE">
+        <label for="4CYTE">4CYTE</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Bravecto" id="Bravecto">
+        <label for="Bravecto">Bravecto</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Dechra" id="Dechra">
+        <label for="Dechra">Dechra</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="MSD Animal Health" id="MSD Animal Health">
+        <label for="MSD Animal Health">MSD Animal Health</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Elanco" id="Elanco">
+        <label for="Elanco">Elanco</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Lantus" id="Lantus">
+        <label for="Lantus">Lantus</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Dermcare" id="Dermcare">
+        <label for="Dermcare">Dermcare</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Boehringer Ingelheim" id="Boehringer Ingelheim">
+        <label for="Boehringer Ingelheim">Boehringer Ingelheim</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Bayer" id="Bayer">
+        <label for="Bayer">Bayer</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Vetoquinol" id="Vetoquinol">
+        <label for="Vetoquinol">Vetoquinol</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Chanelle" id="Chanelle">
+        <label for="Chanelle">Chanelle</label>
+      </p>
+      <p class="collection__filters__item">
+        <input type="checkbox" class="[ js-filter-brands ]" value="Zoetis" id="Zoetis">
+        <label for="Zoetis">Zoetis</label>
+      </p>
     </div>
 
-    {% paginate collections.all.products by 1000 %}
-      {% for product in collections.all.products %}
-        {% assign on_sale = false %}
-        {% if product.compare_at_price > product.price %}
-          {%- assign on_sale = true -%}
-        {% endif %}
+    {% comment %}
+      Product grid - CHANGED: Use collection.products instead of collections.all.products
+    {% endcomment %}
+    <div class="collection__grid">
+      <h3 class="no-results colour--red" style="display:none;width: 100%;">
+        <br>
+        <br>
+        There are no results for the selected filters
+      </h3>
+      <div class="loader">
+        <div id="loader">
+          <div id="shadow"></div>
+          <div id="box"></div>
+        </div>
+      </div>
 
-        <div
-          class="collection__grid__item"
-          data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}"
-          data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}"
-          data-brand="{{ product.vendor }}"
-          data-types="{{ product.type }}"
-        >
-          {% if product.media[0] %}
-            <a href="{{ product.url }}" class="collection__grid__item__image">
-              <img
-                loading="lazy"
-                srcset="
-                  {{ product.media[0] | image_url: width: 480 }} 480w,
-                  {{ product.media[0] | image_url: width: 800 }} 800w,
-                  {{ product.media[0] | image_url: width: 1920 }} 1600w,
-                "
-                sizes="
-                  (max-width: 600px) 480px,
-                  (max-width: 1000px) 800px,
-                  1000px
-                "
-                src="{{ product.media[0] | image_url: width: 1920 }}"
-                alt="{{ product.media[0].alt | escape }}"
-                width="{{ product.media[0].width }}"
-                height="{{ product.media[0].height }}"
-              >
-
-              {% if on_sale %}
-                <span class="collection__grid__item__image__sale"
-                  >WHY PAY {{ product.compare_at_price | money }} ?</span
-                >
-              {% endif %}
-
-              {% if product.available %}
-              {% else %}
-                <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
-              {% endif %}
-            </a>
-          {% else %}
-            <a href="{{ product.url }}" class="collection__grid__item__image">
-              <img
-                loading="lazy"
-                src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg"
-                class="placeholder"
-              >
-
-              {% if on_sale %}
-                <span class="collection__grid__item__image__sale"
-                  >WHY PAY {{ product.compare_at_price | money }} ?</span
-                >
-              {% endif %}
-
-              {% if product.available %}
-              {% else %}
-                <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
-              {% endif %}
-            </a>
+      {% comment %} CHANGED: Use collection.products which respects URL filtering {% endcomment %}
+      {% paginate collection.products by 250 %}
+        {% for product in collection.products %}
+          {% assign on_sale = false %}
+          {% if product.compare_at_price > product.price %}
+            {%- assign on_sale = true -%}
           {% endif %}
 
-          <a href="{{ product.url }}" class="collection__grid__item__details">
-            <div class="collection__grid__item__details__title">
-              {% comment %} <h6 class="colour--text" >{{ product.vendor }}</h6> {% endcomment %}
-              <h6 class="colour--red">
-                <strong>{{ product.title | escape }} &nbsp;</strong>
-              </h6>
-              <p style="color:#212121;">{{ product.price | money }}</p>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    {% endpaginate %}
+          <div
+            class="collection__grid__item"
+            data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}"
+            data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}"
+            data-brand="{{ product.vendor }}"
+            data-types="{{ product.type }}"
+          >
+            {% if product.media[0] %}
+              <a href="{{ product.url }}" class="collection__grid__item__image">
+                <img
+                  loading="lazy"
+                  srcset="{{ product.media[0] | image_url: width: 480 }} 480w,{{ product.media[0] | image_url: width: 800 }} 800w,{{ product.media[0] | image_url: width: 1920 }} 1600w"
+                  sizes="(max-width: 600px) 480px,(max-width: 1000px) 800px,1000px"
+                  src="{{ product.media[0] | image_url: width: 1920 }}"
+                  alt="{{ product.media[0].alt | escape }}"
+                  width="{{ product.media[0].width }}"
+                  height="{{ product.media[0].height }}"
+                >
+
+                {% if on_sale %}
+                  <span class="collection__grid__item__image__sale"
+                    >WHY PAY {{ product.compare_at_price | money }} ?</span
+                  >
+                {% endif %}
+
+                {% if product.available %}
+                {% else %}
+                  <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
+                {% endif %}
+              </a>
+            {% else %}
+              <a href="{{ product.url }}" class="collection__grid__item__image">
+                <img
+                  loading="lazy"
+                  src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg"
+                  class="placeholder"
+                  width="300"
+                  height="300"
+                  alt="Placeholder image"
+                >
+
+                {% if on_sale %}
+                  <span class="collection__grid__item__image__sale"
+                    >WHY PAY {{ product.compare_at_price | money }} ?</span
+                  >
+                {% endif %}
+
+                {% if product.available %}
+                {% else %}
+                  <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
+                {% endif %}
+              </a>
+            {% endif %}
+
+            <a href="{{ product.url }}" class="collection__grid__item__details">
+              <div class="collection__grid__item__details__title">
+                <h6 class="colour--red">
+                  <strong>{{ product.title | escape }} &nbsp;</strong>
+                </h6>
+                <p style="color:#212121;">{{ product.price | money }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+
+        {% if paginate.pages > 1 %}
+          <nav class="pagination" role="navigation" aria-label="Pagination" style="width: 100%;">
+            <ul role="list">
+              {% if paginate.previous %}
+                <li>
+                  <a href="{{ paginate.previous.url }}" aria-label="Previous"> &laquo; Previous </a>
+                </li>
+              {% endif %}
+
+              {% for part in paginate.parts %}
+                <li>
+                  {% if part.is_link %}
+                    <a href="{{ part.url }}" aria-label="{{ part.title }}">{{ part.title }}</a>
+                  {% else %}
+                    {% if part.title == paginate.current_page %}
+                      <span aria-current="page" aria-label="{{ part.title }}">{{ part.title }}</span>
+                    {% else %}
+                      <span>{{ part.title }}</span>
+                    {% endif %}
+                  {% endif %}
+                </li>
+              {% endfor %}
+
+              {% if paginate.next %}
+                <li>
+                  <a href="{{ paginate.next.url }}" aria-label="Next"> Next &raquo; </a>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+        {% endif %}
+      {% endpaginate %}
+    </div>
   </div>
 </div>
-
 {% schema %}
 {
   "name": "Product Grid",
