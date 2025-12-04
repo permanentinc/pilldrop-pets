@@ -69,6 +69,11 @@
     padding: 1rem 4rem;
   }
 
+  &--tiny {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
   &--white {
     color: var(--primary) !important;
     background: white;

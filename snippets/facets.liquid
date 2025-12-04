@@ -4,9 +4,8 @@
 {% endcomment %}
 
 {%- liquid
-  assign brand_tags = 'Mellitus,Brand2,Brand3' | split: ','
-  assign animal_tags = 'Cats,Dogs,Horses' | split: ','
-  assign condition_tags = 'Skin,Cardiac,Diabetes' | split: ','
+  assign tags = 'Skin,Cardiac,Diabetes,Behavioural,Pain and Anti-inflammatory,Hyperthyroidism,Eye Health,Food,Flea Treatment,Seizure,Worming' | split: ','
+  assign active_filters = request.params['filter.p.tag'] | default: ''
 
   if results.url
     assign results_url = results.url
@@ -16,20 +15,34 @@
   endif
 -%}
 
+<script>
+  // on page load preselect all the checkboxes that are in the URL i.e. ?filter.p.tag=Cardiac
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTags = urlParams.getAll('filter.p.tag');
+
+    selectedTags.forEach(function(tag) {
+      const checkbox = document.querySelector(`input[type="checkbox"][value="${tag}"]`);
+      if (checkbox) {
+        checkbox.checked = true;
+      }
+    });
+  });
+</script>
+
 <div class="facets-simple">
-  <div class="product-count">
-    <span id="ProductCount">
-      {%- if results.results_count -%}
-        {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
-      {%- elsif results.products_count == results.all_products_count -%}
-        {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
-      {%- else -%}
-        {{
-          'products.facets.product_count'
-          | t: product_count: results.products_count, count: results.all_products_count
-        }}
-      {%- endif -%}
-    </span>
+  <div class="results-count">
+    Showing&nbsp;
+    {%- if results.results_count -%}
+      {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+    {%- elsif results.products_count == results.all_products_count -%}
+      {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+    {%- else -%}
+      {{
+        'products.facets.product_count'
+        | t: product_count: results.products_count, count: results.all_products_count
+      }}
+    {%- endif -%}
   </div>
 
   <facet-filters-form>
@@ -44,12 +57,52 @@
         >
       </div>
 
-      {%- for filter in results.filters -%}
-        {%- if filter.type == 'list' and filter.label == 'Tags' -%}
-          <div class="filter-group">
-            <h3>Condition</h3>
-            {%- for value in filter.values -%}
-              {%- if condition_tags contains value.label -%}
+      <div class="filter-group">
+        {% for tag in tags %}
+          <label>
+            <input
+              type="checkbox"
+              class="check"
+              name="filter.p.tag"
+              value="{{ tag }}"
+            >
+            {{ tag }}
+          </label>
+        {%- endfor -%}
+      </div>
+
+      {% comment %}
+        {%- for filter in results.filters -%}
+          {%- if filter.type == 'list' and filter.label == 'Tags' -%}
+            <div class="filter-group">
+              <h3>Condition</h3>
+              {%- for value in filter.values -%}
+                {%- if tags contains value.label -%}
+                  <label>
+                    <input
+                      type="checkbox"
+                      class="check"
+                      name="{{ value.param_name }}"
+                      value="{{ value.value }}"
+                      {% if value.active %}
+                        checked
+                      {% endif %}
+                    >
+                    {{ value.label }} ({{ value.count }})
+                  </label>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {% endcomment %}
+
+      {% comment %}
+        <div class="filter-group">
+          <h3>All</h3>
+          {%- for filter in results.filters -%}
+            {%- if filter.type == 'list' -%}
+              {%- for value in filter.values -%}
                 <label>
                   <input
                     type="checkbox"
@@ -62,35 +115,13 @@
                   >
                   {{ value.label }} ({{ value.count }})
                 </label>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {% endcomment %}
 
-      <div class="filter-group">
-        <h3>All</h3>
-        {%- for filter in results.filters -%}
-          {%- if filter.type == 'list' -%}
-            {%- for value in filter.values -%}
-              <label>
-                <input
-                  type="checkbox"
-                  class="check"
-                  name="{{ value.param_name }}"
-                  value="{{ value.value }}"
-                  {% if value.active %}
-                    checked
-                  {% endif %}
-                >
-                {{ value.label }} ({{ value.count }})
-              </label>
-            {%- endfor -%}
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-
-      <a href="{{ results_url }}">Clear all</a>
+      <a href="{{ results_url }}" class="button button--tiny">Clear filters</a>
     </form>
   </facet-filters-form>
 </div>

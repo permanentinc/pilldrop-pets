@@ -286,6 +286,10 @@ hr {
   .tag--small,
   .button--small {
     padding: 1rem 4rem; }
+  .tag--tiny,
+  .button--tiny {
+    padding: 1rem 2rem;
+    font-size: 1.2rem; }
   .tag--white,
   .button--white {
     color: var(--primary) !important;
@@ -1042,6 +1046,11 @@ Product
       grid-column-start: 1;
       grid-column-end: 4; } }
 
+.results-count {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-weight: 600; }
+
 .collection {
   padding: 4rem 2rem;
   max-width: var(--content-width);
@@ -1356,6 +1365,9 @@ Loader
 
 .facets__and-helptext {
   display: none !important; }
+
+.filter-group [type="checkbox"] {
+  accent-color: var(--primary); }
 
 /*------------------------------------------------------------------
 Hero Block

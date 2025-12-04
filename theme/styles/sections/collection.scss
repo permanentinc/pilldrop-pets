@@ -1,3 +1,9 @@
+.results-count {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
 .collection {
     padding: 4rem 2rem;
     max-width: var(--content-width);
@@ -369,4 +375,10 @@ $size: 100px;
 
 .facets__and-helptext {
     display: none !important;
+}
+
+.filter-group {
+    [type="checkbox"] {
+        accent-color: var(--primary);
+    }
 }
