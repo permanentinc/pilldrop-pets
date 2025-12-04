@@ -1187,11 +1187,24 @@ Product
 /*------------------------------------------------------------------
 Checkbox
 ------------------------------------------------------------------*/
-input[type="checkbox"] {
+.filter-group label {
+  width: 100%;
+  display: block;
+  line-height: 1; }
+
+.check {
+  -webkit-appearance: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: auto; }
+
+input[type="checkbox"]:not(.check) {
   opacity: 0;
   z-index: -1;
   position: absolute; }
-  input[type="checkbox"] + label {
+  input[type="checkbox"]:not(.check) + label {
     position: relative;
     padding-left: 3rem;
     -webkit-user-select: none;
@@ -1199,7 +1212,7 @@ input[type="checkbox"] {
             user-select: none;
     cursor: pointer;
     display: block; }
-    input[type="checkbox"] + label:before {
+    input[type="checkbox"]:not(.check) + label:before {
       position: absolute;
       display: block;
       content: '';
@@ -1213,7 +1226,7 @@ input[type="checkbox"] {
       width: 20px;
       height: 20px;
       border-radius: 0; }
-    input[type="checkbox"] + label:after {
+    input[type="checkbox"]:not(.check) + label:after {
       position: absolute;
       display: block;
       content: '';
@@ -1228,10 +1241,10 @@ input[type="checkbox"] {
       transition: all 333ms ease;
       margin-top: -1px;
       transform: translateY(-50%) rotate(20deg); }
-  input[type="checkbox"]:checked + label:before {
+  input[type="checkbox"]:not(.check):checked + label:before {
     background: var(--red);
     border-color: var(--red); }
-  input[type="checkbox"]:checked + label:after {
+  input[type="checkbox"]:not(.check):checked + label:after {
     transform: translateY(-50%) rotate(43deg); }
 
 /*------------------------------------------------------------------

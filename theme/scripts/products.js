@@ -1,3 +1,5 @@
+
+
 // Add this JavaScript to your theme.js or in a <script> tag
 console.log('Products script loaded');
 // AJAX filtering with tag/title matching

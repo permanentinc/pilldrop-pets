@@ -166,7 +166,22 @@
 Checkbox
 ------------------------------------------------------------------*/
 
-input[type="checkbox"] {
+.filter-group {
+    label {
+        width: 100%;
+        display: block;
+        line-height: 1;
+    }
+}
+.check {
+    -webkit-appearance: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: auto;
+}
+input[type="checkbox"]:not(.check) {
     opacity: 0;
     z-index: -1;
     position: absolute;
@@ -336,8 +351,8 @@ $size: 100px;
     top: -1px;
 }
 
-.active-facets{
-    margin:0 0 2rem 0
+.active-facets {
+    margin: 0 0 2rem 0;
 }
 
 .facet-checkbox {
