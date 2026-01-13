@@ -7,10 +7,13 @@ import './../styles/style.scss';
 console.log('Shopify Skeleton 1.2 💀');
 
 import './predictive-search';
+import WarningPopup from './warning-popup';
 import Shop from './shop';
 import $ from 'jquery';
 import slick from 'slick-carousel';
 
+
+$('.js-warning-popup').each((i, el) => new WarningPopup(el));
 
 $(() => {
 

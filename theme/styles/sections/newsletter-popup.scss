@@ -2,22 +2,33 @@
 Newsletter popup
 ------------------------------------------------------------------*/
 
+.text-left {
+  text-align: left;
+}
+
 .popup {
   @include full;
   position: fixed;
   background: rgba(white, 0.7);
+  backdrop-filter: blur(4px);
   z-index: -1;
   visibility: hidden;
   opacity: 0;
   transition: all $fast;
   transition-delay: 444ms;
 
+  hr {
+    border: none;
+    border-top: 2px solid #ec1d24;
+    margin: 1.5rem 0 2.5rem;
+  }
+
   @include media(900px) {
     overflow: auto;
   }
 
   @include media(900px, max) {
-    top: 100%;
+    // top: 100%;
     overflow: visible;
   }
 
@@ -26,7 +37,13 @@ Newsletter popup
     margin: 0 auto;
     max-width: 60rem;
     background: var(--off-white);
-    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+    box-shadow:
+      2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+      22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      100px 100px 80px rgba(0, 0, 0, 0.07);
     top: 4vh;
     position: absolute;
     left: 0;
@@ -35,32 +52,46 @@ Newsletter popup
     margin-bottom: 4rem;
     text-align: center;
     cursor: default;
+    margin-top: 8rem;
+    border: 2px solid black;
+    border-radius: 1.6rem;
 
     @include media(900px, max) {
-      bottom: 1rem;
-      top: auto;
+      margin-top: 1rem;
       width: calc(100% - 2rem);
       border: 2px solid black;
       padding: 3rem 2rem;
       text-align: left;
-      margin-bottom: 0;
     }
 
     &__content {
       &__close {
         position: absolute;
-        top: 4rem;
+        top: 2rem;
         cursor: pointer;
-        right: 4rem;
+        right: 2rem;
         -webkit-appearance: none;
-        border: 0; 
+        border: 0;
         background: transparent;
         outline: none;
         padding: 0;
+        border-radius: 1000rem;
+        border: 1px solid #676767;
+        aspect-ratio: 1/1;
+        width: 4rem;
+
+        @include media(900px, max) {
+          top: 1rem;
+          right: 1rem;
+        }
 
         svg {
-          width: 2rem;
-          height: 2rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 1.4rem;
+          height: 1.4rem;
         }
       }
 
@@ -104,7 +135,7 @@ Newsletter popup
   .popup {
     visibility: visible;
     opacity: 1;
-    z-index: 9999;
+    z-index: 999999999999;
   }
 }
 

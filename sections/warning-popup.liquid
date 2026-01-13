@@ -1,0 +1,112 @@
+<div
+  class="popup popup--warning"
+  data-section-id="warning"
+  data-delay-days="3"
+  data-delay-seconds="2"
+  data-test-mode="true"
+>
+  <div class="popup__inner">
+    <div class="popup__inner__content">
+      <button type="button" class="popup__inner__content__close" onclick="hidePopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+          <polygon fill-rule="evenodd" fill="#EC1D24" points="29.854 25.3 19.482 14.927 29.854 4.553 25.3 0 14.928 10.374 4.555 0 .002 4.553 10.375 14.927 0 25.3 4.553 29.854 14.928 19.48 25.3 29.854" />
+        </svg>
+      </button>
+
+      <h3>Temporary Intake Pause</h3>
+      <hr>
+
+      <p class="text-left">
+        Due to a significant increase in demand, we are currently operating at full capacity. To maintain our turnaround
+        times and ensure medication safety, we have temporarily paused new orders. <br>
+        <br>
+        Ordering will resume on <b>16 January 2026</b>.
+      </p>
+      <p class="text-left">
+        Thank you for your understanding, we look forward to supporting you later this week. For repeat prescriptions or
+        urgent requests, please contact us at
+        <a href="mailto:vet@pilldrop.co.nz" class="colour--red">vet@pilldrop.co.nz</a>.
+      </p>
+
+      {% if section.settings.enable_button %}
+        <div class="popup__inner__content__button">
+          <a href="{{ section.settings.button_link }}" class="btn">
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+      {% endif %}
+
+      <p class="popup__inner__content__link">
+        <a href="#" onclick="hidePopup()">{{ section.settings.close_text }}</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+/**
+ * Get a cookie by name
+ * @param {string} name 
+ * @returns 
+ */
+function getCookie(name) {
+  let value = `; ${document.cookie}`;
+  let parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+
+/**
+* Show the newsletter popup
+*/
+function showPopup() {
+  document.documentElement.classList.add('popup-open');
+
+  setTimeout(function () {
+      document.querySelector('.popup--warning').classList.add('animate-in');
+  }, 444);
+
+}
+
+
+/**
+* Check if the newsletter popup has been closed before
+*/
+setTimeout(function () {
+  if (getCookie('hasClosedWarningPopup') !== 'true') {
+      showPopup();
+  }
+}, {{ section.settings.popup_seconds | times: 1000 }});
+
+
+/**
+* Close the newsletter popup
+*/
+function hidePopup() {
+  document.querySelector('.popup--warning').classList.add('animate-out');
+
+  document.documentElement.classList.remove('popup-open');
+
+  setTimeout(function () {
+      document.querySelector('.popup--warning').classList.remove('animate-in,animate-out');
+  }, 3000);
+
+  document.cookie = 'hasClosedWarningPopup=true; max-age=' + (60 * 60 * 24 * 3);
+}
+
+//on click of anything other than the popup__inner closer the modal, same with escape key
+document.addEventListener('click', function(event) {
+  const isClickInside = document.querySelector('.popup__inner').contains(event.target);
+
+  if (!isClickInside) {
+      hidePopup();
+  }
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Escape") {
+      hidePopup();
+  }
+});
+</script>

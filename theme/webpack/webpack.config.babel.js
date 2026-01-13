@@ -70,11 +70,11 @@ module.exports = (env, argv) => {
                         },
                     ]
                 },
-                {
-                    test: /\.(jpg|png|gif|svg)$/,
-                    loader: 'image-webpack-loader',
-                    enforce: 'pre'
-                },
+                // {
+                //     test: /\.(jpg|png|gif|svg)$/,
+                //     loader: 'image-webpack-loader',
+                //     enforce: 'pre'
+                // },
                 {
                     test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
                     loader: 'file-loader',
