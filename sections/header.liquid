@@ -33,11 +33,9 @@ Header
 
                 <div class="header__wrap__secondary__menu">
                     <div class="header__wrap__secondary__menu__wrap">
-                        {% for link in linklists.about-us.links %}
-                            <a href="{{ link.url }}" class="header__wrap__secondary__menu__wrap__item {% if link.current %}current{% endif %}">
-                                {{ link.title | escape }}
-                            </a>
-                        {%- endfor -%}
+                        <a href="/collections/pets" class="header__wrap__secondary__menu__wrap__item [ js-mega-menu ]">Shop by pet</a>
+                        <a href="/collections/brands" class="header__wrap__secondary__menu__wrap__item [ js-mega-menu ]">Shop by brand</a>
+                        <a href="/collections/conditions" class="header__wrap__secondary__menu__wrap__item [ js-mega-menu ]">Shop by condition</a>
                     </div>
                 </div>
 
@@ -77,23 +75,15 @@ Header
         Navigation
         ------------------------------------------------------------------ -->
         <nav class="header__wrap__nav">
-            {% for link in linklists.main-menu.links %}
-                <div class="header__wrap__nav__item">
-                    <a href="{{ link.url }}" class="header__wrap__nav__item__link {% if link.current %}current{% endif %}">{{ link.title | escape }}</a>
-
-                    {% if link.links != blank %}
-                        <div class="header__wrap__nav__item__menu">
-                            {% for childlink in link.links %}
-                            <div class="header__wrap__nav__item__menu__item">
-                                <a href="{{ childlink.url }}" data-id="{{ childlink.title }}" class="header__main__wrap__menu__item__menu__item__link {% if childlink.active %}header__main__wrap__menu__item__menu__item__link--current{% endif %}">
-                                    {{ childlink.title | escape }}
-                                </a>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            {%- endfor -%}
+            <div class="header__wrap__nav__item">
+                <a href="/collections" class="header__wrap__nav__item__link [ js-mega-menu-trigger ]" data-mega-trigger>SHOP BY PET</a>
+            </div>
+            <div class="header__wrap__nav__item">
+                <a href="/collections/brands" class="header__wrap__nav__item__link">SHOP BY BRAND</a>
+            </div>
+            <div class="header__wrap__nav__item">
+                <a href="/collections/conditions" class="header__wrap__nav__item__link">SHOP BY CONDITION</a>
+            </div>
         </nav>
          
         <!-- -----------------------------------------------------------------
@@ -129,6 +119,8 @@ Header
 
     </div>
 </header>
+
+{% render 'mega-menu' %}
 
 <!-- -------------------------------------------- 
 Mobile Menu

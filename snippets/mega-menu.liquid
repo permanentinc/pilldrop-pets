@@ -1,0 +1,242 @@
+<!-- -----------------------------------------------------------------
+Mega Menu – Static / Hardcoded
+------------------------------------------------------------------ -->
+<div class="megamenu">
+    <div class="megamenu__inner">
+
+        {% comment %} <svg class="megamenu__pet__icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.25 16.25h1.5L12 17z"/><path d="M16 14v.5"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"/><path d="M8 14v.5"/><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/></svg> {% endcomment %}
+        <!-- Column 1: Pets -->
+        <div class="megamenu__col megamenu__col--pets">
+            <a href="/collections/dogs" class="megamenu__pet megamenu__pet--active" data-mega-pet="dog">
+                <svg class="megamenu__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dog-icon lucide-dog"><path d="M11.25 16.25h1.5L12 17z"/><path d="M16 14v.5"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"/><path d="M8 14v.5"/><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/></svg>
+                <span>Dog</span>
+            </a>
+            <a href="/collections/cats" class="megamenu__pet" data-mega-pet="cat">
+                <svg class="megamenu__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cat-icon lucide-cat"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/></svg>
+                <span>Cat</span>
+            </a>
+            <a href="/collections/horses" class="megamenu__pet" data-mega-pet="horse">
+                <svg class="megamenu__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chess-knight-icon lucide-chess-knight"><path d="M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M16.5 18c1-2 2.5-5 2.5-9a7 7 0 0 0-7-7H6.635a1 1 0 0 0-.768 1.64L7 5l-2.32 5.802a2 2 0 0 0 .95 2.526l2.87 1.456"/><path d="m15 5 1.425-1.425"/><path d="m17 8 1.53-1.53"/><path d="M9.713 12.185 7 18"/></svg>
+                <span>Horse</span>
+            </a>
+        </div>
+
+        <!-- Column 2: Categories -->
+        <div class="megamenu__col megamenu__col--categories">
+
+            <!-- Dog categories -->
+            <div class="megamenu__category-group" data-mega-category="dog">
+                <a href="/collections/dog-food" class="megamenu__category megamenu__category--active" data-mega-cat="dog-food">Food</a>
+                <a href="/collections/dog-health" class="megamenu__category" data-mega-cat="dog-health">Health</a>
+                <a href="/collections/dog-flea-and-worm" class="megamenu__category" data-mega-cat="dog-flea-worm">Flea and worm</a>
+                <a href="/collections/dog-prescriptions" class="megamenu__category" data-mega-cat="dog-prescriptions">Prescriptions</a>
+            </div>
+
+            <!-- Cat categories -->
+            <div class="megamenu__category-group" data-mega-category="cat" style="display:none">
+                <a href="/collections/cat-food" class="megamenu__category megamenu__category--active" data-mega-cat="cat-food">Food</a>
+                <a href="/collections/cat-health" class="megamenu__category" data-mega-cat="cat-health">Health</a>
+                <a href="/collections/cat-flea-and-worm" class="megamenu__category" data-mega-cat="cat-flea-worm">Flea and worm</a>
+                <a href="/collections/cat-prescriptions" class="megamenu__category" data-mega-cat="cat-prescriptions">Prescriptions</a>
+            </div>
+
+            <!-- Horse categories -->
+            <div class="megamenu__category-group" data-mega-category="horse" style="display:none">
+                <a href="/collections/horse-food" class="megamenu__category megamenu__category--active" data-mega-cat="horse-food">Food</a>
+                <a href="/collections/horse-health" class="megamenu__category" data-mega-cat="horse-health">Health</a>
+                <a href="/collections/horse-flea-and-worm" class="megamenu__category" data-mega-cat="horse-flea-worm">Flea and worm</a>
+                <a href="/collections/horse-prescriptions" class="megamenu__category" data-mega-cat="horse-prescriptions">Prescriptions</a>
+            </div>
+        </div>
+
+        <!-- Column 3: Subcategories -->
+        <div class="megamenu__col megamenu__col--subcategories">
+
+            <!-- Dog > Food -->
+            <div class="megamenu__subcategory-group" data-mega-sub="dog-food">
+                <a href="/collections/dog-dry-food" class="megamenu__subcategory">Dry Food</a>
+                <a href="/collections/dog-wet-food" class="megamenu__subcategory">Wet Food</a>
+                <a href="/collections/dog-puppy-food" class="megamenu__subcategory">Puppy Food</a>
+                <a href="/collections/dog-vet-diets" class="megamenu__subcategory">Vet Diets</a>
+                <a href="/collections/dog-high-meat-diets" class="megamenu__subcategory">High Meat Diets</a>
+                <a href="/collections/dog-freeze-dried-dehydrated-food" class="megamenu__subcategory">Freeze Dried &amp; Dehydrated Food</a>
+                <a href="/collections/dog-food-toppers" class="megamenu__subcategory">Food Toppers</a>
+                <a href="/collections/dog-milk-replacement" class="megamenu__subcategory">Milk Replacement</a>
+                <a href="/collections/dog-science-health-nutrition" class="megamenu__subcategory">Science Health Nutrition</a>
+            </div>
+
+            <!-- Dog > Health -->
+            <div class="megamenu__subcategory-group" data-mega-sub="dog-health" style="display:none">
+                <a href="/collections/dog-joint-care" class="megamenu__subcategory">Joint Care</a>
+                <a href="/collections/dog-skin-coat" class="megamenu__subcategory">Skin &amp; Coat</a>
+                <a href="/collections/dog-dental-care" class="megamenu__subcategory">Dental Care</a>
+                <a href="/collections/dog-digestive-health" class="megamenu__subcategory">Digestive Health</a>
+                <a href="/collections/dog-supplements" class="megamenu__subcategory">Supplements</a>
+            </div>
+
+            <!-- Dog > Flea and worm -->
+            <div class="megamenu__subcategory-group" data-mega-sub="dog-flea-worm" style="display:none">
+                <a href="/collections/dog-flea-treatment" class="megamenu__subcategory">Flea Treatment</a>
+                <a href="/collections/dog-worm-treatment" class="megamenu__subcategory">Worm Treatment</a>
+                <a href="/collections/dog-tick-treatment" class="megamenu__subcategory">Tick Treatment</a>
+            </div>
+
+            <!-- Dog > Prescriptions -->
+            <div class="megamenu__subcategory-group" data-mega-sub="dog-prescriptions" style="display:none">
+                <a href="/collections/dog-prescription-diets" class="megamenu__subcategory">Prescription Diets</a>
+                <a href="/collections/dog-prescription-medications" class="megamenu__subcategory">Prescription Medications</a>
+            </div>
+
+            <!-- Cat > Food -->
+            <div class="megamenu__subcategory-group" data-mega-sub="cat-food" style="display:none">
+                <a href="/collections/cat-dry-food" class="megamenu__subcategory">Dry Food</a>
+                <a href="/collections/cat-wet-food" class="megamenu__subcategory">Wet Food</a>
+                <a href="/collections/cat-kitten-food" class="megamenu__subcategory">Kitten Food</a>
+                <a href="/collections/cat-vet-diets" class="megamenu__subcategory">Vet Diets</a>
+                <a href="/collections/cat-food-toppers" class="megamenu__subcategory">Food Toppers</a>
+                <a href="/collections/cat-milk-replacement" class="megamenu__subcategory">Milk Replacement</a>
+            </div>
+
+            <!-- Cat > Health -->
+            <div class="megamenu__subcategory-group" data-mega-sub="cat-health" style="display:none">
+                <a href="/collections/cat-joint-care" class="megamenu__subcategory">Joint Care</a>
+                <a href="/collections/cat-skin-coat" class="megamenu__subcategory">Skin &amp; Coat</a>
+                <a href="/collections/cat-dental-care" class="megamenu__subcategory">Dental Care</a>
+                <a href="/collections/cat-supplements" class="megamenu__subcategory">Supplements</a>
+            </div>
+
+            <!-- Cat > Flea and worm -->
+            <div class="megamenu__subcategory-group" data-mega-sub="cat-flea-worm" style="display:none">
+                <a href="/collections/cat-flea-treatment" class="megamenu__subcategory">Flea Treatment</a>
+                <a href="/collections/cat-worm-treatment" class="megamenu__subcategory">Worm Treatment</a>
+            </div>
+
+            <!-- Cat > Prescriptions -->
+            <div class="megamenu__subcategory-group" data-mega-sub="cat-prescriptions" style="display:none">
+                <a href="/collections/cat-prescription-diets" class="megamenu__subcategory">Prescription Diets</a>
+                <a href="/collections/cat-prescription-medications" class="megamenu__subcategory">Prescription Medications</a>
+            </div>
+
+            <!-- Horse > Food -->
+            <div class="megamenu__subcategory-group" data-mega-sub="horse-food" style="display:none">
+                <a href="/collections/horse-feed" class="megamenu__subcategory">Horse Feed</a>
+                <a href="/collections/horse-supplements" class="megamenu__subcategory">Supplements</a>
+            </div>
+
+            <!-- Horse > Health -->
+            <div class="megamenu__subcategory-group" data-mega-sub="horse-health" style="display:none">
+                <a href="/collections/horse-joint-care" class="megamenu__subcategory">Joint Care</a>
+                <a href="/collections/horse-hoof-care" class="megamenu__subcategory">Hoof Care</a>
+                <a href="/collections/horse-digestive-health" class="megamenu__subcategory">Digestive Health</a>
+            </div>
+
+            <!-- Horse > Flea and worm -->
+            <div class="megamenu__subcategory-group" data-mega-sub="horse-flea-worm" style="display:none">
+                <a href="/collections/horse-worming" class="megamenu__subcategory">Worming</a>
+            </div>
+
+            <!-- Horse > Prescriptions -->
+            <div class="megamenu__subcategory-group" data-mega-sub="horse-prescriptions" style="display:none">
+                <a href="/collections/horse-prescription-medications" class="megamenu__subcategory">Prescription Medications</a>
+            </div>
+        </div>
+
+        <!-- Column 4: Pet Image -->
+        <div class="megamenu__col megamenu__col--image">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=600&fit=crop&crop=faces" alt="Dog" class="megamenu__image megamenu__image--active" data-mega-image="dog" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=600&fit=crop&crop=faces" alt="Cat" class="megamenu__image" data-mega-image="cat" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&h=600&fit=crop&crop=faces" alt="Horse" class="megamenu__image" data-mega-image="horse" loading="lazy">
+        </div>
+
+    </div>
+</div>
+
+<script>
+(function() {
+    var menu = document.querySelector('.megamenu');
+    var trigger = document.querySelector('[data-mega-trigger]');
+    if (!menu || !trigger) return;
+
+    // Toggle on click
+    trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        menu.classList.toggle('megamenu--active');
+    });
+
+    // Close when clicking outside the menu and trigger
+    document.addEventListener('click', function(e) {
+        if (!menu.classList.contains('megamenu--active')) return;
+        if (menu.contains(e.target) || trigger.contains(e.target)) return;
+        menu.classList.remove('megamenu--active');
+    });
+
+    // Close on scroll past 40px
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 40 && menu.classList.contains('megamenu--active')) {
+            menu.classList.remove('megamenu--active');
+        }
+    });
+
+    // Close on small viewport
+    function checkViewport() {
+        if (window.innerWidth < 1100 && menu.classList.contains('megamenu--active')) {
+            menu.classList.remove('megamenu--active');
+        }
+    }
+    window.addEventListener('resize', checkViewport);
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && menu.classList.contains('megamenu--active')) {
+            menu.classList.remove('megamenu--active');
+        }
+    });
+
+    // Pet hover → switch category group + show first subcategory
+    menu.querySelectorAll('.megamenu__pet').forEach(function(pet) {
+        pet.addEventListener('mouseenter', function() {
+            var key = this.getAttribute('data-mega-pet');
+
+            menu.querySelectorAll('.megamenu__pet').forEach(function(p) { p.classList.remove('megamenu__pet--active'); });
+            this.classList.add('megamenu__pet--active');
+
+            menu.querySelectorAll('.megamenu__category-group').forEach(function(g) { g.style.display = 'none'; });
+            var group = menu.querySelector('.megamenu__category-group[data-mega-category="' + key + '"]');
+
+            // Swap pet image
+            menu.querySelectorAll('.megamenu__image').forEach(function(img) { img.classList.remove('megamenu__image--active'); });
+            var petImg = menu.querySelector('.megamenu__image[data-mega-image="' + key + '"]');
+            if (petImg) petImg.classList.add('megamenu__image--active');
+
+            if (group) {
+                group.style.display = '';
+                group.querySelectorAll('.megamenu__category').forEach(function(c, i) {
+                    c.classList.toggle('megamenu__category--active', i === 0);
+                });
+                var firstCat = group.querySelector('.megamenu__category');
+                if (firstCat) {
+                    var catKey = firstCat.getAttribute('data-mega-cat');
+                    menu.querySelectorAll('.megamenu__subcategory-group').forEach(function(s) { s.style.display = 'none'; });
+                    var sub = menu.querySelector('.megamenu__subcategory-group[data-mega-sub="' + catKey + '"]');
+                    if (sub) sub.style.display = '';
+                }
+            }
+        });
+    });
+
+    // Category hover → switch subcategory group
+    menu.querySelectorAll('.megamenu__category').forEach(function(cat) {
+        cat.addEventListener('mouseenter', function() {
+            var catKey = this.getAttribute('data-mega-cat');
+            var group = this.closest('.megamenu__category-group');
+
+            group.querySelectorAll('.megamenu__category').forEach(function(c) { c.classList.remove('megamenu__category--active'); });
+            this.classList.add('megamenu__category--active');
+
+            menu.querySelectorAll('.megamenu__subcategory-group').forEach(function(s) { s.style.display = 'none'; });
+            var sub = menu.querySelector('.megamenu__subcategory-group[data-mega-sub="' + catKey + '"]');
+            if (sub) sub.style.display = '';
+        });
+    });
+})();
+</script>
