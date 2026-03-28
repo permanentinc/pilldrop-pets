@@ -1,0 +1,131 @@
+/* -----------------------------------------------------------------
+   Mobile Mega Menu
+   Only visible at <= 1099px (where the desktop megamenu hides)
+   ------------------------------------------------------------------ */
+
+.mmega {
+  display: none;
+  padding: 0 1rem 2rem;
+
+  @media only screen and (max-width: 1099px) {
+    display: block;
+  }
+
+  // ── Pet tabs ──────────────────────────────────
+  &__pets {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 1rem;
+  }
+
+  &__pet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1 1 33.333%;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 100rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &--active {
+      background: var(--primary);
+      color: white;
+
+      .mmega__pet__icon {
+        stroke: white;
+      }
+    }
+
+    &__icon {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+    }
+  }
+
+  // ── Panels (one per pet) ──────────────────────
+  &__panel {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  // ── "Shop all" link ───────────────────────────
+  &__shop-all {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 0.5rem;
+  }
+
+  // ── Accordion ─────────────────────────────────
+  &__accordion {
+    border-bottom: 1px solid #f0f0f0;
+
+    &__trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.2rem 0;
+      border: none;
+      background: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      text-align: left;
+
+      svg {
+        transition: transform 0.25s ease;
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      a {
+        display: block;
+        padding: 0.8rem 0 0.8rem 1.5rem;
+        font-size: 1.35rem;
+        color: var(--text);
+        font-weight: 400;
+        transition: color 0.2s ease;
+
+        &:hover,
+        &:active {
+          color: var(--primary);
+        }
+      }
+    }
+
+    // Open state
+    &--open {
+      .mmega__accordion__trigger svg {
+        transform: rotate(180deg);
+      }
+
+      .mmega__accordion__body {
+        max-height: 50rem; // large enough for any list
+      }
+    }
+  }
+}

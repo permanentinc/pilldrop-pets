@@ -1,0 +1,186 @@
+<!-- -----------------------------------------------------------------
+Mobile Mega Menu – Accordion-style drill-down
+------------------------------------------------------------------ -->
+<div class="mmega">
+
+    <!-- Pet selector tabs -->
+    <div class="mmega__pets">
+        <button class="mmega__pet mmega__pet--active" data-mmega-pet="dog">
+            <svg class="mmega__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.25 16.25h1.5L12 17z"/><path d="M16 14v.5"/><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a11.702 11.702 0 0 0-.493-3.309"/><path d="M8 14v.5"/><path d="M8.5 8.5c-.384 1.05-1.083 2.028-2.344 2.5-1.931.722-3.576-.297-3.656-1-.113-.994 1.177-6.53 4-7 1.923-.321 3.651.845 3.651 2.235A7.497 7.497 0 0 1 14 5.277c0-1.39 1.844-2.598 3.767-2.277 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"/></svg>
+            <span>Dog</span>
+        </button>
+        <button class="mmega__pet" data-mmega-pet="cat">
+            <svg class="mmega__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c.67 0 1.35.09 2 .26 1.78-2 5.03-2.84 6.42-2.26 1.4.58-.42 7-.42 7 .57 1.07 1 2.24 1 3.44C21 17.9 16.97 21 12 21s-9-3-9-7.56c0-1.25.5-2.4 1-3.44 0 0-1.89-6.42-.5-7 1.39-.58 4.72.23 6.5 2.23A9.04 9.04 0 0 1 12 5Z"/><path d="M8 14v.5"/><path d="M16 14v.5"/><path d="M11.25 16.25h1.5L12 17l-.75-.75Z"/></svg>
+            <span>Cat</span>
+        </button>
+        <button class="mmega__pet" data-mmega-pet="horse">
+            <svg class="mmega__pet__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z"/><path d="M16.5 18c1-2 2.5-5 2.5-9a7 7 0 0 0-7-7H6.635a1 1 0 0 0-.768 1.64L7 5l-2.32 5.802a2 2 0 0 0 .95 2.526l2.87 1.456"/><path d="m15 5 1.425-1.425"/><path d="m17 8 1.53-1.53"/><path d="M9.713 12.185 7 18"/></svg>
+            <span>Horse</span>
+        </button>
+    </div>
+
+    <!-- Dog panel -->
+    <div class="mmega__panel mmega__panel--active" data-mmega-panel="dog">
+        <a href="/collections/dogs" class="mmega__shop-all">Shop all Dog</a>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Food <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/dog-dry-food">Dry Food</a>
+                <a href="/collections/dog-wet-food">Wet Food</a>
+                <a href="/collections/dog-puppy-food">Puppy Food</a>
+                <a href="/collections/dog-vet-diets">Vet Diets</a>
+                <a href="/collections/dog-high-meat-diets">High Meat Diets</a>
+                <a href="/collections/dog-freeze-dried-dehydrated-food">Freeze Dried &amp; Dehydrated Food</a>
+                <a href="/collections/dog-food-toppers">Food Toppers</a>
+                <a href="/collections/dog-milk-replacement">Milk Replacement</a>
+                <a href="/collections/dog-science-health-nutrition">Science Health Nutrition</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Health <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/dog-joint-care">Joint Care</a>
+                <a href="/collections/dog-skin-coat">Skin &amp; Coat</a>
+                <a href="/collections/dog-dental-care">Dental Care</a>
+                <a href="/collections/dog-digestive-health">Digestive Health</a>
+                <a href="/collections/dog-supplements">Supplements</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Flea &amp; Worm <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/dog-flea-treatment">Flea Treatment</a>
+                <a href="/collections/dog-worm-treatment">Worm Treatment</a>
+                <a href="/collections/dog-tick-treatment">Tick Treatment</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Prescriptions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/dog-prescription-diets">Prescription Diets</a>
+                <a href="/collections/dog-prescription-medications">Prescription Medications</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cat panel -->
+    <div class="mmega__panel" data-mmega-panel="cat">
+        <a href="/collections/cats" class="mmega__shop-all">Shop all Cat</a>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Food <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/cat-dry-food">Dry Food</a>
+                <a href="/collections/cat-wet-food">Wet Food</a>
+                <a href="/collections/cat-kitten-food">Kitten Food</a>
+                <a href="/collections/cat-vet-diets">Vet Diets</a>
+                <a href="/collections/cat-food-toppers">Food Toppers</a>
+                <a href="/collections/cat-milk-replacement">Milk Replacement</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Health <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/cat-joint-care">Joint Care</a>
+                <a href="/collections/cat-skin-coat">Skin &amp; Coat</a>
+                <a href="/collections/cat-dental-care">Dental Care</a>
+                <a href="/collections/cat-supplements">Supplements</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Flea &amp; Worm <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/cat-flea-treatment">Flea Treatment</a>
+                <a href="/collections/cat-worm-treatment">Worm Treatment</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Prescriptions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/cat-prescription-diets">Prescription Diets</a>
+                <a href="/collections/cat-prescription-medications">Prescription Medications</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horse panel -->
+    <div class="mmega__panel" data-mmega-panel="horse">
+        <a href="/collections/horses" class="mmega__shop-all">Shop all Horse</a>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Food <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/horse-feed">Horse Feed</a>
+                <a href="/collections/horse-supplements">Supplements</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Health <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/horse-joint-care">Joint Care</a>
+                <a href="/collections/horse-hoof-care">Hoof Care</a>
+                <a href="/collections/horse-digestive-health">Digestive Health</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Flea &amp; Worm <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/horse-worming">Worming</a>
+            </div>
+        </div>
+
+        <div class="mmega__accordion">
+            <button class="mmega__accordion__trigger" data-mmega-toggle>Prescriptions <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="mmega__accordion__body">
+                <a href="/collections/horse-prescription-medications">Prescription Medications</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+(function() {
+    var mmega = document.querySelector('.mmega');
+    if (!mmega) return;
+
+    // Pet tab switching
+    mmega.querySelectorAll('.mmega__pet').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            mmega.querySelectorAll('.mmega__pet').forEach(function(b) { b.classList.remove('mmega__pet--active'); });
+            btn.classList.add('mmega__pet--active');
+
+            var pet = btn.getAttribute('data-mmega-pet');
+            mmega.querySelectorAll('.mmega__panel').forEach(function(p) { p.classList.remove('mmega__panel--active'); });
+            var panel = mmega.querySelector('.mmega__panel[data-mmega-panel="' + pet + '"]');
+            if (panel) panel.classList.add('mmega__panel--active');
+        });
+    });
+
+    // Accordion toggle
+    mmega.querySelectorAll('[data-mmega-toggle]').forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            var accordion = trigger.closest('.mmega__accordion');
+            var isOpen = accordion.classList.contains('mmega__accordion--open');
+
+            // Close all accordions in same panel
+            trigger.closest('.mmega__panel').querySelectorAll('.mmega__accordion').forEach(function(a) {
+                a.classList.remove('mmega__accordion--open');
+            });
+
+            if (!isOpen) {
+                accordion.classList.add('mmega__accordion--open');
+            }
+        });
+    });
+})();
+</script>
