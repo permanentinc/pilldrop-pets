@@ -1,0 +1,95 @@
+<div class="js-products js-products--search">
+  <div class="collection">
+    <div class="collection__filters">
+      <h4 class="colour--red">Shop by....</h4>
+
+      {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+      {% render 'facets',
+        results: search,
+        mode: 'search',
+        enable_filtering: true,
+        enable_sorting: true,
+        filter_type: 'vertical',
+        paginate: paginate
+      %}
+    </div>
+
+    <div class="collection__grid">
+      <h3
+        class="no-results colour--red"
+        style="{% if search.performed and search.results_count == 0 %}display:block;{% else %}display:none;{% endif %}width: 100%;"
+      >
+        <br>
+        <br>
+        There are no results for the selected filters
+      </h3>
+
+      <div class="loader">
+        <div id="loader">
+          <div id="shadow"></div>
+          <div id="box"></div>
+        </div>
+      </div>
+
+      <div
+        id="product-grid"
+        data-id="{{ section.id }}"
+      >
+        <div
+          id="ProductGridContainer"
+          data-id="{{ section.id }}"
+        >
+          {% if search.performed %}
+            {% paginate search.results by 48 %}
+              {% for item in search.results %}
+                {% if item.object_type == 'product' %}
+                  {% render 'product-grid-card', product: item %}
+                {% endif %}
+              {% endfor %}
+
+              {% if paginate.pages > 1 %}
+                <nav class="pagination" role="navigation" aria-label="Pagination" style="width: 100%;">
+                  <ul role="list">
+                    {% if paginate.previous %}
+                      <li>
+                        <a href="{{ paginate.previous.url }}" aria-label="Previous"> &laquo; Previous </a>
+                      </li>
+                    {% endif %}
+
+                    {% for part in paginate.parts %}
+                      <li>
+                        {% if part.is_link %}
+                          <a href="{{ part.url }}" aria-label="{{ part.title }}">{{ part.title }}</a>
+                        {% else %}
+                          {% if part.title == paginate.current_page %}
+                            <span aria-current="page" aria-label="{{ part.title }}">{{ part.title }}</span>
+                          {% else %}
+                            <span>{{ part.title }}</span>
+                          {% endif %}
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+
+                    {% if paginate.next %}
+                      <li>
+                        <a href="{{ paginate.next.url }}" aria-label="Next"> Next &raquo; </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </nav>
+              {% endif %}
+            {% endpaginate %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Search product grid",
+  "settings": []
+}
+{% endschema %}

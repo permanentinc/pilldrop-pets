@@ -5,55 +5,70 @@
 
 {%- liquid
   assign tags = 'Skin,Cardiac,Diabetes,Behavioural,Pain and Anti-inflammatory,Hyperthyroidism,Eye Health,Food,Flea Treatment,Seizure,Worming' | split: ','
-  assign active_filters = request.params['filter.p.tag'] | default: ''
+  assign facet_mode = mode | default: 'collection'
+  assign search_value = request.params.q | default: results.terms | default: ''
+  assign collection_context = ''
+
+  if facet_mode == 'collection' and collection and collection.handle != 'all'
+    assign collection_context = collection.title | downcase
+  endif
 
   if results.url
     assign results_url = results.url
+  elsif facet_mode == 'search'
+    assign results_url = routes.search_url
   else
     assign terms = results.terms | escape
     assign results_url = '?q=' | append: terms
   endif
 -%}
 
-<script>
-  // on page load preselect all the checkboxes that are in the URL i.e. ?filter.p.tag=Cardiac
-  document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedTags = urlParams.getAll('filter.p.tag');
-
-    selectedTags.forEach(function(tag) {
-      const checkbox = document.querySelector(`input[type="checkbox"][value="${tag}"]`);
-      if (checkbox) {
-        checkbox.checked = true;
-      }
-    });
-  });
-</script>
-
 <div class="facets-simple">
   <div class="results-count">
     Showing&nbsp;
-    {%- if results.results_count -%}
+    {%- if facet_mode == 'search' -%}
+      {%- if search.performed -%}
+        {{ results.results_count }} products
+      {%- else -%}
+        0 products
+      {%- endif -%}
+    {%- elsif results.results_count -%}
       {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
     {%- elsif results.products_count == results.all_products_count -%}
-      {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+      {{ 'products.facets.product_count_simple' | t: count: results.products_count -}}
+      {%- if collection_context != blank -%}
+        &nbsp;for {{ collection_context }}<br>
+        <a class="colour--red" href="{{ routes.all_products_collection_url }}">click here</a> to filter by all animals
+      {%- endif -%}
     {%- else -%}
       {{
         'products.facets.product_count'
         | t: product_count: results.products_count, count: results.all_products_count
       }}
+      {%- if collection_context != blank -%}
+        &nbsp;for {{ collection_context }}<br>
+        <a class="colour--red" href="{{ routes.all_products_collection_url }}">click here</a> to filter by all animals
+      {%- endif -%}
     {%- endif -%}
   </div>
 
   <facet-filters-form>
-    <form id="FacetFiltersForm">
-      <div class="filter-group">
+    <form
+      id="FacetFiltersForm"
+      data-mode="{{ facet_mode }}"
+      data-collection-url="{% if facet_mode == 'search' %}{{ routes.all_products_collection_url }}{% else %}{{ results_url }}{% endif %}"
+      data-search-url="{{ routes.search_url }}"
+    >
+      <div class="filter-group filter-group--search">
+        <label for="search-query">Refine products</label>
         <input
-          type="hidden"
+          class="filter-search-input"
+          type="search"
           id="search-query"
           name="q"
-          value="{{ results.terms | escape }}"
-          placeholder="Search products..."
+          value="{{ search_value | escape }}"
+          placeholder="Filter products..."
+          autocomplete="off"
         >
       </div>
 
@@ -63,8 +78,11 @@
             <input
               type="checkbox"
               class="check"
-              name="filter.p.tag"
+              name="tag"
               value="{{ tag }}"
+              {% if current_tags contains tag %}
+                checked
+              {% endif %}
             >
             {{ tag }}
           </label>

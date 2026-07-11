@@ -65,6 +65,7 @@
       <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
       {% render 'facets',
         results: collection,
+        mode: 'collection',
         enable_filtering: true,
         enable_sorting: true,
         filter_type: 'vertical',
@@ -208,7 +209,10 @@
       Product grid - CHANGED: Use collection.products instead of collections.all.products
     {% endcomment %}
     <div class="collection__grid">
-      <h3 class="no-results colour--red" style="display:none;width: 100%;">
+      <h3
+        class="no-results colour--red"
+        style="{% if collection.products_count == 0 %}display:block;{% else %}display:none;{% endif %}width: 100%;"
+      >
         <br>
         <br>
         There are no results for the selected filters
@@ -228,77 +232,10 @@
           id="ProductGridContainer"
           data-id="{{ section.id }}"
         >
-          {% comment %} CHANGED: Use collection.products which respects URL filtering {% endcomment %}
-          {% paginate collection.products by 250 %}
+          {% comment %} Use collection.products so Shopify handles filtering and pagination. {% endcomment %}
+          {% paginate collection.products by 48 %}
             {% for product in collection.products %}
-              {% assign on_sale = false %}
-              {% if product.compare_at_price > product.price %}
-                {%- assign on_sale = true -%}
-              {% endif %}
-
-              <div
-                class="collection__grid__item"
-                data-tags="{% for tag in product.tags %}{{ tag }},{% endfor %}"
-                data-collections="{% for collection in product.collections %}{{ collection.title }},{% endfor %}"
-                data-brand="{{ product.vendor }}"
-                data-types="{{ product.type }}"
-              >
-                {% if product.media[0] %}
-                  <a href="{{ product.url }}" class="collection__grid__item__image">
-                    <img
-                      loading="lazy"
-                      srcset="{{ product.media[0] | image_url: width: 480 }} 480w,{{ product.media[0] | image_url: width: 800 }} 800w,{{ product.media[0] | image_url: width: 1920 }} 1600w"
-                      sizes="(max-width: 600px) 480px,(max-width: 1000px) 800px,1000px"
-                      src="{{ product.media[0] | image_url: width: 1920 }}"
-                      alt="{{ product.media[0].alt | escape }}"
-                      width="{{ product.media[0].width }}"
-                      height="{{ product.media[0].height }}"
-                    >
-
-                    {% if on_sale %}
-                      <span class="collection__grid__item__image__sale"
-                        >WHY PAY {{ product.compare_at_price | money }} ?</span
-                      >
-                    {% endif %}
-
-                    {% if product.available %}
-                    {% else %}
-                      <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
-                    {% endif %}
-                  </a>
-                {% else %}
-                  <a href="{{ product.url }}" class="collection__grid__item__image">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg"
-                      class="placeholder"
-                      width="300"
-                      height="300"
-                      alt="Placeholder image"
-                    >
-
-                    {% if on_sale %}
-                      <span class="collection__grid__item__image__sale"
-                        >WHY PAY {{ product.compare_at_price | money }} ?</span
-                      >
-                    {% endif %}
-
-                    {% if product.available %}
-                    {% else %}
-                      <span class="collection__grid__item__image__unavailable">SOLD OUT</span>
-                    {% endif %}
-                  </a>
-                {% endif %}
-
-                <a href="{{ product.url }}" class="collection__grid__item__details">
-                  <div class="collection__grid__item__details__title">
-                    <h6 class="colour--red">
-                      <strong>{{ product.title | escape }} &nbsp;</strong>
-                    </h6>
-                    <p style="color:#212121;">{{ product.price | money }}</p>
-                  </div>
-                </a>
-              </div>
+              {% render 'product-grid-card', product: product %}
             {% endfor %}
 
             {% if paginate.pages > 1 %}
