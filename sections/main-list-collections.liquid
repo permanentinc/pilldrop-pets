@@ -81,16 +81,16 @@
           <span class="collections-index__card__image">
             {%- if collection_image != blank -%}
               <img
-                src="{{ collection_image | image_url: width: 700 }}"
+                src="{{ collection_image | image_url: width: 700, height: 700, crop: 'center' }}"
                 srcset="
-                  {{ collection_image | image_url: width: 360 }} 360w,
-                  {{ collection_image | image_url: width: 540 }} 540w,
-                  {{ collection_image | image_url: width: 700 }} 700w
+                  {{ collection_image | image_url: width: 360, height: 360, crop: 'center' }} 360w,
+                  {{ collection_image | image_url: width: 540, height: 540, crop: 'center' }} 540w,
+                  {{ collection_image | image_url: width: 700, height: 700, crop: 'center' }} 700w
                 "
                 sizes="(max-width: 640px) 50vw, (max-width: 980px) 33vw, 25vw"
                 alt="{{ collection_image.alt | default: collection.title | escape }}"
-                width="{{ collection_image.width | default: 700 }}"
-                height="{{ collection_image.height | default: 700 }}"
+                width="700"
+                height="700"
                 loading="lazy"
               >
             {%- else -%}
