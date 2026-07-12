@@ -8,9 +8,13 @@
   assign facet_mode = mode | default: 'collection'
   assign search_value = request.params.q | default: results.terms | default: ''
   assign collection_context = ''
+  assign collection_title = ''
 
   if facet_mode == 'collection' and collection and collection.handle != 'all'
     assign collection_context = collection.title | downcase
+    assign collection_title = collection.title
+  elsif facet_mode == 'collection' and collection
+    assign collection_title = collection.title
   endif
 
   if results.url
@@ -57,6 +61,7 @@
       id="FacetFiltersForm"
       data-mode="{{ facet_mode }}"
       data-collection-url="{% if facet_mode == 'search' %}{{ routes.all_products_collection_url }}{% else %}{{ results_url }}{% endif %}"
+      data-collection-title="{{ collection_title | escape }}"
       data-search-url="{{ routes.search_url }}"
     >
       <div class="filter-group filter-group--search">

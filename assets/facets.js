@@ -16,6 +16,41 @@ class FacetFiltersForm extends HTMLElement {
     this.cleanCurrentUrl();
     this.syncFromUrl();
     this.bindEvents();
+    this.focusSearchFromUrl();
+    this.applyInitialCollectionSearch();
+  }
+
+  applyInitialCollectionSearch() {
+    const mode = this.form.dataset.mode || 'collection';
+    const searchTerm = this.normalizeSearchTerm(this.searchInput ? this.searchInput.value : '');
+
+    if (mode !== 'collection' || !searchTerm) {
+      return;
+    }
+
+    const selectedTags = new FormData(this.form).getAll('tag').filter(Boolean);
+    const currentUrl = new URL(window.location.href);
+    this.renderCollectionSearch(
+      searchTerm,
+      selectedTags,
+      this.toCleanRelativeUrl(currentUrl, { keepPage: true }),
+    );
+  }
+
+  focusSearchFromUrl() {
+    if (!this.searchInput) {
+      return;
+    }
+
+    const currentUrl = new URL(window.location.href);
+    const query = currentUrl.searchParams.get('q');
+
+    if (!query) {
+      return;
+    }
+
+    this.searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.searchInput.focus({ preventScroll: true });
   }
 
   bindEvents() {
@@ -87,7 +122,27 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   onSubmit() {
-    const targetUrl = this.buildUrlFromForm();
+    const mode = this.form.dataset.mode || 'collection';
+
+    if (mode === 'search') {
+      const targetUrl = this.buildUrlFromForm();
+      this.renderUrl(targetUrl, { pushState: true });
+      return;
+    }
+
+    const formData = new FormData(this.form);
+    const selectedTags = formData.getAll('tag').filter(Boolean);
+    const searchTerm = this.normalizeSearchTerm(formData.get('q') || '');
+
+    if (searchTerm) {
+      const searchParams = new URLSearchParams();
+      searchParams.set('q', searchTerm);
+      const targetUrl = this.buildCollectionUrl(selectedTags, searchParams);
+      this.renderCollectionSearch(searchTerm, selectedTags, targetUrl, { pushState: true });
+      return;
+    }
+
+    const targetUrl = this.buildCollectionUrl(selectedTags);
     this.renderUrl(targetUrl, { pushState: true });
   }
 
@@ -99,11 +154,12 @@ class FacetFiltersForm extends HTMLElement {
     }
 
     event.preventDefault();
+
     const targetUrl = this.toCleanRelativeUrl(new URL(link.href), { keepPage: true });
     this.renderUrl(targetUrl, { pushState: true });
   }
 
-  renderUrl(targetUrl, { pushState = false } = {}) {
+  renderUrl(targetUrl, { pushState = false, historyUrl = targetUrl, afterRender = null } = {}) {
     const target = new URL(targetUrl, window.location.origin);
     const targetPath = target.pathname;
     const currentMode = this.form.dataset.mode || 'collection';
@@ -123,7 +179,7 @@ class FacetFiltersForm extends HTMLElement {
     }
 
     if (FacetFiltersForm.cache.has(sectionUrl)) {
-      this.renderHtml(FacetFiltersForm.cache.get(sectionUrl), targetUrl, pushState);
+      this.renderHtml(FacetFiltersForm.cache.get(sectionUrl), historyUrl, pushState, afterRender);
       return;
     }
 
@@ -133,18 +189,18 @@ class FacetFiltersForm extends HTMLElement {
       .then((response) => response.text())
       .then((html) => {
         FacetFiltersForm.cache.set(sectionUrl, html);
-        this.renderHtml(html, targetUrl, pushState);
+        this.renderHtml(html, historyUrl, pushState, afterRender);
       })
       .catch((error) => {
         if (error.name === 'AbortError') {
           return;
         }
 
-        window.location.href = targetUrl;
+        window.location.href = historyUrl;
       });
   }
 
-  renderHtml(html, targetUrl, pushState) {
+  renderHtml(html, targetUrl, pushState, afterRender = null) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const newGrid = doc.getElementById('ProductGridContainer');
@@ -177,7 +233,157 @@ class FacetFiltersForm extends HTMLElement {
     }
 
     this.syncFromUrl();
+
+    if (afterRender) {
+      afterRender();
+    }
+
     document.body.classList.remove('loading');
+  }
+
+  renderCollectionSearch(searchTerm, selectedTags, historyUrl, { pushState = false } = {}) {
+    const grid = document.getElementById('ProductGridContainer');
+    const productGrid = document.getElementById('product-grid');
+
+    if (!grid || !productGrid) {
+      window.location.href = historyUrl;
+      return;
+    }
+
+    const sectionId = productGrid.dataset.id;
+    const sourceUrl = this.buildCollectionUrl(selectedTags);
+
+    document.body.classList.add('loading');
+
+    if (this.abortController) {
+      this.abortController.abort();
+    }
+
+    this.abortController = new AbortController();
+
+    this.fetchCollectionProductItems(sourceUrl, sectionId, this.abortController.signal)
+      .then((items) => {
+        const matches = items.filter((item) => this.productMatchesSearchTerm(item, searchTerm));
+
+        grid.innerHTML = '';
+        matches.forEach((item) => grid.appendChild(item));
+
+        const noResults = document.querySelector('.no-results');
+        if (noResults) {
+          noResults.style.display = matches.length === 0 ? 'block' : 'none';
+        }
+
+        if (pushState) {
+          history.pushState({ url: historyUrl }, '', historyUrl);
+        } else {
+          history.replaceState(history.state, '', historyUrl);
+        }
+
+        this.syncFromUrl();
+        this.updateCollectionSearchCount(matches.length);
+        document.body.classList.remove('loading');
+      })
+      .catch((error) => {
+        if (error.name === 'AbortError') {
+          return;
+        }
+
+        window.location.href = historyUrl;
+      });
+  }
+
+  fetchCollectionProductItems(sourceUrl, sectionId, signal) {
+    return this.fetchCollectionDocuments(sourceUrl, sectionId, signal)
+      .then((docs) => docs.reduce((items, doc) => items.concat(this.getProductItemsFromDocument(doc)), []));
+  }
+
+  fetchCollectionDocuments(sourceUrl, sectionId, signal, docs = [], visitedUrls = new Set()) {
+    const cleanUrl = this.toCleanRelativeUrl(new URL(sourceUrl, window.location.origin), { keepPage: true });
+
+    if (visitedUrls.has(cleanUrl) || docs.length >= 40) {
+      return Promise.resolve(docs);
+    }
+
+    visitedUrls.add(cleanUrl);
+
+    return this.fetchSectionDocument(cleanUrl, sectionId, signal).then((doc) => {
+      docs.push(doc);
+
+      const nextLink = doc.querySelector('.pagination a[aria-label="Next"]');
+      if (!nextLink) {
+        return docs;
+      }
+
+      const nextUrl = this.toCleanRelativeUrl(new URL(nextLink.href), { keepPage: true });
+      return this.fetchCollectionDocuments(nextUrl, sectionId, signal, docs, visitedUrls);
+    });
+  }
+
+  fetchSectionDocument(url, sectionId, signal) {
+    const sectionUrl = this.withSectionId(url, sectionId);
+
+    if (FacetFiltersForm.cache.has(sectionUrl)) {
+      return Promise.resolve(this.parseHtml(FacetFiltersForm.cache.get(sectionUrl)));
+    }
+
+    return fetch(sectionUrl, { signal })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Unable to fetch collection products');
+        }
+
+        return response.text();
+      })
+      .then((html) => {
+        FacetFiltersForm.cache.set(sectionUrl, html);
+        return this.parseHtml(html);
+      });
+  }
+
+  parseHtml(html) {
+    return new DOMParser().parseFromString(html, 'text/html');
+  }
+
+  getProductItemsFromDocument(doc) {
+    const grid = doc.getElementById('ProductGridContainer');
+
+    if (!grid) {
+      return [];
+    }
+
+    return Array.from(grid.querySelectorAll('.collection__grid__item'), (item) => item.cloneNode(true));
+  }
+
+  productMatchesSearchTerm(item, term) {
+    const normalized = term.toLowerCase();
+
+    if (!normalized) {
+      return true;
+    }
+
+    const searchableText = [
+      item.getAttribute('data-tags') || '',
+      item.getAttribute('data-brand') || '',
+      item.getAttribute('data-types') || '',
+      item.textContent || '',
+    ].join(' ').toLowerCase();
+
+    return searchableText.includes(normalized);
+  }
+
+  updateCollectionSearchCount(visibleCount) {
+    const count = document.querySelector('.results-count');
+
+    if (!count) {
+      return;
+    }
+
+    const collectionTitle = (this.form.dataset.collectionTitle || '').toLowerCase();
+    const productLabel = visibleCount === 1 ? 'product' : 'products';
+
+    count.innerHTML = collectionTitle
+      ? `Showing&nbsp;${visibleCount} ${productLabel} for ${collectionTitle}`
+      : `Showing&nbsp;${visibleCount} ${productLabel}`;
   }
 
   buildUrlFromForm() {

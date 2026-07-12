@@ -1404,7 +1404,7 @@ Product
   margin: 2rem;
   position: relative;
 }
-@media only screen and (max-width: 967px) {
+@media only screen and (max-width: 1099px) {
   .collection__grid__item {
     width: calc(33.333% - 4rem);
   }
@@ -1910,16 +1910,21 @@ Collection index
   color: var(--text);
 }
 .collections-index__card__image {
+  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 1/1;
+  overflow: hidden;
   background: #f8f8f8;
 }
 .collections-index__card__image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 .collections-index__card__content {
   padding: 1.6rem;

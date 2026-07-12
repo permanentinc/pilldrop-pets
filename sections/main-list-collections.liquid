@@ -77,6 +77,9 @@
             assign collection_image = collection.products.first.featured_media.preview_image
           endif
         -%}
+        {%- if product_count == 0 -%}
+          {%- continue -%}
+        {%- endif -%}
         <a class="collections-index__card" href="{{ collection.url }}">
           <span class="collections-index__card__image">
             {%- if collection_image != blank -%}
