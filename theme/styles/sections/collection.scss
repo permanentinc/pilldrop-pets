@@ -24,6 +24,10 @@
         position: relative;
         top: 0;
 
+        @include media($md) {
+            top: -8rem;
+        }
+
         &__toggle {
             background: var(--primary);
             padding: 1rem;
@@ -208,7 +212,9 @@ Checkbox
         font: inherit;
         font-size: 1.5rem;
         outline: 0;
-        transition: border-color 160ms ease, box-shadow 160ms ease;
+        transition:
+            border-color 160ms ease,
+            box-shadow 160ms ease;
 
         &::placeholder {
             color: #8a8a8a;
@@ -535,7 +541,10 @@ Collection index
         border-radius: 6px;
         box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.08);
         overflow: hidden;
-        transition: border-color $fast, box-shadow $fast, transform $fast;
+        transition:
+            border-color $fast,
+            box-shadow $fast,
+            transform $fast;
 
         &:hover {
             border-color: var(--primary);
@@ -604,7 +613,10 @@ Collection index
         border-radius: 6px;
         overflow: hidden;
         box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.08);
-        transition: border-color $fast, box-shadow $fast, transform $fast;
+        transition:
+            border-color $fast,
+            box-shadow $fast,
+            transform $fast;
 
         &:hover {
             border-color: var(--primary);
