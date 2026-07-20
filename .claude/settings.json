@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"^h1,\\\\|^h1 {\\\\|^\\\\.h1\\\\b\" assets/styles.css)",
+      "Bash(curl -s http://127.0.0.1:9292/blogs/news/example-blog-1 --max-time 10)",
+      "Bash(curl -s \"http://127.0.0.1:9292/blogs/news/example-blog-1\" --max-time 10)",
+      "Bash(curl -s \"http://127.0.0.1:9292/cdn/shop/t/2/assets/styles.css?v=175137598358600490961784540615\" --max-time 10)",
+      "Bash(curl -s \"https://pilldrop.foundcreative.nz/news-and-updates/new-blog-post/?stage=Stage\" --max-time 15 -o /private/tmp/claude-501/-Users-jd-Sites-pilldrop-pets/c95bb99c-0d2f-42e4-9e18-bd10d2c94a4e/scratchpad/reference.html)",
+      "Bash(curl -sI \"https://pilldrop.foundcreative.nz/news-and-updates/new-blog-post/?stage=Stage\" --max-time 15)"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+/*------------------------------------------------------------------
+Blogs
+------------------------------------------------------------------*/
+
+.blogs {
+    padding: 8rem 2rem 0;
+    width: 100%;
+
+    &__wrap {
+        max-width: var(--inner-content-width);
+        margin: 5rem auto 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-bottom: 10rem;
+
+            &:after {
+                @include pseudo;
+                @include full;
+                left: 10rem;
+                background: white;
+                box-shadow: 0 0 52px 0 rgba(black, 0.12);
+                z-index: 1;
+
+                @include media($md, max) {
+                    left: 1rem;
+                    top: 20rem;
+                }
+            }
+
+            &__image {
+                @include aspect(1, 1);
+                position: relative;
+                width: 30rem;
+                z-index: 2;
+                margin: -3.5rem 0 0 -2.5rem;
+                box-shadow: 0 20px 45px 0 rgba(black, 0.18);
+
+                @include media($md, max) {
+                    width: calc(100% - 8rem);
+                    max-width: 40rem;
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &__copy {
+                width: calc(100% - 30rem);
+                position: relative;
+                z-index: 3;
+                padding: 4rem;
+
+                @include media($xmd, max) {
+                    padding-right: 2rem;
+                }
+
+                @include media($md, max) {
+                    width: 100%;
+                }
+
+                &__published {
+                    font-weight: 700;
+                    color: var(--grey-mid-light);
+                    margin-bottom: 0;
+                }
+
+                &__title {
+                    margin: 0.5rem 0 1rem;
+                }
+            }
+        }
+    }
+
+    &__pagination {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        &__item {
+            font-weight: 600;
+            text-decoration: none;
+            color: inherit;
+            opacity: 0.6;
+
+            &.active {
+                opacity: 1;
+                color: var(--primary);
+            }
+        }
+    }
+}

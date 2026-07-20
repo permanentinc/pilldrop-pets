@@ -1,0 +1,76 @@
+{% comment %}
+  Blog listing
+{% endcomment %}
+
+<section class="blogs">
+  <div class="blogs__wrap">
+    {%- paginate blog.articles by section.settings.articles_per_page -%}
+      {%- for article in blog.articles -%}
+        <div class="blogs__wrap__item">
+          <div class="blogs__wrap__item__image">
+            {%- if article.image -%}
+              <img
+                loading="lazy"
+                srcset="
+                  {{ article.image | image_url: width: 360, height: 360, crop: 'center' }} 1x,
+                  {{ article.image | image_url: width: 720, height: 720, crop: 'center' }} 2x
+                "
+                src="{{ article.image | image_url: width: 720, height: 720, crop: 'center' }}"
+                alt="{{ article.image.alt | default: article.title | escape }}"
+                width="360"
+                height="360"
+              >
+            {%- endif -%}
+          </div>
+          <div class="blogs__wrap__item__copy">
+            <p class="blogs__wrap__item__copy__published">{{ article.published_at | date: '%d %B %Y' }}</p>
+            <h5 class="blogs__wrap__item__copy__title colour--red"><b>{{ article.title | escape }}</b></h5>
+            {%- if article.excerpt != blank -%}
+              {{ article.excerpt }}
+            {%- else -%}
+              <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+            {%- endif -%}
+            <p>
+              <a href="{{ article.url }}" class="button button--small button--outline">Learn More</a>
+            </p>
+          </div>
+        </div>
+      {%- endfor -%}
+
+      {%- if paginate.pages > 1 -%}
+        <div class="blogs__pagination">
+          {%- if paginate.previous -%}
+            <a href="{{ paginate.previous.url }}" class="blogs__pagination__prev">&larr; Previous</a>
+          {%- endif -%}
+          {%- for part in paginate.parts -%}
+            {%- if part.is_link -%}
+              <a href="{{ part.url }}" class="blogs__pagination__item">{{ part.title }}</a>
+            {%- else -%}
+              <span class="blogs__pagination__item {% if part.title == paginate.current_page %}active{% endif %}">{{ part.title }}</span>
+            {%- endif -%}
+          {%- endfor -%}
+          {%- if paginate.next -%}
+            <a href="{{ paginate.next.url }}" class="blogs__pagination__next">Next &rarr;</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main Blog",
+  "settings": [
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "min": 3,
+      "max": 24,
+      "step": 1,
+      "default": 9,
+      "label": "Articles per page"
+    }
+  ]
+}
+{% endschema %}

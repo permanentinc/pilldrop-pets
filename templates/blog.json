@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "banner": {
+      "type": "banner-slim",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner_slim.jpg",
+        "subheading": "",
+        "subheading_size": "h4",
+        "heading": "<p><strong>Blog<\/strong><\/p>",
+        "heading_size": "h1",
+        "text": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main"
+  ]
+}
