@@ -5,6 +5,8 @@
 <section class="article-hero">
   <div class="article-hero__text">
     <div class="article-hero__text__constraint">
+      <a href="{{ blog.url }}" class="article-hero__text__back">&larr; Back to {{ blog.title }}</a>
+
       {%- if section.settings.show_date -%}
         <p class="article-hero__text__date">{{ article.published_at | date: '%d %B %Y' }}</p>
       {%- endif -%}
@@ -56,16 +58,40 @@
   {%- endif -%}
 
   <div class="article__footer">
-    <a href="{{ blog.url }}" class="arrow-link">&larr; Back to {{ blog.title }}</a>
+    {%- assign related_count = 0 -%}
+    {%- capture related_articles_html -%}
+      {%- for other_article in blog.articles limit: 4 -%}
+        {%- if other_article.id != article.id and related_count < 3 -%}
+          {%- assign related_count = related_count | plus: 1 -%}
+          <a href="{{ other_article.url }}" class="article__related__item">
+            <div class="article__related__item__image">
+              {%- if other_article.image -%}
+                <img
+                  loading="lazy"
+                  srcset="
+                    {{ other_article.image | image_url: width: 480 }} 1x,
+                    {{ other_article.image | image_url: width: 960 }} 2x
+                  "
+                  src="{{ other_article.image | image_url: width: 480 }}"
+                  alt="{{ other_article.image.alt | default: other_article.title | escape }}"
+                  width="480"
+                  height="480"
+                >
+              {%- endif -%}
+            </div>
+            <p class="article__related__item__date">{{ other_article.published_at | date: '%d %B %Y' }}</p>
+            <h5 class="article__related__item__title colour--red">{{ other_article.title | escape }}</h5>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
 
-    <div class="article__nav">
-      {%- if blog.previous_article -%}
-        <a href="{{ blog.previous_article }}" class="article__nav__prev">&larr; Previous post</a>
-      {%- endif -%}
-      {%- if blog.next_article -%}
-        <a href="{{ blog.next_article }}" class="article__nav__next">Next post &rarr;</a>
-      {%- endif -%}
-    </div>
+    {%- if related_count > 0 -%}
+      <div class="article__related">
+        <h2 class="colour--text">More from {{ blog.title }}</h2>
+        <div class="article__related__grid">{{ related_articles_html }}</div>
+      </div>
+    {%- endif -%}
   </div>
 
   {%- if blog.comments_enabled? -%}
