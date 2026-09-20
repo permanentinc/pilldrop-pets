@@ -265,15 +265,13 @@
             </a>
           {% endif %}
 
-          <a href="{{ product.url }}" class="collection__grid__item__details">
-            <div class="collection__grid__item__details__title">
-              {% comment %} <h6 class="colour--text" >{{ product.vendor }}</h6> {% endcomment %}
-              <h6 class="colour--red">
-                <strong>{{ product.title | escape }} &nbsp;</strong>
-              </h6>
-              <p style="color:#212121;">{{ product.price | money }}</p>
-            </div>
-          </a>
+          <div class="collection__grid__item__card">
+            <a href="{{ product.url }}" class="collection__grid__item__card__title">
+              {{ product.title | escape }}
+            </a>
+            <p class="collection__grid__item__card__price">{{ product.price | money }}</p>
+            <a href="{{ product.url }}" class="collection__grid__item__card__buy button button--small">Buy Now</a>
+          </div>
         </div>
       {% endfor %}
     {% endpaginate %}

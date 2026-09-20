@@ -144,6 +144,40 @@
                     margin: 0;
                 }
             }
+
+            &__card {
+                width: 100%;
+                padding: 2rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                &__title {
+                    display: -webkit-box;
+                    width: 100%;
+                    color: var(--text);
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 1.3;
+                    margin-bottom: 0.5rem;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    min-height: calc(1.4rem * 1.3 * 3);
+                }
+
+                &__price {
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    color: var(--primary);
+                    margin-bottom: 2rem;
+                }
+
+                &__buy {
+                    padding: 1rem 3rem;
+                }
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ export const product = (product) =>
 */
 export const searchPlaceholder = () =>
     `<div class="searchPane__wrapper__item searchPane__wrapper__item--placeholder">
-        <div class="searchPane__wrapper__item__image"><span></span></div>
+        <div class="searchPane__wrapper__item__image"><span class="searchPane__wrapper__item__image__placeholder"></span></div>
         <div class="searchPane__wrapper__item__details"><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
         </div>
     </div>`;
@@ -62,16 +62,17 @@ export const searchPlaceholder = () =>
 * @returns {string}
 */
 export const searchItem = (product) =>
-    `<a href="${product.url}" class="searchPane__wrapper__item">
-        <div class="searchPane__wrapper__item__image">
+    `<div class="searchPane__wrapper__item">
+        <a href="${product.url}" class="searchPane__wrapper__item__image">
             <img src="${product.image || 'https://cdn.shopify.com/s/files/1/0617/3982/7386/products/RX_780b8dd4-821b-426c-9a6b-a4e2b3fc1c18.jpg'}">
-        </div>
+            ${(product.compare_at_price_max !== "0.00") ? `<span class="searchPane__wrapper__item__image__sale">WHY PAY $${product.compare_at_price_max} ?</span>` : ``}
+        </a>
         <div class="searchPane__wrapper__item__details">
-            <p><strong>${product.title}</strong></p>
-            <p>${product.type}</p>
-            <p><strong>$${product.price}</strong>${(product.compare_at_price_max !== "0.00") ? `<span class="strike">$${product.compare_at_price_max}</span>` : ``}</p>
+            <a href="${product.url}" class="searchPane__wrapper__item__details__title">${product.title}</a>
+            <p class="searchPane__wrapper__item__details__price"><strong>$${product.price}</strong></p>
+            <a href="${product.url}" class="searchPane__wrapper__item__details__buy button button--small">Buy Now</a>
         </div>
-    </a>`;
+    </div>`;
 
 /**
 * Return a template for a sidecart item

@@ -65,12 +65,12 @@
       </a>
       {% endif %}
 
-      <p>
-        <strong>
-          <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-        </strong>
-      </p>
-      <p style="color:#212121;">{{ item.price | money }}</p>
+      <a href="{{ item.url }}" title="{{ item.title }}" class="collectionList__wrap__item__title">{{ item.title }}</a>
+
+      {% if item.object_type == 'product' %}
+        <p class="collectionList__wrap__item__price">{{ item.price | money }}</p>
+        <a href="{{ item.url }}" class="collectionList__wrap__item__buy button button--small">Buy Now</a>
+      {% endif %}
 
     </div>
 
