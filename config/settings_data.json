@@ -1,6 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "checkout_logo_image": "shopify:\/\/shop_images\/Pilldrop_colour.png",
+    "checkout_logo_image": "shopify://shop_images/Pilldrop_colour.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_heading_font": "Helvetica Neue",
@@ -21,13 +30,11 @@
       },
       "header": {
         "type": "header",
-        "settings": {
-        }
+        "settings": {}
       },
       "footer": {
         "type": "footer",
-        "settings": {
-        }
+        "settings": {}
       },
       "newsletter-popup": {
         "type": "newsletter-popup",
@@ -36,7 +43,7 @@
           "popup_seconds": 5,
           "popup_days": 30,
           "popup_title": "Sign up and save",
-          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.</p>",
           "close_text": "No thanks",
           "enable_newsletter": true,
           "button_label": "Optional button",
@@ -45,14 +52,24 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "319724205969189013": {
-        "type": "shopify:\/\/apps\/form-builder-with-file-upload\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "type": "shopify://apps/form-builder-with-file-upload/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {}
+      },
+      "1768834845299682660": {
+        "type": "shopify://apps/subscriptions/blocks/app-embed-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
         "disabled": false,
         "settings": {
+          "color_text_title": "#6D7175",
+          "color_text_body": "#6D7175",
+          "dividers_color": "#8F8D8D",
+          "bacgkround_color": "#FFFFFF",
+          "border_thickness": 1,
+          "border_radius": 0,
+          "subscription_policy_url": ""
         }
       }
     }
