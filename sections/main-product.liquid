@@ -172,7 +172,6 @@
 
 
   
-            {% endform %}
             {%- if product.selling_plan_groups.size > 0 -%}
               <div class="subscription-box">
                 <p class="subscription-box__header">
@@ -209,6 +208,7 @@
             {%- else -%}
               <div class="subscriptions_app_embed_block"></div>
             {%- endif -%}
+            {% endform %}
             <hr>
             <div class="product__wrap__details__description">
               {{ product.description }}
